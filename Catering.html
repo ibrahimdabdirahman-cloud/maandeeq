@@ -1,0 +1,1471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#14110D" />
+<title>Catering · Maandeeq Somali Restaurant, Woolwich</title>
+<meta name="description" content="Somali catering in London — slow-roasted lamb platters, fragrant bariis, sambusas and shaah, delivered hot for Nikkahs, Walimahs, Aqiqahs, Eid lunches, baby showers and corporate gatherings." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#14110D;
+    --ink-2:#2A211A;
+    --ink-3:#3B2F25;
+    --paper:#F5EFE6;
+    --paper-2:#EADFCC;
+    --paper-3:#FBF7EF;
+    --camel:#8B6B4F;
+    --camel-dk:#6A4F38;
+    --gold:#D4A24C;
+    --gold-dk:#B7873A;
+    --muted:#8A7868;
+    --green:#6B8E5A;
+    --whats:#25D366;
+
+    --serif:"Bodoni Moda","Cormorant Garamond","Didot",serif;
+    --sans:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Space Mono",ui-monospace,Menlo,monospace;
+
+    --pad:clamp(18px,5vw,40px);
+    --r-card:20px;
+    --r-pill:999px;
+    --max:1080px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:120px}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-wrap:pretty;
+    overscroll-behavior:none;
+    padding-bottom:90px;
+  }
+  img{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer;color:inherit;background:none;border:0}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--gold);color:var(--ink)}
+
+  /* ============================= TICKER ============================= */
+  .ticker{
+    background:var(--ink);color:var(--paper);
+    overflow:hidden;position:relative;
+    border-bottom:1px solid rgba(212,162,76,0.18);
+  }
+  .ticker__track{
+    display:flex;gap:48px;padding:9px 0;width:max-content;
+    animation:ticker 60s linear infinite;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:rgba(245,239,230,0.8);
+  }
+  .ticker__track span em{color:var(--gold);font-style:normal;margin-right:8px}
+  .ticker__track span .sep{display:inline-block;margin:0 16px;color:rgba(245,239,230,0.3)}
+  @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============================= HERO ============================= */
+  .hero{
+    position:relative;padding:30px var(--pad) 64px;
+    background:
+      radial-gradient(120% 70% at 50% 0%, rgba(212,162,76,0.18), transparent 55%),
+      linear-gradient(180deg,#14110D 0%, #1B1610 100%);
+    color:var(--paper);overflow:hidden;text-align:center;
+  }
+  .hero__back{
+    position:absolute;top:18px;left:var(--pad);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.75);
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.06);border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;z-index:2;
+  }
+  .hero__back:hover{background:rgba(245,239,230,0.12)}
+  .hero__nav{
+    position:absolute;top:18px;right:var(--pad);
+    display:inline-flex;gap:6px;z-index:2;
+    max-width:calc(100% - 130px);
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .hero__nav::-webkit-scrollbar{display:none}
+  .hero__nav a{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.75);padding:9px 14px;border-radius:var(--r-pill);white-space:nowrap;
+    background:rgba(245,239,230,0.06);border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;
+  }
+  .hero__nav a:hover{background:rgba(245,239,230,0.12)}
+
+  /* big platter watermark */
+  .hero__mark{
+    position:absolute;left:50%;top:62%;transform:translate(-50%,-50%);
+    width:min(720px,68vw);aspect-ratio:1;
+    border-radius:50%;
+    border:1px solid rgba(212,162,76,0.18);
+    pointer-events:none;
+  }
+  .hero__mark::before, .hero__mark::after{
+    content:"";position:absolute;inset:0;border-radius:50%;
+    border:1px solid rgba(212,162,76,0.10);
+  }
+  .hero__mark::before{inset:8%}
+  .hero__mark::after{inset:18%;border-color:rgba(212,162,76,0.06)}
+
+  .hero__eyebrow{
+    margin-top:48px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--gold);display:inline-flex;align-items:center;gap:12px;
+    position:relative;z-index:1;
+  }
+  .hero__eyebrow::before,.hero__eyebrow::after{
+    content:"";display:block;width:24px;height:1px;background:rgba(212,162,76,.45);
+  }
+  .hero__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(48px,10vw,108px);line-height:0.92;letter-spacing:-0.03em;
+    margin:18px 0 18px;position:relative;z-index:1;
+  }
+  .hero__title em{font-style:italic;color:var(--gold);font-weight:400}
+  .hero__sub{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(17px,2vw,22px);line-height:1.45;
+    color:rgba(245,239,230,0.8);
+    margin:0 auto;max-width:48ch;position:relative;z-index:1;
+  }
+
+  /* hero metric strip */
+  .hero__metrics{
+    margin:42px auto 0;max-width:760px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    position:relative;z-index:1;
+    border-top:1px solid rgba(245,239,230,0.12);
+    border-bottom:1px solid rgba(245,239,230,0.12);
+  }
+  .hero__metric{
+    padding:18px 12px;text-align:center;
+    border-left:1px solid rgba(245,239,230,0.08);
+  }
+  .hero__metric:first-child{border-left:0}
+  .hero__metric strong{
+    display:block;
+    font-family:var(--serif);font-weight:500;font-size:clamp(20px,3vw,30px);
+    color:var(--gold);letter-spacing:-0.01em;line-height:1;
+    font-style:italic;margin-bottom:6px;
+  }
+  .hero__metric span{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.55);
+  }
+  @media (max-width:560px){
+    .hero__metrics{grid-template-columns:1fr 1fr}
+    .hero__metric{border-top:1px solid rgba(245,239,230,0.08)}
+    .hero__metric:nth-child(1),.hero__metric:nth-child(2){border-top:0}
+    .hero__metric:nth-child(3){border-left:0}
+  }
+
+  /* ============================= STICKY NAV ============================= */
+  .stickynav{
+    position:sticky;top:0;z-index:40;
+    background:rgba(245,239,230,0.92);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border-bottom:1px solid rgba(20,17,13,0.08);
+    padding:10px var(--pad);
+  }
+  .stickynav__inner{
+    max-width:var(--max);margin:0 auto;
+    display:flex;align-items:center;gap:10px;
+  }
+  .stickynav__tabs{
+    flex:1;display:flex;gap:4px;overflow-x:auto;
+    scrollbar-width:none;-ms-overflow-style:none;
+    scroll-behavior:smooth;padding:2px;
+  }
+  .stickynav__tabs::-webkit-scrollbar{display:none}
+  .stickynav__tab{
+    flex-shrink:0;padding:9px 14px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--ink-2);font-weight:500;white-space:nowrap;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:background .2s ease, color .2s ease;
+  }
+  .stickynav__tab:hover{background:rgba(20,17,13,0.05)}
+  .stickynav__tab.is-on{background:var(--ink);color:var(--paper)}
+  .stickynav__cta{
+    flex-shrink:0;display:none;align-items:center;gap:6px;
+    padding:9px 14px;border-radius:var(--r-pill);
+    background:var(--gold);color:var(--ink);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;
+  }
+  .stickynav__cta:hover{background:var(--gold-dk)}
+  @media (min-width:760px){.stickynav__cta{display:inline-flex}}
+
+  /* ============================= LAYOUT ============================= */
+  main{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+  .sect{padding:64px 0 16px}
+  .sect__head{margin-bottom:28px;display:grid;grid-template-columns:1fr;gap:8px;align-items:end}
+  @media (min-width:760px){
+    .sect__head{grid-template-columns:1fr auto;gap:24px}
+  }
+  .sect__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:8px;
+  }
+  .sect__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(30px,5.4vw,50px);
+    line-height:1;letter-spacing:-0.025em;margin:0;
+  }
+  .sect__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .sect__meta{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--muted);align-self:end;padding-bottom:6px;
+  }
+  .sect__lede{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(16px,1.8vw,19px);line-height:1.5;
+    color:var(--ink-3);max-width:54ch;margin:14px 0 0;
+  }
+
+  /* ============================= PLATTER CARDS ============================= */
+  .platters{
+    display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  @media (min-width:760px){.platters{grid-template-columns:repeat(3,1fr)}}
+
+  .platter{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    transition:transform .25s ease, border-color .2s ease;
+    position:relative;
+  }
+  .platter:hover{
+    transform:translateY(-3px);
+    border-color:var(--camel);
+  }
+  .platter--featured{
+    background:#1A140E;color:var(--paper);
+    border-color:rgba(245,239,230,0.08);
+  }
+  .platter--featured:hover{border-color:var(--gold)}
+  .platter__badge{
+    position:absolute;top:14px;right:14px;
+    background:var(--gold);color:var(--ink);
+    font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;
+    padding:5px 10px;border-radius:var(--r-pill);
+    z-index:1;
+  }
+  .platter__media{
+    aspect-ratio:5/4;
+    background:
+      repeating-linear-gradient(135deg, rgba(212,162,76,0.08) 0 6px, transparent 6px 14px),
+      linear-gradient(135deg, #2A211A, #14110D);
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+    border-bottom:1px solid rgba(20,17,13,0.08);
+  }
+  .platter:not(.platter--featured) .platter__media{
+    background:
+      repeating-linear-gradient(135deg, rgba(106,79,56,0.08) 0 6px, transparent 6px 14px),
+      linear-gradient(135deg, #EADFCC, #FBF7EF);
+  }
+  .platter__media span{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;
+    color:rgba(245,239,230,0.45);
+    padding:6px 12px;border-radius:var(--r-pill);
+    border:1px solid rgba(245,239,230,0.15);
+    background:rgba(20,17,13,0.4);
+  }
+  .platter:not(.platter--featured) .platter__media span{
+    color:var(--camel-dk);
+    border-color:rgba(20,17,13,0.15);
+    background:rgba(245,239,230,0.5);
+  }
+  .platter__body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+  .platter__lbl{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);margin-bottom:8px;
+  }
+  .platter--featured .platter__lbl{color:var(--gold)}
+  .platter__name{
+    font-family:var(--serif);font-weight:500;
+    font-size:26px;line-height:1.05;letter-spacing:-0.015em;
+    margin:0 0 10px;
+  }
+  .platter__name em{font-style:italic;color:var(--camel-dk)}
+  .platter--featured .platter__name em{color:var(--gold)}
+  .platter__desc{
+    font-size:14px;line-height:1.55;
+    color:var(--ink-3);margin:0 0 16px;flex:1;
+  }
+  .platter--featured .platter__desc{color:rgba(245,239,230,0.7)}
+  .platter__meta{
+    display:grid;grid-template-columns:1fr 1fr;gap:6px;
+    padding:12px 0;
+    border-top:1px solid rgba(20,17,13,0.08);
+    border-bottom:1px solid rgba(20,17,13,0.08);
+    margin-bottom:14px;
+  }
+  .platter--featured .platter__meta{
+    border-color:rgba(245,239,230,0.1);
+  }
+  .platter__meta div{display:flex;flex-direction:column;gap:2px}
+  .platter__meta dt{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  .platter--featured .platter__meta dt{color:rgba(245,239,230,0.5)}
+  .platter__meta dd{
+    margin:0;font-family:var(--serif);font-size:17px;font-weight:500;letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .platter--featured .platter__meta dd{color:var(--paper)}
+  .platter__price{
+    display:flex;align-items:baseline;justify-content:space-between;gap:8px;
+    margin-bottom:14px;
+  }
+  .platter__price strong{
+    font-family:var(--serif);font-style:italic;font-weight:500;
+    font-size:34px;letter-spacing:-0.02em;line-height:1;
+  }
+  .platter--featured .platter__price strong{color:var(--gold)}
+  .platter__price small{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  .platter--featured .platter__price small{color:rgba(245,239,230,0.55)}
+  .platter__cta{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 18px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;
+    background:var(--ink);color:var(--paper);
+    transition:background .2s ease;
+  }
+  .platter__cta:hover{background:var(--ink-2)}
+  .platter--featured .platter__cta{background:var(--gold);color:var(--ink)}
+  .platter--featured .platter__cta:hover{background:var(--gold-dk)}
+
+  /* ============================= TIMELINE ============================= */
+  .timeline{
+    margin-top:8px;
+    display:grid;grid-template-columns:1fr;gap:14px;
+    counter-reset:step;
+  }
+  @media (min-width:760px){.timeline{grid-template-columns:repeat(4,1fr);gap:0}}
+
+  .step{
+    position:relative;
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:24px 22px 22px;
+  }
+  @media (min-width:760px){
+    .step{border-radius:0;border-right:0}
+    .step:first-child{border-radius:var(--r-card) 0 0 var(--r-card)}
+    .step:last-child{border-right:1px solid rgba(20,17,13,0.08);border-radius:0 var(--r-card) var(--r-card) 0}
+  }
+  .step__num{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);font-weight:700;
+    display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  }
+  .step__num::before{
+    content:"";display:block;width:18px;height:1px;background:var(--camel);
+  }
+  .step__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:21px;line-height:1.15;letter-spacing:-0.01em;
+    margin:0 0 10px;
+  }
+  .step__title em{font-style:italic;color:var(--camel-dk)}
+  .step__desc{
+    font-size:14px;line-height:1.55;color:var(--ink-3);margin:0;
+  }
+  .step__lead{
+    margin-top:14px;
+    font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--gold-dk);
+  }
+  /* connecting arrow */
+  @media (min-width:760px){
+    .step:not(:last-child)::after{
+      content:"";position:absolute;
+      top:50%;right:-8px;transform:translateY(-50%) rotate(45deg);
+      width:14px;height:14px;
+      background:var(--paper-3);
+      border-top:1px solid rgba(20,17,13,0.08);
+      border-right:1px solid rgba(20,17,13,0.08);
+      z-index:1;
+    }
+  }
+
+  /* ============================= OCCASIONS ============================= */
+  .occasions{
+    display:grid;grid-template-columns:1fr;gap:14px;
+  }
+  @media (min-width:680px){.occasions{grid-template-columns:1fr 1fr}}
+
+  .occ{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:26px 26px 22px;
+    display:flex;flex-direction:column;gap:12px;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .occ:hover{border-color:var(--camel);background:#FFFCF6}
+  .occ__head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+    padding-bottom:14px;border-bottom:1px solid rgba(20,17,13,0.08);
+  }
+  .occ__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:24px;line-height:1.1;letter-spacing:-0.015em;
+    margin:0;
+  }
+  .occ__title em{font-style:italic;color:var(--camel-dk)}
+  .occ__head .occ__price{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--ink-2);font-weight:700;
+    background:var(--paper-2);padding:5px 10px;border-radius:var(--r-pill);
+    white-space:nowrap;
+  }
+  .occ__list{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+  .occ__list li{
+    display:grid;grid-template-columns:14px 1fr;gap:10px;align-items:start;
+    font-size:14.5px;line-height:1.45;color:var(--ink-2);
+  }
+  .occ__list li::before{
+    content:"";display:block;
+    width:6px;height:6px;border-radius:50%;
+    background:var(--gold);margin-top:8px;
+  }
+  .occ__list em{
+    font-family:var(--serif);font-style:italic;color:var(--camel-dk);font-size:13.5px;
+  }
+  .occ__foot{
+    margin-top:auto;padding-top:14px;
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  .occ__foot strong{color:var(--ink);font-weight:700}
+
+  /* ============================= INCLUDED / ADDONS ============================= */
+  .twocol{
+    display:grid;grid-template-columns:1fr;gap:14px;
+  }
+  @media (min-width:760px){.twocol{grid-template-columns:1fr 1fr}}
+
+  .panel{
+    border-radius:var(--r-card);
+    padding:28px 26px 26px;
+    position:relative;
+  }
+  .panel--light{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+  }
+  .panel--dark{
+    background:var(--ink);color:var(--paper);
+  }
+  .panel__num{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);margin-bottom:10px;display:block;
+  }
+  .panel--dark .panel__num{color:var(--gold)}
+  .panel__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:28px;line-height:1.05;letter-spacing:-0.02em;
+    margin:0 0 18px;
+  }
+  .panel__title em{font-style:italic;color:var(--camel-dk)}
+  .panel--dark .panel__title em{color:var(--gold)}
+  .panel__list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .panel__list li{
+    display:grid;grid-template-columns:18px 1fr auto;gap:10px;align-items:baseline;
+    padding-bottom:12px;border-bottom:1px solid rgba(20,17,13,0.08);
+    font-size:15px;line-height:1.4;
+  }
+  .panel--dark .panel__list li{
+    border-color:rgba(245,239,230,0.1);
+  }
+  .panel__list li:last-child{border-bottom:0;padding-bottom:0}
+  .panel__list .tick{
+    width:16px;height:16px;border-radius:50%;
+    background:var(--green);color:var(--paper);
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-top:2px;
+  }
+  .panel__list .plus{
+    width:16px;height:16px;border-radius:50%;
+    background:transparent;color:var(--gold);
+    border:1.5px solid var(--gold);
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-top:2px;
+  }
+  .panel__list strong{display:block;font-weight:600;letter-spacing:-0.005em}
+  .panel--dark .panel__list strong{color:var(--paper)}
+  .panel__list small{
+    display:block;font-size:13px;color:var(--muted);margin-top:3px;
+  }
+  .panel--dark .panel__list small{color:rgba(245,239,230,0.55)}
+  .panel__list .pr{
+    font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:0.04em;
+    color:var(--ink-2);
+  }
+  .panel--dark .panel__list .pr{color:var(--gold)}
+
+  /* ============================= INQUIRY FORM ============================= */
+  .inquiry{
+    margin:64px calc(var(--pad)*-1) 0;
+    padding:80px var(--pad);
+    background:var(--paper-2);
+    position:relative;overflow:hidden;
+  }
+  .inquiry__inner{
+    max-width:var(--max);margin:0 auto;
+    display:grid;grid-template-columns:1fr;gap:36px;
+  }
+  @media (min-width:880px){
+    .inquiry__inner{grid-template-columns:0.9fr 1.2fr;gap:60px;align-items:start}
+  }
+  .inquiry__txt{position:relative}
+  .inquiry__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);margin-bottom:12px;display:block;
+  }
+  .inquiry__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(34px,5.2vw,52px);line-height:1;letter-spacing:-0.025em;
+    margin:0 0 18px;
+  }
+  .inquiry__title em{font-style:italic;color:var(--camel-dk)}
+  .inquiry__lede{
+    font-family:var(--serif);font-style:italic;
+    font-size:18px;line-height:1.5;color:var(--ink-3);
+    margin:0 0 22px;max-width:38ch;
+  }
+  .inquiry__contacts{
+    display:grid;gap:12px;
+  }
+  .inquiry__contact{
+    display:flex;align-items:flex-start;gap:14px;
+    padding:14px 16px;border-radius:14px;
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    transition:transform .15s ease, border-color .2s ease;
+  }
+  .inquiry__contact:hover{transform:translateY(-1px);border-color:var(--camel)}
+  .inquiry__icon{
+    width:36px;height:36px;border-radius:50%;
+    background:var(--ink);color:var(--gold);
+    display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .inquiry__contact div{display:flex;flex-direction:column;gap:2px}
+  .inquiry__contact dt{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .inquiry__contact dd{
+    margin:0;font-family:var(--serif);font-size:17px;font-weight:500;letter-spacing:-0.005em;
+    color:var(--ink);
+  }
+  .inquiry__contact small{font-size:12px;color:var(--muted);margin-top:2px}
+
+  .form{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:clamp(22px,3vw,32px);
+  }
+  .form__grid{
+    display:grid;grid-template-columns:1fr;gap:14px;
+  }
+  @media (min-width:560px){.form__grid{grid-template-columns:1fr 1fr}}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field--full{grid-column:1/-1}
+  .field > label{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+  .field input, .field textarea, .field select{
+    background:var(--paper);
+    border:1px solid rgba(20,17,13,0.12);
+    border-radius:12px;
+    padding:13px 14px;
+    font:inherit;font-size:15px;
+    color:var(--ink);font-family:var(--sans);
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .field input:focus, .field textarea:focus, .field select:focus{
+    outline:none;border-color:var(--camel);background:#FFFCF6;
+  }
+  .field textarea{resize:vertical;min-height:90px}
+
+  .chipgroup{display:flex;flex-wrap:wrap;gap:6px}
+  .chipgroup input[type="radio"], .chipgroup input[type="checkbox"]{
+    position:absolute;opacity:0;pointer-events:none;
+  }
+  .chipgroup label{
+    background:var(--paper);
+    border:1px solid rgba(20,17,13,0.12);
+    border-radius:var(--r-pill);
+    padding:8px 14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
+    font-weight:600;color:var(--ink-2);
+    cursor:pointer;transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .chipgroup input:checked + label{
+    background:var(--ink);color:var(--paper);border-color:var(--ink);
+  }
+  .chipgroup label:hover{background:rgba(20,17,13,0.04)}
+
+  .form__actions{
+    display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+    margin-top:18px;padding-top:18px;border-top:1px solid rgba(20,17,13,0.08);
+  }
+  .form__hint{
+    font-family:var(--serif);font-style:italic;color:var(--ink-3);
+    font-size:13.5px;line-height:1.45;max-width:32ch;margin:0;
+  }
+  .submitbtn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 22px;border-radius:var(--r-pill);
+    background:var(--gold);color:var(--ink);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;
+    transition:background .2s ease, transform .15s ease;
+  }
+  .submitbtn:hover{background:var(--gold-dk);transform:translateY(-1px)}
+
+  /* ============================= PAST EVENTS ============================= */
+  .events{
+    display:grid;grid-template-columns:1fr;gap:14px;
+    margin-top:8px;
+  }
+  @media (min-width:680px){.events{grid-template-columns:1fr 1fr}}
+  @media (min-width:1000px){.events{grid-template-columns:repeat(3,1fr)}}
+
+  .event{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:24px 24px 22px;
+    display:flex;flex-direction:column;gap:14px;
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .event:hover{transform:translateY(-2px);border-color:var(--camel)}
+  .event__head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  }
+  .event__kind{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);font-weight:700;
+  }
+  .event__date{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.14em;
+    color:var(--muted);
+  }
+  .event blockquote{
+    margin:0;
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:18px;line-height:1.35;letter-spacing:-0.005em;
+    color:var(--ink);
+  }
+  .event blockquote::before{
+    content:"\201C";font-style:normal;color:var(--gold);
+    font-size:36px;line-height:0;vertical-align:-12px;margin-right:4px;
+  }
+  .event__meta{
+    margin-top:auto;padding-top:14px;
+    border-top:1px solid rgba(20,17,13,0.08);
+    display:flex;flex-wrap:wrap;gap:14px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  .event__meta strong{color:var(--ink);font-weight:700}
+
+  /* ============================= QUICK FACTS (dark band) ============================= */
+  .facts{
+    margin:64px calc(var(--pad)*-1) 0;
+    padding:72px var(--pad);
+    background:linear-gradient(180deg,#1A140E 0%, #221913 100%);
+    color:var(--paper);
+    position:relative;overflow:hidden;
+  }
+  .facts::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(60% 70% at 0% 0%, rgba(212,162,76,0.18), transparent 60%),
+      radial-gradient(50% 60% at 100% 100%, rgba(212,162,76,0.08), transparent 60%);
+    pointer-events:none;
+  }
+  .facts__inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+  .facts__head{margin-bottom:36px}
+  .facts__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--gold);display:block;margin-bottom:10px;
+  }
+  .facts__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(30px,5vw,44px);line-height:1;letter-spacing:-0.025em;
+    margin:0;max-width:18ch;
+  }
+  .facts__title em{font-style:italic;color:var(--gold)}
+  .facts__grid{
+    display:grid;grid-template-columns:1fr;gap:1px;
+    background:rgba(245,239,230,0.12);
+    border:1px solid rgba(245,239,230,0.12);
+    border-radius:var(--r-card);overflow:hidden;
+  }
+  @media (min-width:680px){.facts__grid{grid-template-columns:1fr 1fr}}
+  @media (min-width:1000px){.facts__grid{grid-template-columns:1fr 1fr 1fr}}
+  .fact{
+    padding:24px 26px;
+    background:#1A140E;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .fact__lbl{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--gold);
+  }
+  .fact__val{
+    font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-0.015em;
+    line-height:1.2;color:var(--paper);margin:0;
+  }
+  .fact__val em{font-style:italic;color:var(--gold)}
+  .fact__sub{font-size:13px;line-height:1.5;color:rgba(245,239,230,0.65);margin:0}
+
+  /* ============================= FOOTER ============================= */
+  footer{
+    background:var(--ink);color:var(--paper);
+    padding:48px var(--pad) 30px;text-align:center;
+  }
+  footer .wordmark{
+    font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:0.06em;
+    display:inline-block;padding:0 0 6px;border-bottom:1px solid var(--gold);position:relative;
+  }
+  footer .wordmark::before,footer .wordmark::after{
+    content:"";position:absolute;bottom:-1px;width:24%;height:1px;background:var(--gold)
+  }
+  footer .wordmark::before{left:-14px}
+  footer .wordmark::after{right:-14px}
+  footer .tagline{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--gold);margin:8px 0 18px;
+  }
+  footer .quote{
+    font-family:var(--serif);font-style:italic;color:rgba(245,239,230,0.7);
+    max-width:36ch;margin:0 auto;font-size:15px;line-height:1.4;
+  }
+  footer .legal{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:rgba(245,239,230,0.4);margin:18px 0 0;
+  }
+
+  /* ============================= STICKY ACTIONS ============================= */
+  .actions{
+    position:fixed;left:12px;right:12px;bottom:12px;z-index:60;
+    background:rgba(20,17,13,0.96);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    color:var(--paper);
+    border-radius:var(--r-pill);padding:8px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;
+    box-shadow:0 20px 50px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,162,76,0.18);
+    max-width:580px;margin:0 auto;
+  }
+  .actions__btn{
+    background:transparent;border:0;color:var(--paper);
+    padding:11px 6px;border-radius:calc(var(--r-pill) - 4px);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    transition:background .2s ease;text-decoration:none;
+  }
+  .actions__btn:hover{background:rgba(245,239,230,0.06)}
+  .actions__btn--book{background:var(--gold);color:var(--ink)}
+  .actions__btn--book:hover{background:var(--gold-dk)}
+  @media (min-width:760px){
+    body{padding-bottom:30px}
+    .actions{
+      left:auto;right:18px;bottom:18px;
+      grid-template-columns:1fr;width:auto;padding:6px;
+    }
+    .actions__btn{padding:12px 22px}
+    .actions__btn--menu,.actions__btn--call{display:none}
+  }
+
+  @media (max-width:560px){
+    .platter__price strong{font-size:30px}
+    .occ__head{flex-wrap:wrap}
+  }
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker"></div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <a class="hero__back" href="index.html">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Home
+  </a>
+  <div class="hero__nav">
+    <a href="Menu.html">Menu</a>
+    <a href="Order.html">Order</a>
+    <a href="About.html">About</a>
+    <a href="Reviews.html">Reviews</a>
+    <a href="Contact.html">Visit</a>
+    <a href="Reserve.html">Reserve</a>
+  </div>
+
+  <div class="hero__mark" aria-hidden="true"></div>
+
+  <div class="hero__eyebrow">Off-site Catering · Greater London</div>
+  <h1 class="hero__title">A feast that <em>travels</em>.</h1>
+  <p class="hero__sub">Slow-roasted lamb on a sea of fragrant bariis, sambusas folded by hand that morning, basbaas in glass jars, shaah by the urn — delivered hot, set down with care.</p>
+
+  <div class="hero__metrics">
+    <div class="hero__metric"><strong>10 – 300</strong><span>Guests</span></div>
+    <div class="hero__metric"><strong>£18</strong><span>From / head</span></div>
+    <div class="hero__metric"><strong>7 days</strong><span>Notice</span></div>
+    <div class="hero__metric"><strong>15 mi</strong><span>Free delivery</span></div>
+  </div>
+</header>
+
+<!-- STICKY NAV -->
+<nav class="stickynav">
+  <div class="stickynav__inner">
+    <div class="stickynav__tabs" id="tabs">
+      <button class="stickynav__tab is-on" data-target="platters">Signature Platters</button>
+      <button class="stickynav__tab" data-target="howitworks">How It Works</button>
+      <button class="stickynav__tab" data-target="occasions">Occasion Menus</button>
+      <button class="stickynav__tab" data-target="included">What's Included</button>
+      <button class="stickynav__tab" data-target="events">Past Events</button>
+      <button class="stickynav__tab" data-target="inquire">Inquire</button>
+    </div>
+    <a class="stickynav__cta" href="#inquire">
+      Request a Quote
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ===================== 01 PLATTERS ===================== -->
+  <section class="sect" id="platters">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">01 — Signature Platters</span>
+        <h2 class="sect__title">Built to be <em>set down on a long table</em>.</h2>
+        <p class="sect__lede">Three formats, each a complete meal — protein, bariis, salad, sambusas, sauce, and shaah. Order one or layer them up for bigger gatherings. All prices include foil-tray service, tongs, biodegradable plates and cutlery.</p>
+      </div>
+      <div class="sect__meta">3 formats</div>
+    </div>
+
+    <div class="platters">
+
+      <article class="platter">
+        <div class="platter__media">
+          <span>Family Platter — image</span>
+        </div>
+        <div class="platter__body">
+          <span class="platter__lbl">For 10 — 15 guests</span>
+          <h3 class="platter__name">The <em>Family</em> Platter</h3>
+          <p class="platter__desc">A whole shoulder of slow-roasted lamb, eight-hour haniid, served on bariis with caramelised onions, hilib ari, sambusas, kachumbari salad, and a jar of basbaas. Shaah in a flask on the side.</p>
+          <dl class="platter__meta">
+            <div><dt>Protein</dt><dd>1 whole shoulder</dd></div>
+            <div><dt>Rice</dt><dd>3 kg bariis</dd></div>
+            <div><dt>Sides</dt><dd>4 included</dd></div>
+            <div><dt>Sambusas</dt><dd>20 pieces</dd></div>
+          </dl>
+          <div class="platter__price"><strong>£185</strong><small>£12.30 / head</small></div>
+          <a class="platter__cta" href="#inquire">Reserve this platter
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="platter platter--featured">
+        <span class="platter__badge">Most ordered</span>
+        <div class="platter__media">
+          <span>Celebration Platter — image</span>
+        </div>
+        <div class="platter__body">
+          <span class="platter__lbl">For 25 — 35 guests</span>
+          <h3 class="platter__name">The <em>Celebration</em> Platter</h3>
+          <p class="platter__desc">Our Nikkah and Walimah favourite. Whole roasted lamb on a 6 kg bed of bariis iskukaris, chicken suqaar, six house sides, two flasks of shaah, dates, malawax with honey, and a plated dessert station for thirty.</p>
+          <dl class="platter__meta">
+            <div><dt>Protein</dt><dd>Whole lamb</dd></div>
+            <div><dt>Rice</dt><dd>6 kg bariis</dd></div>
+            <div><dt>Sides</dt><dd>6 included</dd></div>
+            <div><dt>Sambusas</dt><dd>50 pieces</dd></div>
+          </dl>
+          <div class="platter__price"><strong>£395</strong><small>£13.20 / head</small></div>
+          <a class="platter__cta" href="#inquire">Reserve this platter
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="platter">
+        <div class="platter__media">
+          <span>Mega Fusion Platter — image</span>
+        </div>
+        <div class="platter__body">
+          <span class="platter__lbl">For 50 — 80 guests</span>
+          <h3 class="platter__name">The <em>Mega Fusion</em> Platter</h3>
+          <p class="platter__desc">East Africa on one long table — two whole lambs, chicken haniid, beef suqaar, chipsi maya, anjero stacks, hilib ari, ten house sides, a salad bar, three flasks of shaah, dates, malawax and pineapple finishers.</p>
+          <dl class="platter__meta">
+            <div><dt>Protein</dt><dd>2 lambs + chicken</dd></div>
+            <div><dt>Rice</dt><dd>12 kg bariis</dd></div>
+            <div><dt>Sides</dt><dd>10 included</dd></div>
+            <div><dt>Sambusas</dt><dd>120 pieces</dd></div>
+          </dl>
+          <div class="platter__price"><strong>£795</strong><small>£13.30 / head</small></div>
+          <a class="platter__cta" href="#inquire">Reserve this platter
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== 02 HOW IT WORKS ===================== -->
+  <section class="sect" id="howitworks">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">02 — How It Works</span>
+        <h2 class="sect__title">From inquiry to <em>the first scoop of bariis</em>.</h2>
+      </div>
+      <div class="sect__meta">4 steps · 7 days</div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="step">
+        <div class="step__num">Step 01</div>
+        <h3 class="step__title">Tell us the <em>date and headcount</em></h3>
+        <p class="step__desc">Drop us a note with your event date, postcode, and rough headcount. We'll come back within 24 hours with a tailored quote and a draft menu.</p>
+        <div class="step__lead">≈ 24 hours</div>
+      </div>
+
+      <div class="step">
+        <div class="step__num">Step 02</div>
+        <h3 class="step__title">Shape the <em>menu together</em></h3>
+        <p class="step__desc">A short call or WhatsApp thread to pick proteins, swap sides, flag allergies, and confirm timing for delivery and warm-up. We'll send a final menu and invoice.</p>
+        <div class="step__lead">3 — 5 days out</div>
+      </div>
+
+      <div class="step">
+        <div class="step__num">Step 03</div>
+        <h3 class="step__title">We <em>cook on the day</em></h3>
+        <p class="step__desc">Lamb goes in at dawn so it falls off the bone by lunch. Sambusas are folded that morning, bariis is finished an hour before we load the van.</p>
+        <div class="step__lead">Event morning</div>
+      </div>
+
+      <div class="step">
+        <div class="step__num">Step 04</div>
+        <h3 class="step__title">Hot delivery <em>&amp; set-up</em></h3>
+        <p class="step__desc">Our team arrives 45 minutes before service, lays out platters on heat-warmers, places sauces and shaah, and slips out quietly — or stays on as servers for an extra fee.</p>
+        <div class="step__lead">45 min before</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 03 OCCASION MENUS ===================== -->
+  <section class="sect" id="occasions">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">03 — Occasion Menus</span>
+        <h2 class="sect__title">Menus shaped <em>around the moment</em>.</h2>
+        <p class="sect__lede">Starting points, not straitjackets. Everything is adjusted to your headcount, room and timings. Pricing shown is per head, with set-up and delivery within fifteen miles included.</p>
+      </div>
+      <div class="sect__meta">6 occasions</div>
+    </div>
+
+    <div class="occasions">
+
+      <article class="occ">
+        <div class="occ__head">
+          <h3 class="occ__title">Nikkah <em>&amp; Walimah</em></h3>
+          <span class="occ__price">From £22 / head</span>
+        </div>
+        <ul class="occ__list">
+          <li>Whole roasted lamb on bariis iskukaris, served with caramelised onion and raisin</li>
+          <li>Chicken haniid, slow-cooked overnight</li>
+          <li>Five house sides — salata, foul, hummus, beetroot, kachumbari</li>
+          <li>Sambusas (beef &amp; vegetable), 4 per guest</li>
+          <li>Dates, malawax with honey, fresh fruit board</li>
+          <li>Spiced shaah by the urn, mango lassi station</li>
+          <li><em>White-glove plated service available on request</em></li>
+        </ul>
+        <div class="occ__foot"><strong>50 – 250 guests</strong> · 10 days' notice</div>
+      </article>
+
+      <article class="occ">
+        <div class="occ__head">
+          <h3 class="occ__title">Eid <em>family lunch</em></h3>
+          <span class="occ__price">From £18 / head</span>
+        </div>
+        <ul class="occ__list">
+          <li>Hilib ari (goat) and chicken on bariis</li>
+          <li>Suqaar — beef and vegetable</li>
+          <li>Anjero stacks with shaah-soaked sugar</li>
+          <li>Three sides — basbaas, salata, fruit</li>
+          <li>Sambusas, 3 per guest, plus a tray of kac kac</li>
+          <li>Dates, fresh fruit, spiced shaah</li>
+        </ul>
+        <div class="occ__foot"><strong>20 – 80 guests</strong> · 7 days' notice</div>
+      </article>
+
+      <article class="occ">
+        <div class="occ__head">
+          <h3 class="occ__title">Aqiqah <em>celebrations</em></h3>
+          <span class="occ__price">From £24 / head</span>
+        </div>
+        <ul class="occ__list">
+          <li>Whole lamb shoulder or shank platters</li>
+          <li>Bariis with raisin, caramelised onion, almond</li>
+          <li>Foul medames and sweet potato suqaar</li>
+          <li>A dedicated children's tray — mild chicken, rice, sabayaad</li>
+          <li>Sambusas, dates, malawax</li>
+          <li>Shaah and rosewater milk for elders</li>
+        </ul>
+        <div class="occ__foot"><strong>30 – 120 guests</strong> · 7 days' notice</div>
+      </article>
+
+      <article class="occ">
+        <div class="occ__head">
+          <h3 class="occ__title">Ramadan <em>iftar &amp; suhoor</em></h3>
+          <span class="occ__price">From £16 / head</span>
+        </div>
+        <ul class="occ__list">
+          <li>Dates and Zamzam-style water at every place setting</li>
+          <li>Sambusas (4 per guest), bajiya, sweet bur</li>
+          <li>Maraq (light spiced broth) with sabayaad</li>
+          <li>Bariis with chicken suqaar — kept warm for the second sitting</li>
+          <li>Foul medames, fresh fruit, shaah and tamarind juice</li>
+          <li><em>Timed to the local maghrib — never late</em></li>
+        </ul>
+        <div class="occ__foot"><strong>30 – 200 guests</strong> · 14 days' notice in Ramadan</div>
+      </article>
+
+      <article class="occ">
+        <div class="occ__head">
+          <h3 class="occ__title">Corporate <em>&amp; community</em></h3>
+          <span class="occ__price">From £20 / head</span>
+        </div>
+        <ul class="occ__list">
+          <li>Buffet-style chicken &amp; beef suqaar, mixed bariis</li>
+          <li>Salad bar — kachumbari, beetroot, hummus, foul</li>
+          <li>Sambusa pyramids on each table</li>
+          <li>Vegan tray (lentils, vegetable suqaar, foul) at every event</li>
+          <li>Bottled juices, shaah, soft drinks</li>
+          <li><em>Branded napkins on request — we coordinate</em></li>
+        </ul>
+        <div class="occ__foot"><strong>15 – 150 guests</strong> · 5 days' notice</div>
+      </article>
+
+      <article class="occ">
+        <div class="occ__head">
+          <h3 class="occ__title">Memorials <em>&amp; remembrance</em></h3>
+          <span class="occ__price">From £14 / head</span>
+        </div>
+        <ul class="occ__list">
+          <li>A quiet, modest menu — no display, no service team</li>
+          <li>Bariis with chicken and lamb, kept simple</li>
+          <li>Foul, salata, kac kac, dates</li>
+          <li>Two flasks of shaah, fresh fruit</li>
+          <li>Delivered to the masjid hall or home with care</li>
+          <li><em>Same-day service available where possible — call us</em></li>
+        </ul>
+        <div class="occ__foot"><strong>20 – 150 guests</strong> · Same day where we can</div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== 04 WHAT'S INCLUDED / ADD-ONS ===================== -->
+  <section class="sect" id="included">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">04 — Included &amp; Extras</span>
+        <h2 class="sect__title">What's in the price, <em>and what isn't</em>.</h2>
+      </div>
+      <div class="sect__meta">No surprises</div>
+    </div>
+
+    <div class="twocol">
+
+      <div class="panel panel--light">
+        <span class="panel__num">Always included</span>
+        <h3 class="panel__title">In every <em>quote</em>.</h3>
+        <ul class="panel__list">
+          <li>
+            <span class="tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><strong>Delivery within 15 miles</strong><small>Hot-bag insulated transport, timed to the minute. £1 / mile beyond.</small></div>
+            <span class="pr">£0</span>
+          </li>
+          <li>
+            <span class="tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><strong>Buffet set-up &amp; warm-trays</strong><small>Foil chafing dishes with fuel canisters, tongs, serving spoons, ladles for sauce.</small></div>
+            <span class="pr">£0</span>
+          </li>
+          <li>
+            <span class="tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><strong>Plates, cutlery &amp; napkins</strong><small>Bagasse plates, PLA cutlery, kraft napkins — all compostable.</small></div>
+            <span class="pr">£0</span>
+          </li>
+          <li>
+            <span class="tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><strong>Shaah service</strong><small>Hot spiced tea by the urn, fresh from the kitchen, with sugar &amp; milk.</small></div>
+            <span class="pr">£0</span>
+          </li>
+          <li>
+            <span class="tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><strong>Allergen book</strong><small>A printed allergen breakdown for every dish, hand-delivered with the food.</small></div>
+            <span class="pr">£0</span>
+          </li>
+          <li>
+            <span class="tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><strong>15% over-portioning</strong><small>We always cook extra, because we'd rather you take home leftovers than run short.</small></div>
+            <span class="pr">£0</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="panel panel--dark">
+        <span class="panel__num">Add-ons</span>
+        <h3 class="panel__title">A few <em>extras</em>, if you want them.</h3>
+        <ul class="panel__list">
+          <li>
+            <span class="plus"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            <div><strong>Server team</strong><small>Two to four servers in black aprons, present through service.</small></div>
+            <span class="pr">£28 / hour</span>
+          </li>
+          <li>
+            <span class="plus"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            <div><strong>Live shaah station</strong><small>A team member brews and pours from a samawar all night.</small></div>
+            <span class="pr">£140</span>
+          </li>
+          <li>
+            <span class="plus"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            <div><strong>Porcelain &amp; linen</strong><small>White china, gold rim, linen napkins. Includes wash &amp; return.</small></div>
+            <span class="pr">£3.50 / head</span>
+          </li>
+          <li>
+            <span class="plus"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            <div><strong>Whole-lamb display</strong><small>Carved tableside on a wooden board, presented with herbs.</small></div>
+            <span class="pr">£95</span>
+          </li>
+          <li>
+            <span class="plus"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            <div><strong>Dessert station</strong><small>Halwa, baklava, fresh mango cubes, malawax tower for thirty.</small></div>
+            <span class="pr">£4.50 / head</span>
+          </li>
+          <li>
+            <span class="plus"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+            <div><strong>Bukhoor &amp; rose-water</strong><small>Frankincense burner and rose-water bowl for guests on arrival.</small></div>
+            <span class="pr">£45</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 05 PAST EVENTS ===================== -->
+  <section class="sect" id="events">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">05 — Notes From The Field</span>
+        <h2 class="sect__title">A few of the <em>tables we've set</em>.</h2>
+      </div>
+      <div class="sect__meta">Last 6 months</div>
+    </div>
+
+    <div class="events">
+
+      <article class="event">
+        <div class="event__head">
+          <span class="event__kind">Walimah</span>
+          <span class="event__date">Mar 2026</span>
+        </div>
+        <blockquote>The aunties were quiet for the first ten minutes, which is the highest compliment a Somali caterer can ever receive. Lamb fell off the bone exactly as it should.</blockquote>
+        <div class="event__meta"><span><strong>180</strong> guests</span><span><strong>Plumstead</strong></span><span>Celebration platter ×6</span></div>
+      </article>
+
+      <article class="event">
+        <div class="event__head">
+          <span class="event__kind">Corporate</span>
+          <span class="event__date">Feb 2026</span>
+        </div>
+        <blockquote>Half the office had never tried Somali food. By the end of lunch the basbaas jars were empty and three people asked for the catering details for their own events.</blockquote>
+        <div class="event__meta"><span><strong>60</strong> guests</span><span><strong>Canary Wharf</strong></span><span>Buffet set-up</span></div>
+      </article>
+
+      <article class="event">
+        <div class="event__head">
+          <span class="event__kind">Aqiqah</span>
+          <span class="event__date">Jan 2026</span>
+        </div>
+        <blockquote>Two whole lambs, three tiers of malawax, and a children's tray that kept twenty cousins quiet. The set-up team arrived early and left the kitchen cleaner than they found it.</blockquote>
+        <div class="event__meta"><span><strong>110</strong> guests</span><span><strong>Tooting</strong></span><span>Mega Fusion ×1</span></div>
+      </article>
+
+      <article class="event">
+        <div class="event__head">
+          <span class="event__kind">Iftar</span>
+          <span class="event__date">Ramadan 2026</span>
+        </div>
+        <blockquote>Maghrib was 18:14. The platters were uncovered at 18:09. That precision is the whole game during Ramadan, and Maandeeq understood it without us asking twice.</blockquote>
+        <div class="event__meta"><span><strong>240</strong> guests</span><span><strong>Greenwich Masjid</strong></span><span>Iftar menu ×2 sittings</span></div>
+      </article>
+
+      <article class="event">
+        <div class="event__head">
+          <span class="event__kind">Eid</span>
+          <span class="event__date">Eid al-Fitr 2026</span>
+        </div>
+        <blockquote>We did three sittings of forty in our garden — the platters were swapped out hot and on time each time. Felt like the kitchen was in our house, just much better.</blockquote>
+        <div class="event__meta"><span><strong>120</strong> guests</span><span><strong>Forest Hill</strong></span><span>Family platter ×8</span></div>
+      </article>
+
+      <article class="event">
+        <div class="event__head">
+          <span class="event__kind">Nikkah</span>
+          <span class="event__date">Nov 2025</span>
+        </div>
+        <blockquote>Our venue had no kitchen, just a back room with a kettle. They brought a whole banquet and a tableside lamb carving. Guests are still talking about it.</blockquote>
+        <div class="event__meta"><span><strong>95</strong> guests</span><span><strong>Lewisham</strong></span><span>Celebration ×3 + carving</span></div>
+      </article>
+
+    </div>
+  </section>
+
+<!-- ===================== INQUIRY ===================== -->
+<section class="inquiry" id="inquire">
+  <div class="inquiry__inner">
+
+    <div class="inquiry__txt">
+      <span class="inquiry__num">06 — Inquire</span>
+      <h2 class="inquiry__title">Tell us about <em>your gathering</em>.</h2>
+      <p class="inquiry__lede">A quick form to start the conversation. We'll come back within 24 hours with a draft menu, a quote, and a few thoughtful questions.</p>
+
+      <div class="inquiry__contacts">
+        <a class="inquiry__contact" href="mailto:catering@maandeeq.co.uk">
+          <span class="inquiry__icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <div>
+            <dt>Email — events team</dt>
+            <dd>catering@maandeeq.co.uk</dd>
+            <small>Replies within 24 hours, every day except Mondays</small>
+          </div>
+        </a>
+        <a class="inquiry__contact" href="tel:+442083111234">
+          <span class="inquiry__icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.71 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.71A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div>
+            <dt>Phone — direct line</dt>
+            <dd>020 8311 1234</dd>
+            <small>Tue – Sun, 11:30am – 9:00pm · Faster for same-week dates</small>
+          </div>
+        </a>
+        <a class="inquiry__contact" href="https://wa.me/447700900000">
+          <span class="inquiry__icon" style="background:var(--whats);color:#06281a">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.1-.3.1-.6 0-1.5-.7-2.5-1.3-3.5-3-.3-.4.3-.4.7-1.4.1-.2 0-.4 0-.5s-.6-1.4-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.2 15 3.8 13.5 3.8 12 3.8 7.5 7.5 3.8 12 3.8s8.2 3.7 8.2 8.2-3.7 8-8.2 8z"/></svg>
+          </span>
+          <div>
+            <dt>WhatsApp — quickest</dt>
+            <dd>+44 7700 900 000</dd>
+            <small>Voice notes welcome — sometimes easier than typing it all out</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <form class="form" id="cateringForm">
+      <div class="form__grid">
+
+        <div class="field"><label for="name">Your name</label><input id="name" type="text" placeholder="Halima Yusuf" required/></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com" required/></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="07700 900 000"/></div>
+        <div class="field"><label for="date">Event date</label><input id="date" type="date"/></div>
+
+        <div class="field"><label for="guests">Approximate headcount</label>
+          <select id="guests">
+            <option>Under 25 guests</option>
+            <option selected>25 – 50 guests</option>
+            <option>50 – 100 guests</option>
+            <option>100 – 200 guests</option>
+            <option>200+ guests</option>
+          </select>
+        </div>
+        <div class="field"><label for="postcode">Event postcode</label><input id="postcode" type="text" placeholder="SE18 6HQ"/></div>
+
+        <div class="field field--full">
+          <label>Type of event</label>
+          <div class="chipgroup">
+            <input type="radio" name="occ" id="o1" /><label for="o1">Nikkah / Walimah</label>
+            <input type="radio" name="occ" id="o2" /><label for="o2">Aqiqah</label>
+            <input type="radio" name="occ" id="o3" /><label for="o3">Eid lunch</label>
+            <input type="radio" name="occ" id="o4" /><label for="o4">Iftar</label>
+            <input type="radio" name="occ" id="o5" /><label for="o5">Corporate</label>
+            <input type="radio" name="occ" id="o6" /><label for="o6">Memorial</label>
+            <input type="radio" name="occ" id="o7" /><label for="o7">Other</label>
+          </div>
+        </div>
+
+        <div class="field field--full">
+          <label>Service style</label>
+          <div class="chipgroup">
+            <input type="radio" name="srv" id="s1" /><label for="s1">Drop-off platters</label>
+            <input type="radio" name="srv" id="s2" /><label for="s2">Buffet set-up</label>
+            <input type="radio" name="srv" id="s3" /><label for="s3">Servers on-site</label>
+            <input type="radio" name="srv" id="s4" /><label for="s4">Full-service banquet</label>
+          </div>
+        </div>
+
+        <div class="field field--full">
+          <label for="msg">Anything else we should know?</label>
+          <textarea id="msg" placeholder="Allergies, themes, timings, prayer breaks, venue quirks — the more the better."></textarea>
+        </div>
+
+      </div>
+
+      <div class="form__actions">
+        <p class="form__hint">We reply within 24 hours. For dates inside seven days, please call — we'll do everything we can to make it work.</p>
+        <button class="submitbtn" type="submit">
+          Send the inquiry
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+<!-- QUICK FACTS -->
+<section class="facts">
+  <div class="facts__inner">
+    <div class="facts__head">
+      <span class="facts__num">07 — Logistics</span>
+      <h2 class="facts__title">The <em>numbers behind</em> the platter.</h2>
+    </div>
+    <div class="facts__grid">
+      <div class="fact"><span class="fact__lbl">Minimum headcount</span><p class="fact__val"><em>10</em> guests</p><p class="fact__sub">No lower limit on drop-off platters. Buffet set-up starts at twenty.</p></div>
+      <div class="fact"><span class="fact__lbl">Lead time</span><p class="fact__val"><em>7</em> days standard</p><p class="fact__sub">Five days for corporate, ten for Walimah, fourteen during Ramadan.</p></div>
+      <div class="fact"><span class="fact__lbl">Delivery radius</span><p class="fact__val"><em>15</em> miles free</p><p class="fact__sub">From SE18. £1 per mile thereafter, up to fifty miles.</p></div>
+      <div class="fact"><span class="fact__lbl">Deposit</span><p class="fact__val"><em>25%</em> on booking</p><p class="fact__sub">Refundable to within 72 hours of the event. Balance on the day.</p></div>
+      <div class="fact"><span class="fact__lbl">Largest event served</span><p class="fact__val"><em>420</em> guests</p><p class="fact__sub">Eid lunch at Greenwich Masjid, April 2024. We were ready.</p></div>
+      <div class="fact"><span class="fact__lbl">Certifications</span><p class="fact__val"><em>HMC</em> &amp; <em>HFA</em></p><p class="fact__sub">100% halal end-to-end. Allergen book on every delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wordmark">MAANDEEQ</div>
+  <p class="tagline">Somali · Catering · Woolwich</p>
+  <p class="quote">"A guest is a gift. The platter is how we say so — quietly, generously, and on time."</p>
+  <p class="legal">© 2026 Maandeeq Restaurant Ltd · 12 Powis Street, Woolwich, SE18 · catering@maandeeq.co.uk</p>
+</footer>
+
+<!-- STICKY ACTIONS -->
+<div class="actions">
+  <a class="actions__btn actions__btn--call" href="tel:+442083111234">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.71 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.71A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a class="actions__btn actions__btn--menu" href="Menu.html">
+    Menu
+  </a>
+  <a class="actions__btn actions__btn--book" href="#inquire">
+    Request a quote
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+
+<script>
+/* TICKER */
+(function(){
+  const items = [
+    {tag:"Off-site catering", body:"Greater London + 15 miles free"},
+    {tag:"Whole roasted lamb", body:"From £185 / family platter"},
+    {tag:"Nikkahs & Walimahs", body:"Plated service available"},
+    {tag:"7 days' notice", body:"Faster on request — call us"},
+    {tag:"HMC & HFA halal", body:"End-to-end, every event"},
+    {tag:"Free delivery", body:"15-mile radius from SE18"},
+    {tag:"Iftar bookings open", body:"Ramadan 2027 — early list"},
+  ];
+  const html = items.map(it=>`<span><em>${it.tag}</em>${it.body}<i class="sep">·</i></span>`).join("");
+  const t = document.getElementById('ticker');
+  t.innerHTML = html + html; // doubled for seamless loop
+})();
+
+/* STICKY NAV — active section + smooth scroll */
+(function(){
+  const tabs = Array.from(document.querySelectorAll('.stickynav__tab'));
+  const targets = tabs.map(t => document.getElementById(t.dataset.target)).filter(Boolean);
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const el = document.getElementById(tab.dataset.target);
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 110;
+      window.scrollTo({top:y, behavior:'smooth'});
+    });
+  });
+
+  // Form submit — soft confirmation
+  const form = document.getElementById('cateringForm');
+  if(form){
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.style.opacity = '0.6';
+      const b = form.querySelector('.submitbtn');
+      b.innerHTML = 'Sent — we’ll be in touch';
+      b.style.background = 'var(--green)';
+      b.style.color = 'var(--paper)';
+    });
+  }
+
+  // Intersection observer to highlight active tab
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const id = entry.target.id;
+        tabs.forEach(t => t.classList.toggle('is-on', t.dataset.target === id));
+      }
+    });
+  }, {rootMargin: '-40% 0px -55% 0px', threshold: 0});
+  targets.forEach(t => io.observe(t));
+})();
+</script>
+</body>
+</html>

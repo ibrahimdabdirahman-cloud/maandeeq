@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#14110D" />
+<title>FAQ · Maandeeq Somali Restaurant, Woolwich</title>
+<meta name="description" content="Answers to the questions we get most often — about our halal kitchen, bookings, dietary options, families, deliveries and visiting Maandeeq in Woolwich." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#14110D;
+    --ink-2:#2A211A;
+    --ink-3:#3B2F25;
+    --paper:#F5EFE6;
+    --paper-2:#EADFCC;
+    --paper-3:#FBF7EF;
+    --camel:#8B6B4F;
+    --camel-dk:#6A4F38;
+    --gold:#D4A24C;
+    --gold-dk:#B7873A;
+    --muted:#8A7868;
+    --green:#6B8E5A;
+
+    --serif:"Bodoni Moda","Cormorant Garamond","Didot",serif;
+    --sans:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Space Mono",ui-monospace,Menlo,monospace;
+
+    --pad:clamp(18px,5vw,40px);
+    --r-card:20px;
+    --r-pill:999px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:120px}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-wrap:pretty;
+    overscroll-behavior:none;
+    padding-bottom:90px;
+  }
+  img{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer;color:inherit;background:none;border:0}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--gold);color:var(--ink)}
+
+  /* ============================= TICKER ============================= */
+  .ticker{
+    background:var(--ink);color:var(--paper);
+    overflow:hidden;position:relative;
+    border-bottom:1px solid rgba(212,162,76,0.18);
+  }
+  .ticker__track{
+    display:flex;gap:48px;padding:9px 0;width:max-content;
+    animation:ticker 60s linear infinite;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:rgba(245,239,230,0.8);
+  }
+  .ticker__track span em{color:var(--gold);font-style:normal;margin-right:8px}
+  .ticker__track span .sep{display:inline-block;margin:0 16px;color:rgba(245,239,230,0.3)}
+  @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============================= HERO ============================= */
+  .hero{
+    position:relative;padding:30px var(--pad) 56px;
+    background:
+      radial-gradient(120% 70% at 50% 0%, rgba(212,162,76,0.18), transparent 55%),
+      linear-gradient(180deg,#14110D 0%, #1B1610 100%);
+    color:var(--paper);overflow:hidden;text-align:center;
+  }
+  .hero__back{
+    position:absolute;top:18px;left:var(--pad);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.75);
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.06);border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;z-index:2;
+  }
+  .hero__back:hover{background:rgba(245,239,230,0.12)}
+  .hero__nav{
+    position:absolute;top:18px;right:var(--pad);
+    display:inline-flex;gap:6px;z-index:2;
+    max-width:calc(100% - 130px);
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .hero__nav::-webkit-scrollbar{display:none}
+  .hero__nav a{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.75);padding:9px 14px;border-radius:var(--r-pill);white-space:nowrap;
+    background:rgba(245,239,230,0.06);border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;
+  }
+  .hero__nav a:hover{background:rgba(245,239,230,0.12)}
+
+  /* big question-mark watermark */
+  .hero__mark{
+    position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(420px,68vw,720px);
+    line-height:1;color:rgba(212,162,76,0.045);
+    pointer-events:none;user-select:none;
+  }
+
+  .hero__eyebrow{
+    margin-top:48px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--gold);display:inline-flex;align-items:center;gap:12px;
+    position:relative;z-index:1;
+  }
+  .hero__eyebrow::before,.hero__eyebrow::after{
+    content:"";display:block;width:24px;height:1px;background:rgba(212,162,76,.45);
+  }
+  .hero__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(48px,10vw,96px);line-height:0.92;letter-spacing:-0.03em;
+    margin:18px 0 16px;position:relative;z-index:1;
+  }
+  .hero__title em{font-style:italic;color:var(--gold);font-weight:400}
+  .hero__sub{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(17px,2vw,21px);line-height:1.45;
+    color:rgba(245,239,230,0.78);
+    margin:0 auto;max-width:46ch;position:relative;z-index:1;
+  }
+
+  /* search */
+  .hero__search{
+    margin:36px auto 0;max-width:520px;position:relative;z-index:1;
+    display:flex;align-items:center;gap:10px;
+    background:rgba(245,239,230,0.06);
+    border:1px solid rgba(245,239,230,0.18);
+    border-radius:var(--r-pill);
+    padding:6px 6px 6px 18px;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .hero__search:focus-within{
+    border-color:var(--gold);background:rgba(245,239,230,0.09);
+  }
+  .hero__search svg{color:rgba(245,239,230,0.55);flex-shrink:0}
+  .hero__search input{
+    flex:1;background:transparent;border:0;outline:0;color:var(--paper);
+    font-family:var(--sans);font-size:15px;padding:12px 0;
+  }
+  .hero__search input::placeholder{color:rgba(245,239,230,0.45)}
+  .hero__search kbd{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.12em;
+    padding:6px 9px;border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.08);color:rgba(245,239,230,0.6);
+    border:1px solid rgba(245,239,230,0.12);
+  }
+  .hero__search button{
+    padding:11px 18px;border-radius:var(--r-pill);
+    background:var(--gold);color:var(--ink);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;
+    transition:background .2s ease;
+  }
+  .hero__search button:hover{background:var(--gold-dk)}
+
+  .hero__hint{
+    margin-top:18px;position:relative;z-index:1;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:rgba(245,239,230,0.5);
+  }
+
+  /* ============================= STICKY NAV ============================= */
+  .stickynav{
+    position:sticky;top:0;z-index:40;
+    background:rgba(245,239,230,0.92);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border-bottom:1px solid rgba(20,17,13,0.08);
+    padding:10px var(--pad);
+  }
+  .stickynav__inner{
+    max-width:1080px;margin:0 auto;
+    display:flex;align-items:center;gap:10px;
+  }
+  .stickynav__tabs{
+    flex:1;display:flex;gap:4px;overflow-x:auto;
+    scrollbar-width:none;-ms-overflow-style:none;
+    scroll-behavior:smooth;padding:2px;
+  }
+  .stickynav__tabs::-webkit-scrollbar{display:none}
+  .stickynav__tab{
+    flex-shrink:0;padding:9px 14px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--ink-2);font-weight:500;white-space:nowrap;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:background .2s ease, color .2s ease;
+  }
+  .stickynav__tab:hover{background:rgba(20,17,13,0.05)}
+  .stickynav__tab.is-on{background:var(--ink);color:var(--paper)}
+  .stickynav__tab .count{
+    font-family:var(--mono);font-size:9px;opacity:0.55;
+  }
+  .stickynav__tab.is-on .count{opacity:0.7}
+
+  /* ============================= LAYOUT ============================= */
+  main{max-width:1080px;margin:0 auto;padding:0 var(--pad)}
+
+  /* result count strip */
+  .resultbar{
+    margin:42px 0 8px;
+    display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:14px;
+    padding:14px 18px;
+    border-radius:14px;
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+  }
+  .resultbar__count{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .resultbar__count strong{color:var(--ink);font-weight:700}
+  .resultbar__clear{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--ink-2);padding:7px 12px;border-radius:var(--r-pill);
+    border:1px solid rgba(20,17,13,0.15);
+    transition:background .2s ease;display:none;
+  }
+  .resultbar__clear.is-on{display:inline-block}
+  .resultbar__clear:hover{background:rgba(20,17,13,0.05)}
+
+  .sect{padding:48px 0 16px}
+  .sect__head{margin-bottom:24px;display:grid;grid-template-columns:1fr;gap:8px;align-items:end}
+  @media (min-width:760px){
+    .sect__head{grid-template-columns:1fr auto;gap:24px}
+  }
+  .sect__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:8px;
+  }
+  .sect__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(30px,5.4vw,46px);
+    line-height:1;letter-spacing:-0.025em;margin:0;
+  }
+  .sect__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .sect__meta{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--muted);align-self:end;padding-bottom:6px;
+  }
+
+  /* ============================= FAQ ACCORDION ============================= */
+  .faq{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    overflow:hidden;
+  }
+  .qa{
+    border-top:1px solid rgba(20,17,13,0.08);
+  }
+  .qa:first-child{border-top:0}
+  .qa[hidden]{display:none}
+
+  .qa__sum{
+    list-style:none;cursor:pointer;
+    display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:start;
+    padding:22px 24px;
+    transition:background .15s ease;
+  }
+  .qa__sum::-webkit-details-marker{display:none}
+  .qa__sum:hover{background:rgba(212,162,76,0.06)}
+  .qa[open] .qa__sum{background:rgba(212,162,76,0.08)}
+
+  .qa__idx{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;font-weight:700;
+    color:var(--camel-dk);padding-top:4px;min-width:24px;
+  }
+  .qa__q{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(18px,2.2vw,22px);line-height:1.25;letter-spacing:-0.015em;
+    color:var(--ink);margin:0;
+  }
+  .qa[open] .qa__q em{color:var(--camel-dk);font-style:italic}
+
+  .qa__toggle{
+    width:32px;height:32px;border-radius:50%;
+    border:1px solid rgba(20,17,13,0.18);
+    display:inline-flex;align-items:center;justify-content:center;
+    color:var(--ink-2);flex-shrink:0;
+    transition:background .2s ease, border-color .2s ease, transform .25s ease;
+  }
+  .qa__toggle svg{transition:transform .25s ease}
+  .qa[open] .qa__toggle{
+    background:var(--ink);color:var(--paper);border-color:var(--ink);
+  }
+  .qa[open] .qa__toggle svg{transform:rotate(45deg)}
+
+  .qa__body{
+    padding:0 24px 26px 66px;
+    color:var(--ink-2);
+    font-size:16px;line-height:1.6;
+  }
+  .qa__body p{margin:0 0 12px;max-width:60ch}
+  .qa__body p:last-child{margin-bottom:0}
+  .qa__body strong{color:var(--ink);font-weight:600}
+  .qa__body em{
+    font-family:var(--serif);font-style:italic;color:var(--camel-dk);font-size:15px;
+  }
+  .qa__body a{
+    color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);
+    text-decoration-thickness:2px;text-underline-offset:3px;
+  }
+  .qa__body a:hover{text-decoration-color:var(--ink)}
+  .qa__tags{
+    margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;
+  }
+  .qa__tags span{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:5px 10px;border-radius:var(--r-pill);
+    border:1px solid rgba(20,17,13,0.12);
+    font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--ink-3);
+  }
+  .qa__tags span::before{
+    content:"";width:4px;height:4px;border-radius:50%;background:var(--camel);
+  }
+
+  /* highlight when matched */
+  .qa.is-highlight .qa__q mark{
+    background:rgba(212,162,76,0.45);color:inherit;padding:0 2px;border-radius:3px;
+  }
+  .qa.is-highlight .qa__body mark{
+    background:rgba(212,162,76,0.35);color:inherit;padding:0 2px;border-radius:3px;
+  }
+
+  @media (max-width:560px){
+    .qa__sum{padding:18px 16px;gap:12px}
+    .qa__body{padding:0 16px 20px 50px}
+    .qa__idx{min-width:18px;font-size:9px}
+  }
+
+  /* empty state */
+  .empty{
+    padding:80px 24px;text-align:center;
+    display:none;
+  }
+  .empty.is-on{display:block}
+  .empty__mark{
+    font-family:var(--serif);font-style:italic;font-size:72px;line-height:1;
+    color:var(--camel);margin:0 0 12px;
+  }
+  .empty h3{
+    font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-0.02em;
+    margin:0 0 8px;color:var(--ink);
+  }
+  .empty p{
+    font-family:var(--serif);font-style:italic;color:var(--ink-3);
+    font-size:16px;line-height:1.45;max-width:34ch;margin:0 auto 18px;
+  }
+  .empty a{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 18px;border-radius:var(--r-pill);
+    background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+    font-weight:700;
+  }
+
+  /* ============================= QUICK FACTS (dark band) ============================= */
+  .facts{
+    margin:64px calc(var(--pad)*-1) 0;
+    padding:72px var(--pad);
+    background:linear-gradient(180deg,#1A140E 0%, #221913 100%);
+    color:var(--paper);
+    position:relative;overflow:hidden;
+  }
+  .facts::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(60% 70% at 0% 0%, rgba(212,162,76,0.18), transparent 60%),
+      radial-gradient(50% 60% at 100% 100%, rgba(212,162,76,0.08), transparent 60%);
+    pointer-events:none;
+  }
+  .facts__inner{
+    max-width:1080px;margin:0 auto;position:relative;z-index:1;
+  }
+  .facts__head{margin-bottom:36px}
+  .facts__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--gold);display:block;margin-bottom:10px;
+  }
+  .facts__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(30px,5vw,44px);line-height:1;letter-spacing:-0.025em;
+    margin:0;max-width:18ch;
+  }
+  .facts__title em{font-style:italic;color:var(--gold)}
+  .facts__grid{
+    display:grid;grid-template-columns:1fr;gap:1px;
+    background:rgba(245,239,230,0.12);
+    border:1px solid rgba(245,239,230,0.12);
+    border-radius:var(--r-card);overflow:hidden;
+  }
+  @media (min-width:680px){
+    .facts__grid{grid-template-columns:1fr 1fr}
+  }
+  @media (min-width:1000px){
+    .facts__grid{grid-template-columns:1fr 1fr 1fr}
+  }
+  .fact{
+    padding:24px 26px;
+    background:#1A140E;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .fact__lbl{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--gold);
+  }
+  .fact__val{
+    font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-0.015em;
+    line-height:1.2;color:var(--paper);margin:0;
+  }
+  .fact__val em{font-style:italic;color:var(--gold)}
+  .fact__sub{
+    font-size:13px;line-height:1.5;color:rgba(245,239,230,0.65);margin:0;
+  }
+
+  /* ============================= STILL HAVE QUESTIONS CTA ============================= */
+  .ask{
+    margin:64px calc(var(--pad)*-1) 0;
+    padding:80px var(--pad);
+    background:var(--paper-2);text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .ask__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:12px;
+  }
+  .ask h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(36px,6vw,60px);line-height:0.98;letter-spacing:-0.03em;
+    margin:0 auto 16px;max-width:18ch;
+  }
+  .ask h2 em{font-style:italic;color:var(--camel-dk)}
+  .ask p{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(16px,1.8vw,19px);
+    color:var(--ink-3);line-height:1.45;
+    margin:0 auto 32px;max-width:46ch;
+  }
+  .ask__channels{
+    display:grid;grid-template-columns:1fr;gap:10px;
+    max-width:680px;margin:0 auto;
+  }
+  @media (min-width:680px){.ask__channels{grid-template-columns:1fr 1fr 1fr}}
+  .channel{
+    display:flex;flex-direction:column;align-items:flex-start;gap:8px;
+    padding:22px 22px 20px;
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.1);
+    border-radius:var(--r-card);
+    transition:transform .15s ease, border-color .2s ease, background .2s ease;
+    text-align:left;
+  }
+  .channel:hover{
+    transform:translateY(-2px);
+    border-color:var(--camel);
+  }
+  .channel__icon{
+    width:36px;height:36px;border-radius:50%;
+    background:var(--ink);color:var(--gold);
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-bottom:4px;
+  }
+  .channel__lbl{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .channel__val{
+    font-family:var(--serif);font-weight:500;font-size:21px;letter-spacing:-0.015em;
+    line-height:1.2;color:var(--ink);
+  }
+  .channel__hint{
+    font-size:13px;color:var(--ink-3);line-height:1.45;margin-top:2px;
+  }
+
+  /* ============================= FOOTER ============================= */
+  footer{
+    background:var(--ink);color:var(--paper);
+    padding:48px var(--pad) 30px;text-align:center;margin-top:0;
+  }
+  footer .wordmark{
+    font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:0.06em;
+    display:inline-block;padding:0 0 6px;border-bottom:1px solid var(--gold);position:relative;
+  }
+  footer .wordmark::before,footer .wordmark::after{
+    content:"";position:absolute;bottom:-1px;width:24%;height:1px;background:var(--gold)
+  }
+  footer .wordmark::before{left:-14px}
+  footer .wordmark::after{right:-14px}
+  footer .tagline{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--gold);margin:8px 0 18px;
+  }
+  footer .quote{
+    font-family:var(--serif);font-style:italic;color:rgba(245,239,230,0.7);
+    max-width:32ch;margin:0 auto;font-size:15px;line-height:1.4;
+  }
+  footer .legal{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:rgba(245,239,230,0.4);margin:18px 0 0;
+  }
+
+  /* ============================= STICKY ACTIONS ============================= */
+  .actions{
+    position:fixed;left:12px;right:12px;bottom:12px;z-index:60;
+    background:rgba(20,17,13,0.96);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    color:var(--paper);
+    border-radius:var(--r-pill);padding:8px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;
+    box-shadow:0 20px 50px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,162,76,0.18);
+    max-width:580px;margin:0 auto;
+  }
+  .actions__btn{
+    background:transparent;border:0;color:var(--paper);
+    padding:11px 6px;border-radius:calc(var(--r-pill) - 4px);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    transition:background .2s ease;
+  }
+  .actions__btn:hover{background:rgba(245,239,230,0.06)}
+  .actions__btn--book{background:var(--gold);color:var(--ink)}
+  .actions__btn--book:hover{background:var(--gold-dk)}
+  @media (min-width:760px){
+    body{padding-bottom:30px}
+    .actions{
+      left:auto;right:18px;bottom:18px;
+      grid-template-columns:1fr;width:auto;padding:6px;
+    }
+    .actions__btn{padding:12px 22px}
+    .actions__btn--menu,.actions__btn--call{display:none}
+  }
+
+  @media (max-width:520px){
+    .hero__search input{font-size:14px}
+    .hero__search kbd{display:none}
+    .hero__search button{padding:11px 14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker"></div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <a class="hero__back" href="index.html">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Home
+  </a>
+  <div class="hero__nav">
+    <a href="Menu.html">Menu</a>
+    <a href="Order.html">Order</a>
+    <a href="Catering.html">Catering</a>
+    <a href="About.html">About</a>
+    <a href="Reviews.html">Reviews</a>
+    <a href="Contact.html">Visit</a>
+    <a href="Reserve.html">Reserve</a>
+  </div>
+
+  <div class="hero__mark" aria-hidden="true">?</div>
+
+  <div class="hero__eyebrow">Frequently Asked · Help Centre</div>
+  <h1 class="hero__title">Questions, <em>kindly answered</em>.</h1>
+  <p class="hero__sub">From halal sourcing to booking the back room for thirty cousins — the things our guests ask us most, gathered in one place.</p>
+
+  <div class="hero__search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input id="q" type="search" placeholder="Search — try “halal”, “highchair”, “delivery”…" autocomplete="off" />
+    <kbd>/</kbd>
+    <button id="qBtn" type="button">Find</button>
+  </div>
+  <p class="hero__hint">28 questions across 6 categories — last updated April 2026</p>
+</header>
+
+<!-- STICKY NAV -->
+<nav class="stickynav">
+  <div class="stickynav__inner">
+    <div class="stickynav__tabs" id="tabs">
+      <button class="stickynav__tab is-on" data-target="visiting">Visiting <span class="count">5</span></button>
+      <button class="stickynav__tab" data-target="halal">Halal &amp; Sourcing <span class="count">4</span></button>
+      <button class="stickynav__tab" data-target="menu">Menu &amp; Dietary <span class="count">6</span></button>
+      <button class="stickynav__tab" data-target="bookings">Bookings &amp; Events <span class="count">5</span></button>
+      <button class="stickynav__tab" data-target="delivery">Delivery &amp; Takeaway <span class="count">4</span></button>
+      <button class="stickynav__tab" data-target="hospitality">Families &amp; Hospitality <span class="count">4</span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- RESULT BAR -->
+  <div class="resultbar" id="resultbar">
+    <span class="resultbar__count" id="resultCount"><strong>28</strong> Questions · 6 Categories</span>
+    <button class="resultbar__clear" id="clearBtn" type="button">Clear search ✕</button>
+  </div>
+
+  <!-- ===================== 01 VISITING ===================== -->
+  <section class="sect" id="visiting">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">01 — Visiting</span>
+        <h2 class="sect__title">Hours, parking <em>&amp; getting here</em>.</h2>
+      </div>
+      <div class="sect__meta">5 questions</div>
+    </div>
+
+    <div class="faq" data-group="visiting">
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">01</span>
+          <h3 class="qa__q">What are your <em>opening hours</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>We are open <strong>Tuesday through Sunday</strong>, from <strong>11:30 am to 10:30 pm</strong>. The kitchen runs late on <strong>Friday and Saturday evenings</strong> until 11:00 pm to look after the post-Maghrib crowd. We're closed on Mondays so our team can rest.</p>
+          <p><em>Shaah service continues for thirty minutes after the kitchen closes — never rushed.</em></p>
+          <div class="qa__tags"><span>Hours</span><span>Tue–Sun</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">02</span>
+          <h3 class="qa__q">Where are you, and how do I <em>get there</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>We are in the heart of <strong>Woolwich, South East London (SE18)</strong>, a four-minute walk from <strong>Woolwich Arsenal</strong> station (Elizabeth Line, DLR, National Rail). The 53, 54, 96, 161, 177, 178, 244 and 380 buses all stop within two minutes of our door.</p>
+          <p>If you're coming by river, the Woolwich pier is a ten-minute walk through the market.</p>
+          <div class="qa__tags"><span>Location</span><span>Elizabeth Line</span><span>DLR</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">03</span>
+          <h3 class="qa__q">Is there <em>parking</em> nearby?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>There's <strong>on-street pay-and-display</strong> on the surrounding streets — free after 6:30 pm and all day on Sunday. The closest paid car park is <strong>Love Lane Car Park</strong>, a three-minute walk away, with around 300 spaces.</p>
+          <p>We're inside the South Circular but <em>outside</em> the ULEZ congestion zone borders that get most people — but always double-check your route on TfL.</p>
+          <div class="qa__tags"><span>Parking</span><span>Car</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">04</span>
+          <h3 class="qa__q">Is the restaurant <em>step-free</em> and accessible?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Yes. We have <strong>step-free entry</strong> from the street, wide aisles between tables, and an <strong>accessible WC</strong> on the ground floor. If you'd like a table close to the entrance or away from the speakers during a busy service, just let us know when you book and we'll save the right spot for you.</p>
+          <div class="qa__tags"><span>Accessibility</span><span>Step-free</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">05</span>
+          <h3 class="qa__q">Is there a <em>prayer space</em> on site?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>We have a <strong>small, quiet prayer area</strong> with mats and a copy of the qibla direction. <strong>Woolwich Central Mosque</strong> is also a four-minute walk away if you'd prefer to pray in jama'ah. We're happy to time your courses around prayer — just give us a quiet nod and we'll hold the food.</p>
+          <div class="qa__tags"><span>Salah</span><span>Prayer space</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===================== 02 HALAL & SOURCING ===================== -->
+  <section class="sect" id="halal">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">02 — Halal &amp; Sourcing</span>
+        <h2 class="sect__title">A kitchen that's <em>halal end-to-end</em>.</h2>
+      </div>
+      <div class="sect__meta">4 questions</div>
+    </div>
+
+    <div class="faq" data-group="halal">
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">06</span>
+          <h3 class="qa__q">Is everything <em>100% halal</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Yes — <strong>completely</strong>. Every protein on our menu is HMC- or HFA-certified halal, sourced from a small set of trusted London-area butchers. We do not serve alcohol, pork, or any haram ingredient. There is no separate "non-halal" section to worry about.</p>
+          <p><em>If you ever want to see a certificate, ask any member of staff and we'll bring it to your table.</em></p>
+          <div class="qa__tags"><span>Halal</span><span>HMC</span><span>HFA</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">07</span>
+          <h3 class="qa__q">Is the meat <em>hand-slaughtered</em> or stunned?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Our <strong>lamb and chicken</strong> are HMC-certified, which means <strong>hand-slaughtered, non-stunned</strong>, with the tasmiyah recited at each animal. Our <strong>beef</strong> is HFA-certified. We keep both certificates on file and refresh them annually.</p>
+          <div class="qa__tags"><span>HMC</span><span>Non-stunned</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">08</span>
+          <h3 class="qa__q">Do you serve <em>alcohol</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>No. We are an <strong>alcohol-free restaurant</strong> by choice, and guests are kindly asked not to bring their own. Instead we pour generous <strong>spiced shaah</strong>, fresh juices, mango lassi, and a short list of soft drinks. Many guests tell us the food tastes better for it.</p>
+          <div class="qa__tags"><span>Alcohol-free</span><span>BYOB</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">09</span>
+          <h3 class="qa__q">Where do you <em>source</em> your meat and produce?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Lamb comes daily from a long-standing halal butcher in <strong>Edmonton</strong>; chicken from a family-run supplier in <strong>Leyton</strong>. Produce is picked up most mornings at <strong>New Spitalfields Market</strong>. Our cardamom, cumin and coriander are sourced through an East African importer in Whitechapel — and ground in our kitchen each morning.</p>
+          <div class="qa__tags"><span>Sourcing</span><span>Spices</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===================== 03 MENU & DIETARY ===================== -->
+  <section class="sect" id="menu">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">03 — Menu &amp; Dietary</span>
+        <h2 class="sect__title">What's on the plate, <em>and what's not</em>.</h2>
+      </div>
+      <div class="sect__meta">6 questions</div>
+    </div>
+
+    <div class="faq" data-group="menu">
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">10</span>
+          <h3 class="qa__q">What's your <em>signature dish</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>The <strong>Maandeeq Special Haniid Lamb Shank</strong> — slow-roasted for eight hours with our house xawaash, served on a bed of fragrant bariis rice with caramelised onions. If you're ordering for the first time, this is the one. <em>If you only ever order one thing from us, let it be this.</em></p>
+          <div class="qa__tags"><span>Signature</span><span>Haniid</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">11</span>
+          <h3 class="qa__q">Do you have <em>vegetarian or vegan</em> options?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Yes, more than people expect. Our <strong>vegetable suqaar</strong>, <strong>bariis with grilled halloumi</strong>, <strong>foul medames</strong>, <strong>spiced lentils</strong>, and most of our breakfast spread are vegetarian. Vegan-by-default options are marked with a small leaf on the menu; ask our team and they'll walk you through what can be adapted (most things can).</p>
+          <div class="qa__tags"><span>Vegetarian</span><span>Vegan</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">12</span>
+          <h3 class="qa__q">Can you handle <em>allergies</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Please tell your server <strong>before you order</strong>. We carry a full allergen book and a kitchen team trained to handle gluten, dairy, nut, sesame and shellfish allergies. We do prepare nuts and sesame in our kitchen, so we cannot guarantee an allergen-free environment — but we'll be honest with you about what is and isn't safe on any given day.</p>
+          <div class="qa__tags"><span>Allergies</span><span>Allergens</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">13</span>
+          <h3 class="qa__q">Is your food <em>very spicy</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Somali food is <strong>aromatic, not fiery</strong>. Our xawaash is built on cumin, coriander, cardamom and cinnamon — warmth without heat. If you'd like a kick, ask for a side of <strong>basbaas</strong> — our house green chilli sauce — and add it to taste.</p>
+          <div class="qa__tags"><span>Spice</span><span>Basbaas</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">14</span>
+          <h3 class="qa__q">Do you serve <em>breakfast</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Yes — and breakfast is one of our favourite services. From <strong>11:30 am until 1:00 pm</strong> we serve <strong>malawax with honey</strong>, <strong>anjero with suqaar</strong>, <strong>foul medames</strong>, and eggs to order. Best paired with shaah and a slow morning.</p>
+          <div class="qa__tags"><span>Breakfast</span><span>Malawax</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">15</span>
+          <h3 class="qa__q">What's the difference between <em>haniid, suqaar &amp; chipsi maya</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p><strong>Haniid</strong> is slow-roasted meat — typically lamb shank — cooked low and long until it falls off the bone. <strong>Suqaar</strong> is cubed meat or vegetables, sautéed quickly with onion, garlic and xawaash. <strong>Chipsi maya</strong> is a Tanzanian-Swahili chip omelette — comfort food we serve in honour of East Africa's shared kitchen.</p>
+          <p><em>You'll find a full glossary on our <a href="About.html#glossary">About page</a>.</em></p>
+          <div class="qa__tags"><span>Glossary</span><span>Dishes</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===================== 04 BOOKINGS & EVENTS ===================== -->
+  <section class="sect" id="bookings">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">04 — Bookings &amp; Events</span>
+        <h2 class="sect__title">Reserving, catering, <em>celebrating</em>.</h2>
+      </div>
+      <div class="sect__meta">5 questions</div>
+    </div>
+
+    <div class="faq" data-group="bookings">
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">16</span>
+          <h3 class="qa__q">Do I need a <em>reservation</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p><strong>Walk-ins are always welcome</strong> — there's almost always a table at lunchtime. For Friday and Saturday evenings, and for any party of <strong>five or more</strong>, we'd recommend booking ahead. You can <a href="index.html#reservations">reserve online</a> or call us.</p>
+          <div class="qa__tags"><span>Walk-in</span><span>Booking</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">17</span>
+          <h3 class="qa__q">Can you host <em>large groups</em> or private events?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Yes. Our back room seats <strong>up to 38 guests</strong> and can be booked privately on quieter evenings. For larger gatherings — Nikkah parties, walimah, baby showers, Eid lunches — we can do <strong>full-venue hires</strong> for up to 90 guests. Email <a href="mailto:events@maandeeq.co.uk">events@maandeeq.co.uk</a> with your date and headcount and we'll send you our event sheet.</p>
+          <div class="qa__tags"><span>Private hire</span><span>Events</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">18</span>
+          <h3 class="qa__q">Do you offer <em>catering</em> for off-site events?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>We cater across <strong>Greater London</strong>. Our most popular catering format is the <strong>family platter</strong> — slow-roasted lamb on a sea of bariis, with sides for ten to fifty guests. Mega Fusion Platters are also available. We ask for <strong>seven days' notice</strong>, more for parties over 100.</p>
+          <div class="qa__tags"><span>Catering</span><span>Platters</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">19</span>
+          <h3 class="qa__q">What's your <em>cancellation</em> policy?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>For tables of up to eight, cancellation is free up until <strong>two hours before</strong> your booking. For larger parties and private hire we hold a small refundable deposit per head, returned in full if you cancel <strong>72 hours in advance</strong>. Plans change — we understand. Just let us know as soon as you can.</p>
+          <div class="qa__tags"><span>Cancellation</span><span>Deposit</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">20</span>
+          <h3 class="qa__q">Can you do <em>Eid</em> and <em>Ramadan</em> sittings?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Yes — and they are the busiest, brightest weeks of our year. During Ramadan we run a <strong>communal iftar sitting</strong> nightly with dates, sambusas and shaah at the table when you arrive, timed precisely to the call. For Eid we operate a <strong>set-menu service</strong> with sittings every two hours. Bookings open in early Sha'ban — join our list to be told first.</p>
+          <div class="qa__tags"><span>Iftar</span><span>Eid</span><span>Ramadan</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===================== 05 DELIVERY ===================== -->
+  <section class="sect" id="delivery">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">05 — Delivery &amp; Takeaway</span>
+        <h2 class="sect__title">From our kitchen <em>to your door</em>.</h2>
+      </div>
+      <div class="sect__meta">4 questions</div>
+    </div>
+
+    <div class="faq" data-group="delivery">
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">21</span>
+          <h3 class="qa__q">Do you do <em>delivery</em>?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Yes. We deliver via <strong>Deliveroo, Uber Eats and Just Eat</strong> within a four-mile radius of Woolwich. For platters, large orders and same-day catering it's faster (and kinder on you) to call the restaurant directly and we'll arrange a courier.</p>
+          <div class="qa__tags"><span>Delivery</span><span>Deliveroo</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">22</span>
+          <h3 class="qa__q">Can I <em>collect</em> a takeaway?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Of course. Call ahead with your order and we'll have it boxed at the front counter — usually <strong>15 to 25 minutes</strong> from order, longer for slow-roasted dishes which we recommend pre-ordering for the day before. There's no service fee on collection.</p>
+          <div class="qa__tags"><span>Takeaway</span><span>Collection</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">23</span>
+          <h3 class="qa__q">How do I <em>reheat</em> what I've taken home?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>For the lamb and chicken: cover loosely with foil and warm in the oven at <strong>160°C for 12–15 minutes</strong>. Splash a spoon of water on the bariis to revive it in a covered pan over low heat. <em>Microwaves work; ovens reward you.</em></p>
+          <div class="qa__tags"><span>Reheating</span><span>Tips</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">24</span>
+          <h3 class="qa__q">Is the <em>packaging</em> recyclable?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Our takeaway boxes are <strong>bagasse (sugarcane fibre)</strong>, fully compostable. Lids and cutlery are PLA-based bioplastic. Carrier bags are kraft paper. <em>Please pop them in your food waste bin where you can.</em></p>
+          <div class="qa__tags"><span>Packaging</span><span>Compostable</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===================== 06 FAMILIES & HOSPITALITY ===================== -->
+  <section class="sect" id="hospitality">
+    <div class="sect__head">
+      <div>
+        <span class="sect__num">06 — Families &amp; Hospitality</span>
+        <h2 class="sect__title">The room, <em>the welcome</em>.</h2>
+      </div>
+      <div class="sect__meta">4 questions</div>
+    </div>
+
+    <div class="faq" data-group="hospitality">
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">25</span>
+          <h3 class="qa__q">Are <em>children</em> welcome?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Always. Maandeeq is a family kitchen and children make the room feel right. We have <strong>highchairs</strong>, a small <strong>children's menu</strong> (chicken suqaar, mild bariis, sabayaad strips), and the kitchen is happy to plate things <em>"the way your child eats at home"</em> if you tell our team how.</p>
+          <div class="qa__tags"><span>Family</span><span>Children</span><span>Highchairs</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">26</span>
+          <h3 class="qa__q">Is there a <em>women-only</em> section?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>We don't operate a permanent partition, but our back room can be reserved as a <strong>women-only or family-only space</strong> for private parties — Nikkah after-parties, baby showers, ladies' lunches. Mention it when you book.</p>
+          <div class="qa__tags"><span>Private hire</span><span>Family room</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">27</span>
+          <h3 class="qa__q">Do you take <em>tips</em>? Is service included?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>An <strong>optional 10% service charge</strong> is added to tables of six or more — it goes <strong>directly and fully</strong> to the team that served you, distributed weekly. For smaller tables, tipping is appreciated but never expected. A word of thanks to the aunties carries equal weight in our room.</p>
+          <div class="qa__tags"><span>Service</span><span>Tipping</span></div>
+        </div>
+      </details>
+
+      <details class="qa">
+        <summary class="qa__sum">
+          <span class="qa__idx">28</span>
+          <h3 class="qa__q">I've got a <em>complaint</em> — who do I speak to?</h3>
+          <span class="qa__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="qa__body">
+          <p>Please ask for the <strong>manager on shift</strong> before you leave — almost everything can be put right while you're still in the room, and we'd much rather hear it from you than read it online. If you'd prefer to write, email <a href="mailto:hello@maandeeq.co.uk">hello@maandeeq.co.uk</a> and a member of the family will reply within 48 hours. <em>We take it seriously. Soo Dhaweyn doesn't end when the plates do.</em></p>
+          <div class="qa__tags"><span>Feedback</span><span>Complaints</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- EMPTY STATE -->
+  <div class="empty" id="empty">
+    <div class="empty__mark">?</div>
+    <h3>No matches just yet.</h3>
+    <p>Try a shorter word, or ask us directly — someone in the family will get back to you the same day.</p>
+    <a href="mailto:hello@maandeeq.co.uk">Email the kitchen
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+</main>
+
+<!-- QUICK FACTS -->
+<section class="facts">
+  <div class="facts__inner">
+    <div class="facts__head">
+      <span class="facts__num">07 — In short</span>
+      <h2 class="facts__title">The <em>cheat sheet</em>, if you're skim-reading.</h2>
+    </div>
+    <div class="facts__grid">
+      <div class="fact">
+        <span class="fact__lbl">Open</span>
+        <p class="fact__val">Tue–Sun · <em>11:30 → 22:30</em></p>
+        <p class="fact__sub">Late kitchen Friday &amp; Saturday until 23:00. Closed Mondays.</p>
+      </div>
+      <div class="fact">
+        <span class="fact__lbl">Address</span>
+        <p class="fact__val">Woolwich, SE18</p>
+        <p class="fact__sub">Four minutes from Woolwich Arsenal — Elizabeth Line, DLR, Rail.</p>
+      </div>
+      <div class="fact">
+        <span class="fact__lbl">Halal</span>
+        <p class="fact__val"><em>100%</em> HMC &amp; HFA</p>
+        <p class="fact__sub">No alcohol. No pork. Hand-slaughtered lamb &amp; chicken.</p>
+      </div>
+      <div class="fact">
+        <span class="fact__lbl">Children</span>
+        <p class="fact__val">Highchairs · <em>kids' menu</em></p>
+        <p class="fact__sub">Family-first dining, every day. Strollers fit between tables.</p>
+      </div>
+      <div class="fact">
+        <span class="fact__lbl">Bookings</span>
+        <p class="fact__val">Online or by phone</p>
+        <p class="fact__sub">Walk-ins always welcome. Book for parties of five or more.</p>
+      </div>
+      <div class="fact">
+        <span class="fact__lbl">Events</span>
+        <p class="fact__val">Up to <em>90 guests</em></p>
+        <p class="fact__sub">Private hires, catering across London, Eid &amp; Ramadan sittings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STILL HAVE QUESTIONS -->
+<section class="ask" id="ask">
+  <span class="ask__num">08 — Didn't find your answer?</span>
+  <h2>Ask us <em>directly</em>.</h2>
+  <p>Speak to the family. We're a small team and the same person who picks up the phone might also bring out your shaah.</p>
+  <div class="ask__channels">
+    <a class="channel" href="tel:+442000000000">
+      <span class="channel__icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      </span>
+      <span class="channel__lbl">Call the restaurant</span>
+      <span class="channel__val">020 0000 0000</span>
+      <span class="channel__hint">Fastest — Tue to Sun, 11:30 to 22:30.</span>
+    </a>
+    <a class="channel" href="mailto:hello@maandeeq.co.uk">
+      <span class="channel__icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </span>
+      <span class="channel__lbl">Email</span>
+      <span class="channel__val">hello@maandeeq.co.uk</span>
+      <span class="channel__hint">For general questions. We reply within 48 hours.</span>
+    </a>
+    <a class="channel" href="mailto:events@maandeeq.co.uk">
+      <span class="channel__icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </span>
+      <span class="channel__lbl">Events &amp; Catering</span>
+      <span class="channel__val">events@maandeeq.co.uk</span>
+      <span class="channel__hint">For private hires, Nikkah, catering quotes.</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wordmark">MAANDEEQ</div>
+  <div class="tagline">Restaurant · Somali</div>
+  <p class="quote">Thank you for sharing our table. There will always be a place set for you.</p>
+  <p class="legal">© Maandeeq Restaurant · Woolwich, London</p>
+</footer>
+
+<!-- STICKY ACTIONS -->
+<div class="actions">
+  <a class="actions__btn actions__btn--menu" href="Menu.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+    Menu
+  </a>
+  <a class="actions__btn actions__btn--call" href="tel:+442000000000">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a class="actions__btn actions__btn--book" href="index.html#reservations">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Reserve a table
+  </a>
+</div>
+
+<script>
+/* ============================= TICKER ============================= */
+(function(){
+  const items = [
+    {em:"Est. 2023", t:"Family-run Somali kitchen in Woolwich"},
+    {em:"100% Halal", t:"HMC- and HFA-certified, every plate"},
+    {em:"Walk-ins", t:"Always welcome at lunch"},
+    {em:"Soo Dhaweyn", t:"The Somali welcome — woven into every visit"},
+    {em:"Step-free", t:"Accessible entry, family-first room"},
+    {em:"Open Tue–Sun", t:"Late kitchen Friday & Saturday"},
+  ];
+  const track = document.getElementById('ticker');
+  const html = items.map(i=>`<span><em>${i.em}</em>${i.t}<span class="sep">◆</span></span>`).join('');
+  track.innerHTML = html + html;
+})();
+
+/* ============================= STICKY TABS — scroll-spy ============================= */
+(function(){
+  const tabs = document.querySelectorAll('.stickynav__tab');
+  const ids = ['visiting','halal','menu','bookings','delivery','hospitality'];
+  const sections = Object.fromEntries(ids.map(id=>[id, document.getElementById(id)]));
+
+  tabs.forEach(t=>{
+    t.addEventListener('click', ()=>{
+      const target = t.dataset.target;
+      const el = sections[target];
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({top:y, behavior:'smooth'});
+    });
+  });
+
+  const setActive = (id)=>{
+    tabs.forEach(t=>t.classList.toggle('is-on', t.dataset.target===id));
+  };
+
+  const visible = new Map();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      visible.set(en.target.id, en.intersectionRatio);
+    });
+    let best = 'visiting', bestR = -1;
+    ids.forEach(id=>{
+      const r = visible.get(id) || 0;
+      if(r > bestR){ bestR = r; best = id; }
+    });
+    setActive(best);
+  }, {rootMargin: '-120px 0px -55% 0px', threshold: [0, 0.15, 0.4, 0.8]});
+
+  Object.values(sections).forEach(s=>s && io.observe(s));
+})();
+
+/* ============================= SEARCH ============================= */
+(function(){
+  const input = document.getElementById('q');
+  const clearBtn = document.getElementById('clearBtn');
+  const empty = document.getElementById('empty');
+  const resultCount = document.getElementById('resultCount');
+  const allQa = Array.from(document.querySelectorAll('.qa'));
+  const allSects = Array.from(document.querySelectorAll('main > .sect'));
+  const total = allQa.length;
+
+  // Cache plain text
+  allQa.forEach(qa=>{
+    const q = qa.querySelector('.qa__q').textContent.toLowerCase();
+    const a = qa.querySelector('.qa__body').textContent.toLowerCase();
+    const tags = Array.from(qa.querySelectorAll('.qa__tags span')).map(s=>s.textContent.toLowerCase()).join(' ');
+    qa.__text = q + ' ' + a + ' ' + tags;
+    qa.__q = qa.querySelector('.qa__q');
+    qa.__qOriginal = qa.__q.innerHTML;
+    qa.__body = qa.querySelector('.qa__body');
+    qa.__bodyOriginal = qa.__body.innerHTML;
+  });
+
+  function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+
+  function highlight(el, original, term){
+    if(!term){
+      el.innerHTML = original;
+      return;
+    }
+    const re = new RegExp('('+escapeRegex(term)+')','gi');
+    // Walk text nodes only — preserve <em>, <strong>, <a>
+    const tmp = document.createElement('div');
+    tmp.innerHTML = original;
+    const walk = (node)=>{
+      if(node.nodeType === 3){
+        const txt = node.nodeValue;
+        if(re.test(txt)){
+          const span = document.createElement('span');
+          span.innerHTML = txt.replace(re,'<mark>$1</mark>');
+          node.replaceWith(...span.childNodes);
+        }
+      } else if(node.nodeType === 1 && node.tagName !== 'MARK'){
+        Array.from(node.childNodes).forEach(walk);
+      }
+    };
+    Array.from(tmp.childNodes).forEach(walk);
+    el.innerHTML = tmp.innerHTML;
+  }
+
+  function apply(){
+    const raw = input.value.trim();
+    const term = raw.toLowerCase();
+    let matches = 0;
+
+    allQa.forEach(qa=>{
+      const hit = !term || qa.__text.includes(term);
+      qa.hidden = !hit;
+      qa.classList.toggle('is-highlight', !!term && hit);
+      if(hit){
+        matches++;
+        highlight(qa.__q, qa.__qOriginal, term);
+        // Auto-open on match if searching, for quick scan
+        if(term){
+          qa.open = true;
+          highlight(qa.__body, qa.__bodyOriginal, term);
+        } else {
+          qa.open = false;
+          qa.__body.innerHTML = qa.__bodyOriginal;
+        }
+      } else {
+        qa.__q.innerHTML = qa.__qOriginal;
+        qa.__body.innerHTML = qa.__bodyOriginal;
+        qa.open = false;
+      }
+    });
+
+    // Hide sections that have no visible questions
+    allSects.forEach(sect=>{
+      const visibleQas = sect.querySelectorAll('.qa:not([hidden])');
+      sect.style.display = (term && visibleQas.length===0) ? 'none' : '';
+    });
+
+    if(term){
+      resultCount.innerHTML = `<strong>${matches}</strong> Result${matches===1?'':'s'} for “${raw}”`;
+      clearBtn.classList.add('is-on');
+    } else {
+      resultCount.innerHTML = `<strong>${total}</strong> Questions · 6 Categories`;
+      clearBtn.classList.remove('is-on');
+    }
+    empty.classList.toggle('is-on', term && matches===0);
+  }
+
+  input.addEventListener('input', apply);
+  clearBtn.addEventListener('click', ()=>{
+    input.value = '';
+    apply();
+    input.focus();
+  });
+
+  // "/" focuses search
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === '/' && document.activeElement !== input){
+      e.preventDefault();
+      input.focus();
+      input.select();
+    }
+    if(e.key === 'Escape' && document.activeElement === input){
+      input.value = '';
+      apply();
+      input.blur();
+    }
+  });
+
+  document.getElementById('qBtn').addEventListener('click', ()=>{
+    apply();
+    const first = document.querySelector('.qa:not([hidden])');
+    if(first){
+      const y = first.getBoundingClientRect().top + window.scrollY - 110;
+      window.scrollTo({top:y, behavior:'smooth'});
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#14110D" />
+<title>Reserve a Table · Maandeeq Somali Restaurant · Woolwich</title>
+<meta name="description" content="Book a table at Maandeeq in Woolwich. Family-friendly Somali dining — choose your date, time and party size. Walk-ins always welcome." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#14110D;
+    --ink-2:#2A211A;
+    --ink-3:#3B2F25;
+    --paper:#F5EFE6;
+    --paper-2:#EADFCC;
+    --paper-3:#FBF7EF;
+    --camel:#8B6B4F;
+    --camel-dk:#6A4F38;
+    --gold:#D4A24C;
+    --gold-dk:#B7873A;
+    --muted:#8A7868;
+    --green:#6B8E5A;
+    --whats:#25D366;
+
+    --serif:"Bodoni Moda","Cormorant Garamond","Didot",serif;
+    --sans:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Space Mono",ui-monospace,Menlo,monospace;
+
+    --pad:clamp(18px,4vw,40px);
+    --r-card:18px;
+    --r-pill:999px;
+    --col-w:380px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-wrap:pretty;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  img{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer;color:inherit;background:transparent;border:0;padding:0}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--gold);color:var(--ink)}
+  input,select,textarea{font:inherit;color:inherit}
+
+  /* ============================= TOP BAR ============================= */
+  .top{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,239,230,0.92);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border-bottom:1px solid rgba(20,17,13,0.08);
+  }
+  .top__row{
+    display:flex;align-items:center;gap:14px;
+    padding:12px var(--pad);
+    max-width:1440px;margin:0 auto;
+  }
+  .top__brand{display:inline-flex;align-items:center;gap:12px;flex:1;min-width:0}
+  .top__logo{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--paper);padding:2px;object-fit:contain;
+    border:1px solid rgba(20,17,13,0.08);flex-shrink:0;
+  }
+  .top__wm{display:flex;flex-direction:column;line-height:1;min-width:0}
+  .top__name{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:-0.01em}
+  .top__tag{
+    font-family:var(--mono);font-size:9px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--muted);margin-top:4px;
+  }
+  .top__crumb{
+    display:none;
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  .top__crumb b{color:var(--ink);font-weight:600}
+  .top__crumb svg{vertical-align:-2px;margin:0 6px;color:var(--camel)}
+  @media (min-width:780px){.top__crumb{display:inline-flex;align-items:center}}
+
+  .top__actions{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;margin-left:auto}
+  .top__nav{
+    display:inline-flex;align-items:center;gap:6px;
+    max-width:42vw;overflow-x:auto;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .top__nav::-webkit-scrollbar{display:none}
+  .top__back{
+    display:inline-flex;align-items:center;gap:6px;
+    font-family:var(--mono);font-size:11px;white-space:nowrap;
+    letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ink-2);
+    padding:8px 12px;border-radius:var(--r-pill);
+    transition:background .2s ease;
+  }
+  .top__back:hover{background:rgba(20,17,13,0.05)}
+  .top__call{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--ink);color:var(--paper);
+    padding:9px 16px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    font-weight:600;
+  }
+  .top__call:hover{background:var(--ink-2)}
+  .top__call svg{color:var(--gold)}
+  @media (max-width:560px){.top__back{display:none}.top__name{font-size:18px}}
+
+  /* ============================= HERO ============================= */
+  .hero{
+    padding:34px var(--pad) 8px;
+    max-width:1440px;margin:0 auto;
+  }
+  .hero__eye{
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.24em;text-transform:uppercase;
+    color:var(--camel-dk);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .hero__eye::before{content:"";width:24px;height:1px;background:var(--camel)}
+  .hero__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(40px,6.5vw,76px);
+    line-height:0.96;letter-spacing:-0.025em;
+    margin:14px 0 16px;
+    max-width:16ch;
+  }
+  .hero__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .hero__sub{
+    font-size:17px;line-height:1.5;color:var(--ink-2);
+    max-width:58ch;margin:0 0 6px;
+  }
+  .hero__meta{
+    display:flex;flex-wrap:wrap;gap:18px;
+    margin-top:22px;
+  }
+  .hero__meta__item{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--ink-2);
+  }
+  .hero__meta__item svg{color:var(--camel-dk)}
+  .hero__meta__item.is-live{color:var(--green)}
+  .hero__meta__item .dot{
+    width:7px;height:7px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 0 3px rgba(107,142,90,.25);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{50%{box-shadow:0 0 0 7px rgba(107,142,90,0)}}
+
+  /* ============================= LAYOUT ============================= */
+  .shell{
+    max-width:1440px;margin:0 auto;
+    padding:34px var(--pad) 80px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  @media (min-width:980px){
+    .shell{grid-template-columns:1fr var(--col-w);gap:48px;align-items:start}
+  }
+
+  .panels{display:flex;flex-direction:column;gap:36px}
+
+  /* ============================= STEP ============================= */
+  .step{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.06);
+    border-radius:var(--r-card);
+    padding:22px 22px 24px;
+  }
+  .step__head{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:14px;
+    margin-bottom:18px;
+    padding-bottom:14px;
+    border-bottom:1px solid rgba(20,17,13,0.08);
+  }
+  .step__num{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+    display:block;margin-bottom:4px;
+  }
+  .step__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(26px,3.2vw,32px);
+    line-height:1;letter-spacing:-0.02em;
+    margin:0;
+  }
+  .step__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .step__note{
+    color:var(--muted);font-size:13px;
+    font-family:var(--serif);font-style:italic;
+    padding-bottom:4px;
+    text-align:right;max-width:32ch;
+    flex-shrink:0;
+  }
+  @media (max-width:520px){.step__note{display:none}}
+
+  /* ============================= DATE STRIP ============================= */
+  .dates{
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns:74px;
+    gap:8px;
+    overflow-x:auto;
+    margin:0 -22px;
+    padding:4px 22px 14px;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(20,17,13,0.18) transparent;
+  }
+  .dates::-webkit-scrollbar{height:6px}
+  .dates::-webkit-scrollbar-thumb{background:rgba(20,17,13,0.15);border-radius:3px}
+  .date{
+    border:1px solid rgba(20,17,13,0.1);
+    border-radius:14px;
+    padding:12px 0;
+    background:var(--paper);
+    display:flex;flex-direction:column;align-items:center;gap:4px;
+    color:var(--ink-2);
+    transition:all .2s ease;
+    position:relative;
+  }
+  .date:hover{border-color:var(--camel);transform:translateY(-1px)}
+  .date.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .date.is-on .date__day{color:var(--gold)}
+  .date.is-full{opacity:.4;cursor:not-allowed;background:transparent}
+  .date.is-full:hover{transform:none;border-color:rgba(20,17,13,0.1)}
+  .date__dow{
+    font-family:var(--mono);font-size:9px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    opacity:.7;
+  }
+  .date__num{
+    font-family:var(--serif);font-weight:500;
+    font-size:24px;line-height:1;letter-spacing:-0.02em;
+  }
+  .date__day{
+    font-family:var(--mono);font-size:9px;
+    letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--muted);
+    margin-top:1px;
+  }
+  .date.is-today::before{
+    content:"";position:absolute;top:7px;right:9px;
+    width:5px;height:5px;border-radius:50%;
+    background:var(--gold);
+  }
+
+  /* ============================= PILLS ============================= */
+  .pills{display:flex;flex-wrap:wrap;gap:6px}
+  .pill{
+    border:1px solid rgba(20,17,13,0.16);
+    border-radius:var(--r-pill);
+    padding:10px 16px;
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.08em;text-transform:uppercase;
+    font-weight:600;
+    color:var(--ink-2);
+    background:transparent;
+    transition:all .2s ease;
+    display:inline-flex;align-items:center;gap:7px;
+    white-space:nowrap;
+  }
+  .pill:hover{background:rgba(20,17,13,0.04);border-color:var(--camel)}
+  .pill.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .pill.is-on small,
+  .pill.is-on svg{color:var(--gold)}
+  .pill small{
+    font-family:var(--mono);font-size:9px;font-weight:400;
+    opacity:.7;letter-spacing:0.04em;text-transform:none;
+  }
+  .pill[disabled]{opacity:.35;cursor:not-allowed}
+  .pill[disabled]:hover{background:transparent;border-color:rgba(20,17,13,0.16)}
+
+  /* time slot groups */
+  .slots{display:grid;gap:18px}
+  .slots__group{display:grid;gap:9px}
+  .slots__lbl{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--camel-dk);
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .slots__lbl small{
+    font-family:var(--serif);font-style:italic;
+    font-size:13px;color:var(--muted);
+    letter-spacing:0;text-transform:none;font-weight:400;
+  }
+  .slots__row{display:flex;flex-wrap:wrap;gap:6px}
+  .slot{
+    border:1px solid rgba(20,17,13,0.14);
+    border-radius:12px;
+    padding:10px 14px;min-width:74px;
+    font-family:var(--mono);font-size:13px;
+    font-weight:700;letter-spacing:0.02em;
+    color:var(--ink);
+    background:var(--paper);
+    transition:all .2s ease;
+    text-align:center;
+  }
+  .slot:hover{border-color:var(--camel);transform:translateY(-1px)}
+  .slot.is-on{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+  .slot[disabled]{
+    opacity:.35;cursor:not-allowed;
+    background:transparent;color:var(--muted);
+    text-decoration:line-through;
+  }
+  .slot[disabled]:hover{transform:none;border-color:rgba(20,17,13,0.14)}
+
+  /* party size */
+  .party{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .party__btn{
+    width:44px;height:44px;border-radius:14px;
+    border:1px solid rgba(20,17,13,0.16);
+    font-family:var(--serif);font-weight:500;
+    font-size:20px;letter-spacing:-0.02em;
+    color:var(--ink);background:var(--paper);
+    transition:all .2s ease;
+  }
+  .party__btn:hover{border-color:var(--camel);transform:translateY(-1px)}
+  .party__btn.is-on{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+  .party__more{
+    margin-left:6px;padding:0 14px;height:44px;
+    border:1px dashed rgba(20,17,13,0.22);
+    border-radius:14px;
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ink-2);
+    display:inline-flex;align-items:center;gap:8px;
+    transition:all .2s ease;
+  }
+  .party__more:hover{background:rgba(212,162,76,0.08);border-color:var(--camel)}
+  .party__more svg{color:var(--camel-dk)}
+
+  /* occasion grid */
+  .occ{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+  @media (min-width:560px){.occ{grid-template-columns:repeat(3,1fr)}}
+  .occ__btn{
+    border:1px solid rgba(20,17,13,0.12);
+    border-radius:14px;
+    padding:12px 14px;
+    background:var(--paper);
+    display:flex;align-items:center;gap:10px;
+    transition:all .2s ease;
+  }
+  .occ__btn:hover{border-color:var(--camel);transform:translateY(-1px)}
+  .occ__btn.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .occ__btn.is-on .occ__ic{background:rgba(212,162,76,0.18);color:var(--gold)}
+  .occ__ic{
+    width:32px;height:32px;border-radius:10px;
+    background:rgba(212,162,76,0.12);
+    color:var(--camel-dk);
+    display:inline-flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .occ__lbl{
+    font-family:var(--mono);font-size:10.5px;
+    letter-spacing:0.1em;text-transform:uppercase;
+    font-weight:700;text-align:left;
+    line-height:1.2;
+  }
+
+  /* ============================= FORM ============================= */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid--full > *{grid-column:1/-1}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field--full{grid-column:1/-1}
+  .field > span{
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .field > span small{
+    font-family:var(--mono);font-size:9px;
+    color:var(--muted);font-weight:400;
+    text-transform:none;letter-spacing:0.02em;
+  }
+  .field input,.field textarea,.field select{
+    background:var(--paper);
+    border:1px solid rgba(20,17,13,0.12);
+    border-radius:12px;
+    padding:13px 14px;
+    font-size:15px;
+    font-family:var(--sans);
+    color:var(--ink);
+    outline:0;
+    transition:border-color .2s ease,background .2s ease;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{
+    border-color:var(--camel);background:var(--paper-3);
+  }
+  .field textarea{resize:vertical;min-height:80px;line-height:1.45}
+
+  /* dietary checkboxes */
+  .diet{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .diet__opt{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:9px 14px;border-radius:var(--r-pill);
+    border:1px solid rgba(20,17,13,0.14);
+    background:transparent;
+    font-family:var(--mono);font-size:10.5px;
+    letter-spacing:0.08em;text-transform:uppercase;
+    font-weight:600;color:var(--ink-2);
+    cursor:pointer;
+    transition:all .2s ease;
+  }
+  .diet__opt:hover{background:rgba(20,17,13,0.04);border-color:var(--camel)}
+  .diet__opt input{display:none}
+  .diet__opt.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .diet__opt.is-on::before{
+    content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);
+  }
+
+  .consent{
+    display:flex;align-items:flex-start;gap:10px;
+    margin-top:12px;
+    font-size:13px;color:var(--ink-2);line-height:1.45;
+  }
+  .consent input{
+    width:18px;height:18px;
+    accent-color:var(--ink);
+    margin-top:2px;flex-shrink:0;
+  }
+
+  /* ============================= SUMMARY (sticky) ============================= */
+  .summary{
+    background:linear-gradient(180deg,#14110D 0%, #1B1610 100%);
+    color:var(--paper);
+    border-radius:var(--r-card);
+    padding:24px;
+    display:flex;flex-direction:column;gap:18px;
+    position:sticky;top:88px;
+    overflow:hidden;
+  }
+  .summary::before{
+    content:"";position:absolute;inset:auto -40px -60px auto;
+    width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle, rgba(212,162,76,0.14), transparent 70%);
+    pointer-events:none;
+  }
+  .summary__head{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px;
+    padding-bottom:14px;
+    border-bottom:1px solid rgba(245,239,230,0.1);
+    position:relative;
+  }
+  .summary__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:22px;letter-spacing:-0.01em;margin:0;
+  }
+  .summary__title em{font-style:italic;color:var(--gold);font-weight:400}
+  .summary__tag{
+    font-family:var(--mono);font-size:9px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--gold);
+    background:rgba(212,162,76,0.12);
+    padding:5px 9px;border-radius:var(--r-pill);
+    border:1px solid rgba(212,162,76,0.25);
+  }
+
+  .summary__body{display:grid;gap:14px;position:relative}
+  .sumline{
+    display:grid;
+    grid-template-columns:36px 1fr;
+    align-items:center;gap:12px;
+  }
+  .sumline__ic{
+    width:36px;height:36px;border-radius:50%;
+    background:rgba(245,239,230,0.06);
+    color:var(--gold);
+    display:inline-flex;align-items:center;justify-content:center;
+  }
+  .sumline__lbl{
+    font-family:var(--mono);font-size:9px;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:rgba(245,239,230,0.55);
+    line-height:1;
+  }
+  .sumline__val{
+    font-family:var(--serif);font-style:italic;
+    font-weight:400;
+    font-size:18px;letter-spacing:-0.01em;
+    color:var(--paper);
+    margin-top:4px;
+    line-height:1.2;
+  }
+  .sumline__val.is-empty{
+    font-style:normal;font-family:var(--mono);
+    font-size:11px;letter-spacing:0.04em;
+    color:rgba(245,239,230,0.4);
+  }
+  .sumline__val.is-empty::before{content:"— "}
+
+  .summary__quote{
+    border-top:1px dashed rgba(245,239,230,0.18);
+    padding-top:14px;
+    font-family:var(--serif);font-style:italic;
+    font-size:14.5px;line-height:1.4;
+    color:rgba(245,239,230,0.78);
+    position:relative;
+  }
+  .summary__quote::before{
+    content:"\201C";font-family:var(--serif);font-style:normal;
+    font-size:34px;line-height:0;color:var(--gold);
+    vertical-align:-8px;margin-right:4px;
+  }
+  .summary__quote cite{
+    display:block;
+    font-family:var(--mono);font-style:normal;
+    font-size:9px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--gold);
+    margin-top:8px;
+  }
+
+  .summary__cta{
+    background:var(--gold);color:var(--ink);
+    padding:15px 18px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:12px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    font-weight:700;
+    display:inline-flex;align-items:center;justify-content:space-between;gap:10px;
+    transition:background .2s ease;
+    position:relative;
+  }
+  .summary__cta:hover:not(:disabled){background:var(--gold-dk)}
+  .summary__cta:disabled{
+    background:rgba(245,239,230,0.06);
+    color:rgba(245,239,230,0.35);
+    cursor:not-allowed;
+  }
+  .summary__cta svg{transition:transform .2s ease}
+  .summary__cta:hover:not(:disabled) svg{transform:translateX(3px)}
+
+  .summary__alt{
+    display:flex;flex-direction:column;gap:6px;
+    text-align:center;
+    font-family:var(--mono);font-size:10px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    color:rgba(245,239,230,0.5);
+    position:relative;
+  }
+  .summary__alt a{
+    color:var(--gold);
+    border-bottom:1px solid rgba(212,162,76,0.4);
+    padding-bottom:1px;
+  }
+  .summary__alt a:hover{color:var(--paper);border-color:var(--paper)}
+
+  /* ============================= POLICY / FOOTER ============================= */
+  .policy{
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 var(--pad) 60px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  @media (min-width:760px){.policy{grid-template-columns:repeat(3,1fr)}}
+  .policy__card{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.06);
+    border-radius:var(--r-card);
+    padding:22px;
+  }
+  .policy__ic{
+    width:36px;height:36px;border-radius:10px;
+    background:rgba(212,162,76,0.14);color:var(--camel-dk);
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-bottom:14px;
+  }
+  .policy__t{
+    font-family:var(--serif);font-weight:500;
+    font-size:20px;letter-spacing:-0.01em;
+    margin:0 0 8px;
+  }
+  .policy__t em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .policy__d{
+    color:var(--ink-2);font-size:14px;line-height:1.5;margin:0;
+  }
+  .policy__d strong{font-weight:600}
+
+  /* ============================= CONFIRMATION OVERLAY ============================= */
+  .ok{
+    position:fixed;inset:0;z-index:400;
+    pointer-events:none;
+    display:flex;align-items:center;justify-content:center;
+    padding:16px;
+  }
+  .ok.is-on{pointer-events:auto}
+  .ok__bg{
+    position:absolute;inset:0;
+    background:rgba(20,17,13,0.7);
+    backdrop-filter:blur(8px);
+    opacity:0;transition:opacity .3s ease;
+  }
+  .ok.is-on .ok__bg{opacity:1}
+  .ok__card{
+    position:relative;
+    background:var(--paper);
+    width:min(520px,100%);
+    border-radius:22px;
+    padding:36px 30px 28px;
+    transform:translateY(16px) scale(.98);opacity:0;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s ease;
+    text-align:center;
+    overflow:hidden;
+  }
+  .ok.is-on .ok__card{transform:translateY(0) scale(1);opacity:1}
+  .ok__card::before{
+    content:"";position:absolute;inset:auto -80px -120px auto;
+    width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle, rgba(212,162,76,0.18), transparent 70%);
+    pointer-events:none;
+  }
+  .ok__ic{
+    width:72px;height:72px;border-radius:50%;
+    background:var(--ink);color:var(--gold);
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 auto 16px;position:relative;
+    box-shadow:0 0 0 8px rgba(212,162,76,0.12);
+  }
+  .ok__eye{
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);position:relative;
+  }
+  .ok__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:34px;letter-spacing:-0.02em;line-height:1.04;
+    margin:6px 0 6px;position:relative;
+  }
+  .ok__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .ok__sub{
+    color:var(--ink-2);font-size:14.5px;line-height:1.5;
+    margin:0 auto 18px;max-width:36ch;position:relative;
+  }
+  .ok__recap{
+    background:var(--paper-3);
+    border:1px dashed rgba(20,17,13,0.18);
+    border-radius:14px;
+    padding:14px 18px;
+    margin:0 0 18px;
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.04em;
+    color:var(--ink-2);
+    display:grid;gap:6px;text-align:left;
+    position:relative;
+  }
+  .ok__recap__row{display:flex;justify-content:space-between;gap:10px}
+  .ok__recap__row b{color:var(--ink);font-weight:700}
+  .ok__recap__ref{
+    border-top:1px solid rgba(20,17,13,0.1);
+    padding-top:8px;margin-top:4px;
+    color:var(--camel-dk);
+  }
+  .ok__btns{
+    display:flex;gap:8px;flex-wrap:wrap;
+    justify-content:center;
+    position:relative;
+  }
+  .ok__btn{
+    flex:1;min-width:140px;
+    padding:13px 16px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    font-weight:700;
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  }
+  .ok__btn--p{background:var(--ink);color:var(--paper)}
+  .ok__btn--p:hover{background:var(--ink-2)}
+  .ok__btn--g{
+    background:transparent;color:var(--ink);
+    border:1px solid rgba(20,17,13,0.18);
+  }
+  .ok__btn--g:hover{background:rgba(20,17,13,0.05)}
+  .ok__btn--g svg{color:var(--whats)}
+
+  /* ============================= TOAST ============================= */
+  .toast{
+    position:fixed;left:50%;bottom:24px;
+    transform:translate(-50%,20px);
+    background:var(--ink);color:var(--paper);
+    padding:12px 18px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    box-shadow:0 12px 30px -12px rgba(0,0,0,0.4);
+    opacity:0;pointer-events:none;
+    transition:opacity .25s ease,transform .25s ease;
+    z-index:500;
+    border:1px solid rgba(212,162,76,0.3);
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .toast.is-on{opacity:1;transform:translate(-50%,0)}
+  .toast svg{color:var(--gold)}
+
+  /* responsive: collapse sticky summary on small screens */
+  @media (max-width:979px){
+    .summary{position:static;top:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================= TOP BAR ============================= -->
+<header class="top">
+  <div class="top__row">
+    <a class="top__brand" href="index.html" aria-label="Maandeeq home">
+      <img class="top__logo" src="assets/brand/logo-circle.png" alt="" />
+      <div class="top__wm">
+        <span class="top__name">Maandeeq</span>
+        <span class="top__tag">Somali Restaurant · Woolwich</span>
+      </div>
+    </a>
+
+    <div class="top__crumb">
+      <span>Visit</span>
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <b>Reserve a table</b>
+    </div>
+
+    <div class="top__actions">
+      <nav class="top__nav" aria-label="Site">
+        <a class="top__back" href="Menu.html">Menu</a>
+        <a class="top__back" href="Order.html">Order</a>
+        <a class="top__back" href="Catering.html">Catering</a>
+        <a class="top__back" href="About.html">About</a>
+        <a class="top__back" href="Reviews.html">Reviews</a>
+        <a class="top__back" href="Contact.html">Visit</a>
+      </nav>
+      <a class="top__call" href="tel:+442083173321">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        020 8317 3321
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="hero__eye">Reservations</div>
+  <h1 class="hero__title">Save a seat at <em>our table.</em></h1>
+  <p class="hero__sub">Family-friendly Somali dining in Woolwich. Book up to thirty days ahead — we hold your table for fifteen minutes, then welcome the next family. Walk-ins always welcome too.</p>
+
+  <div class="hero__meta">
+    <span class="hero__meta__item is-live"><span class="dot"></span>Booking online · live availability</span>
+    <span class="hero__meta__item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      Confirmation in seconds
+    </span>
+    <span class="hero__meta__item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg>
+      Halal · No deposit
+    </span>
+    <span class="hero__meta__item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      Groups of 10+ &mdash; <a href="mailto:hello@maandeeq.co.uk" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--camel)">email us</a>
+    </span>
+  </div>
+</section>
+
+<!-- ============================= SHELL ============================= -->
+<div class="shell">
+
+  <!-- Left: stepped panels -->
+  <div class="panels">
+
+    <!-- STEP 1: party + date -->
+    <section class="step">
+      <header class="step__head">
+        <div>
+          <span class="step__num">01 · Who & when</span>
+          <h2 class="step__title">A table for <em>how many?</em></h2>
+        </div>
+        <p class="step__note">Children of all ages welcome — high chairs at most tables.</p>
+      </header>
+
+      <div style="margin-bottom:22px">
+        <div class="party" id="party"></div>
+      </div>
+
+      <div>
+        <div class="slots__lbl" style="margin-bottom:10px">
+          <span>Pick a date</span>
+          <small id="dateRangeLbl">Next 30 days · today highlighted in gold</small>
+        </div>
+        <div class="dates" id="dates" role="listbox" aria-label="Reservation date"></div>
+      </div>
+    </section>
+
+    <!-- STEP 2: time -->
+    <section class="step">
+      <header class="step__head">
+        <div>
+          <span class="step__num">02 · Time</span>
+          <h2 class="step__title">When would you like to <em>arrive?</em></h2>
+        </div>
+        <p class="step__note">Greyed slots are fully booked. Kitchen closes at 22:00.</p>
+      </header>
+
+      <div class="slots" id="slots"></div>
+    </section>
+
+    <!-- STEP 3: occasion + seating -->
+    <section class="step">
+      <header class="step__head">
+        <div>
+          <span class="step__num">03 · A few details</span>
+          <h2 class="step__title">Tell us about the <em>occasion.</em></h2>
+        </div>
+        <p class="step__note">Optional — but it helps us look after you better.</p>
+      </header>
+
+      <div style="margin-bottom:22px">
+        <div class="slots__lbl" style="margin-bottom:10px"><span>Occasion</span><small>If any</small></div>
+        <div class="occ" id="occ"></div>
+      </div>
+
+      <div>
+        <div class="slots__lbl" style="margin-bottom:10px"><span>Seating preference</span><small>Best effort</small></div>
+        <div class="pills" id="seat"></div>
+      </div>
+    </section>
+
+    <!-- STEP 4: your details -->
+    <section class="step" id="detailsStep">
+      <header class="step__head">
+        <div>
+          <span class="step__num">04 · Your details</span>
+          <h2 class="step__title">Where can we <em>reach you?</em></h2>
+        </div>
+        <p class="step__note">We'll text a confirmation and a friendly reminder the day before.</p>
+      </header>
+
+      <div class="grid">
+        <div class="field">
+          <span>First name</span>
+          <input type="text" id="fName" placeholder="Maryam" autocomplete="given-name" />
+        </div>
+        <div class="field">
+          <span>Last name</span>
+          <input type="text" id="lName" placeholder="Ahmed" autocomplete="family-name" />
+        </div>
+        <div class="field">
+          <span>Mobile <small>— for confirmation</small></span>
+          <input type="tel" id="fPhone" placeholder="07…" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <span>Email <small>— optional</small></span>
+          <input type="email" id="fEmail" placeholder="you@example.com" autocomplete="email" />
+        </div>
+
+        <div class="field field--full">
+          <span>Dietary needs <small>— select any that apply</small></span>
+          <div class="diet" id="diet"></div>
+        </div>
+
+        <div class="field field--full">
+          <span>Special requests <small>— optional</small></span>
+          <textarea id="fNotes" placeholder="High chair for a toddler · cake for a birthday · pram space · wheelchair access · table by the window…"></textarea>
+        </div>
+
+        <div class="field field--full">
+          <label class="consent">
+            <input type="checkbox" id="consent" />
+            <span>Yes, please send me a confirmation text and a courtesy reminder. We never share your number. <a href="#" style="color:var(--camel-dk);text-decoration:underline;text-underline-offset:2px">Privacy</a></span>
+          </label>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Right: sticky summary -->
+  <aside class="summary" id="summary" aria-label="Reservation summary">
+    <header class="summary__head">
+      <h2 class="summary__title">Your <em>booking</em></h2>
+      <span class="summary__tag" id="sumStatus">Drafting</span>
+    </header>
+
+    <div class="summary__body">
+      <div class="sumline">
+        <span class="sumline__ic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </span>
+        <div>
+          <div class="sumline__lbl">Guests</div>
+          <div class="sumline__val is-empty" id="sumParty">choose a party size</div>
+        </div>
+      </div>
+
+      <div class="sumline">
+        <span class="sumline__ic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </span>
+        <div>
+          <div class="sumline__lbl">Date</div>
+          <div class="sumline__val is-empty" id="sumDate">pick a day</div>
+        </div>
+      </div>
+
+      <div class="sumline">
+        <span class="sumline__ic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </span>
+        <div>
+          <div class="sumline__lbl">Arrival</div>
+          <div class="sumline__val is-empty" id="sumTime">pick a time</div>
+        </div>
+      </div>
+
+      <div class="sumline" id="sumOccRow" style="display:none">
+        <span class="sumline__ic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </span>
+        <div>
+          <div class="sumline__lbl">Occasion</div>
+          <div class="sumline__val" id="sumOcc">—</div>
+        </div>
+      </div>
+
+      <div class="sumline" id="sumSeatRow" style="display:none">
+        <span class="sumline__ic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v12"></path><path d="M9 21V13h6v8"></path></svg>
+        </span>
+        <div>
+          <div class="sumline__lbl">Seating</div>
+          <div class="sumline__val" id="sumSeat">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary__quote">
+      Soo dhawoow. Mi casa, su casa — at Maandeeq, the kettle is already on and a chair is waiting for you.
+      <cite>— Hooyo Faadumo, founder</cite>
+    </div>
+
+    <button class="summary__cta" id="confirmBtn" disabled>
+      <span id="confirmBtnTxt">Confirm reservation</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+
+    <div class="summary__alt">
+      <span>Or call us directly</span>
+      <span><a href="tel:+442083173321">020 8317 3321</a> · 11am – 10pm</span>
+    </div>
+  </aside>
+</div>
+
+<!-- ============================= POLICY ============================= -->
+<section class="policy">
+  <article class="policy__card">
+    <span class="policy__ic">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+    </span>
+    <h3 class="policy__t">A gentle <em>15-minute</em> grace</h3>
+    <p class="policy__d">We hold your table for fifteen minutes past your booking time. If you're running late, a quick call lets us know to keep it warm. After that we may need to offer it on.</p>
+  </article>
+
+  <article class="policy__card">
+    <span class="policy__ic">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+    </span>
+    <h3 class="policy__t">Changes are <em>easy</em></h3>
+    <p class="policy__d">Need to move the booking, change the party size, or cancel? Just reply to our confirmation text, or WhatsApp us on <strong>078 0000 3321</strong>. No deposit, no fee.</p>
+  </article>
+
+  <article class="policy__card">
+    <span class="policy__ic">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+    </span>
+    <h3 class="policy__t">Big groups, <em>private hire</em></h3>
+    <p class="policy__d">For tables of ten or more, family iftars, baby showers or a private buyout of the back room, please <a href="Catering.html" style="color:var(--camel-dk);text-decoration:underline;text-underline-offset:2px">see catering &amp; events</a> or email <strong>hello@maandeeq.co.uk</strong>.</p>
+  </article>
+</section>
+
+<!-- ============================= CONFIRMATION ============================= -->
+<div class="ok" id="ok" aria-hidden="true">
+  <div class="ok__bg" data-close-ok></div>
+  <div class="ok__card">
+    <div class="ok__ic">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div class="ok__eye">Reservation confirmed</div>
+    <h3 class="ok__title">See you <em>soon</em>, <span id="okName">friend</span>.</h3>
+    <p class="ok__sub">A confirmation text is on its way. We'll send a friendly reminder the day before.</p>
+
+    <div class="ok__recap">
+      <div class="ok__recap__row"><span>Guests</span><b id="okParty">—</b></div>
+      <div class="ok__recap__row"><span>Date</span><b id="okDate">—</b></div>
+      <div class="ok__recap__row"><span>Arrival</span><b id="okTime">—</b></div>
+      <div class="ok__recap__row ok__recap__ref"><span>Reference</span><b id="okRef">MND-0000</b></div>
+    </div>
+
+    <div class="ok__btns">
+      <button class="ok__btn ok__btn--g" id="okWhats">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.4-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.2.2-.4 0-.2 0-.3-.1-.4-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.7.1.2 1.9 2.9 4.5 4 .6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.1-.5-.2zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3.1-.2-.3C4.1 14.7 4 13.4 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+        WhatsApp us
+      </button>
+      <button class="ok__btn ok__btn--p" id="okDone">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= TOAST ============================= -->
+<div class="toast" id="toast">
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  <span id="toastTxt">Saved</span>
+</div>
+
+<!-- ============================= APP ============================= -->
+<script>
+/* -------------------- state -------------------- */
+const state = {
+  party: 2,
+  date: null, // ISO YYYY-MM-DD
+  time: null, // HH:MM
+  occ: null,
+  seat: "no-pref",
+  diet: new Set(),
+};
+
+/* -------------------- party -------------------- */
+const partyEl = document.getElementById("party");
+function renderParty(){
+  partyEl.innerHTML = "";
+  for (let i=1; i<=8; i++){
+    const b = document.createElement("button");
+    b.className = "party__btn" + (i===state.party?" is-on":"");
+    b.type = "button";
+    b.textContent = i;
+    b.setAttribute("aria-pressed", i===state.party);
+    b.addEventListener("click", ()=>{ state.party = i; renderParty(); renderSlots(); updateSummary(); });
+    partyEl.appendChild(b);
+  }
+  const more = document.createElement("a");
+  more.className = "party__more";
+  more.href = "Catering.html";
+  more.innerHTML = '9+ guests · groups <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+  partyEl.appendChild(more);
+}
+
+/* -------------------- dates -------------------- */
+const datesEl = document.getElementById("dates");
+const DOW_SHORT = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const MONTH_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONTH_FULL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+function isoDate(d){
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+function prettyDate(d){
+  return DOW_SHORT[d.getDay()].replace(/^./,c=>c) + " " + d.getDate() + " " + MONTH_FULL[d.getMonth()];
+}
+function pseudoBookedDay(d){
+  // weekend evenings can occasionally be "full" in this demo
+  const dow = d.getDay();
+  const day = d.getDate();
+  return (dow===6 && day%7===2);
+}
+function renderDates(){
+  datesEl.innerHTML = "";
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  for (let i=0; i<30; i++){
+    const d = new Date(today.getTime() + i*86400000);
+    const iso = isoDate(d);
+    const b = document.createElement("button");
+    const full = pseudoBookedDay(d);
+    b.className = "date" + (i===0?" is-today":"") + (state.date===iso?" is-on":"") + (full?" is-full":"");
+    b.type = "button";
+    b.setAttribute("role","option");
+    b.setAttribute("aria-selected", state.date===iso);
+    if (full) b.setAttribute("aria-disabled","true");
+    b.innerHTML = `
+      <span class="date__dow">${DOW_SHORT[d.getDay()]}</span>
+      <span class="date__num">${d.getDate()}</span>
+      <span class="date__day">${full ? "Full" : MONTH_SHORT[d.getMonth()]}</span>
+    `;
+    if (!full){
+      b.addEventListener("click", ()=>{
+        state.date = iso; state.time = null;
+        renderDates(); renderSlots(); updateSummary();
+      });
+    }
+    datesEl.appendChild(b);
+  }
+}
+
+/* -------------------- time slots -------------------- */
+const slotsEl = document.getElementById("slots");
+const GROUPS = [
+  { id:"lunch", lbl:"Lunch", sub:"12:00 – 15:00", times:["12:00","12:30","13:00","13:30","14:00","14:30"] },
+  { id:"after", lbl:"Afternoon", sub:"between services", times:["15:00","15:30","16:00","16:30"] },
+  { id:"dinner",lbl:"Dinner", sub:"17:00 – 21:30", times:["17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00","21:30"] },
+];
+function slotBooked(date,time){
+  if (!date) return false;
+  // deterministic pseudo-randomness: hash of date+time
+  const h = (date+time).split("").reduce((a,c)=>a+c.charCodeAt(0),0);
+  // ~ 1 in 7 fully booked, more in prime dinner hours
+  const prime = ["19:00","19:30","20:00","20:30"].includes(time);
+  return (h % (prime?5:9)) === 0;
+}
+function renderSlots(){
+  slotsEl.innerHTML = "";
+  if (!state.date){
+    slotsEl.innerHTML = `<div style="font-family:var(--mono);font-size:11px;letter-spacing:0.06em;color:var(--muted);padding:24px 0;text-align:center;border:1px dashed rgba(20,17,13,0.14);border-radius:14px">Pick a date above to see available times.</div>`;
+    return;
+  }
+  GROUPS.forEach(g=>{
+    const wrap = document.createElement("div");
+    wrap.className = "slots__group";
+    wrap.innerHTML = `<div class="slots__lbl"><span>${g.lbl}</span><small>${g.sub}</small></div>`;
+    const row = document.createElement("div");
+    row.className = "slots__row";
+    g.times.forEach(t=>{
+      const b = document.createElement("button");
+      const booked = slotBooked(state.date, t);
+      b.className = "slot" + (state.time===t?" is-on":"");
+      b.type = "button";
+      b.textContent = t;
+      if (booked){
+        b.disabled = true;
+        b.setAttribute("aria-label", t+" — fully booked");
+      } else {
+        b.addEventListener("click", ()=>{
+          state.time = t; renderSlots(); updateSummary();
+          toast("Time held for 2 minutes");
+        });
+      }
+      row.appendChild(b);
+    });
+    wrap.appendChild(row);
+    slotsEl.appendChild(wrap);
+  });
+}
+
+/* -------------------- occasion -------------------- */
+const occEl = document.getElementById("occ");
+const OCCS = [
+  { id:"birthday",   lbl:"Birthday",        ic:'<path d="M20 21H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z"></path><path d="M2 15h20"></path><path d="M12 4v5"></path><circle cx="12" cy="3" r="1"></circle>' },
+  { id:"anniversary",lbl:"Anniversary",     ic:'<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>' },
+  { id:"date",       lbl:"Date night",      ic:'<path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path>' },
+  { id:"family",     lbl:"Family gathering",ic:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>' },
+  { id:"business",   lbl:"Business",        ic:'<path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>' },
+  { id:"justbecause",lbl:"Just because",    ic:'<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>' },
+];
+function renderOcc(){
+  occEl.innerHTML = "";
+  OCCS.forEach(o=>{
+    const b = document.createElement("button");
+    b.className = "occ__btn" + (state.occ===o.id?" is-on":"");
+    b.type = "button";
+    b.innerHTML = `
+      <span class="occ__ic">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${o.ic}</svg>
+      </span>
+      <span class="occ__lbl">${o.lbl}</span>
+    `;
+    b.addEventListener("click", ()=>{
+      state.occ = (state.occ===o.id) ? null : o.id;
+      renderOcc(); updateSummary();
+    });
+    occEl.appendChild(b);
+  });
+}
+
+/* -------------------- seating -------------------- */
+const seatEl = document.getElementById("seat");
+const SEATS = [
+  { id:"no-pref", lbl:"No preference" },
+  { id:"window",  lbl:"Window" },
+  { id:"family",  lbl:"Family room" },
+  { id:"quiet",   lbl:"Quiet corner" },
+  { id:"bar",     lbl:"Counter / bar" },
+];
+function renderSeat(){
+  seatEl.innerHTML = "";
+  SEATS.forEach(s=>{
+    const b = document.createElement("button");
+    b.className = "pill" + (state.seat===s.id?" is-on":"");
+    b.type = "button";
+    b.textContent = s.lbl;
+    b.addEventListener("click", ()=>{ state.seat = s.id; renderSeat(); updateSummary(); });
+    seatEl.appendChild(b);
+  });
+}
+
+/* -------------------- diet -------------------- */
+const dietEl = document.getElementById("diet");
+const DIETS = [
+  { id:"vegetarian", lbl:"Vegetarian" },
+  { id:"vegan",      lbl:"Vegan" },
+  { id:"gluten",     lbl:"Gluten-free" },
+  { id:"nut",        lbl:"Nut allergy" },
+  { id:"dairy",      lbl:"Dairy-free" },
+  { id:"halal",      lbl:"All halal (already)" },
+];
+function renderDiet(){
+  dietEl.innerHTML = "";
+  DIETS.forEach(d=>{
+    const lbl = document.createElement("label");
+    lbl.className = "diet__opt" + (state.diet.has(d.id)?" is-on":"");
+    lbl.innerHTML = `<input type="checkbox" ${state.diet.has(d.id)?"checked":""}><span>${d.lbl}</span>`;
+    lbl.addEventListener("click", (e)=>{
+      e.preventDefault();
+      if (state.diet.has(d.id)) state.diet.delete(d.id); else state.diet.add(d.id);
+      renderDiet();
+    });
+    dietEl.appendChild(lbl);
+  });
+}
+
+/* -------------------- summary -------------------- */
+function updateSummary(){
+  const sumParty = document.getElementById("sumParty");
+  if (state.party){
+    sumParty.classList.remove("is-empty");
+    sumParty.textContent = state.party + (state.party===1 ? " guest" : " guests");
+  } else {
+    sumParty.classList.add("is-empty");
+    sumParty.textContent = "choose a party size";
+  }
+
+  const sumDate = document.getElementById("sumDate");
+  if (state.date){
+    const [y,m,dd] = state.date.split("-").map(Number);
+    const d = new Date(y, m-1, dd);
+    sumDate.classList.remove("is-empty");
+    sumDate.textContent = prettyDate(d);
+  } else {
+    sumDate.classList.add("is-empty");
+    sumDate.textContent = "pick a day";
+  }
+
+  const sumTime = document.getElementById("sumTime");
+  if (state.time){
+    sumTime.classList.remove("is-empty");
+    sumTime.textContent = "Arrive at " + state.time;
+  } else {
+    sumTime.classList.add("is-empty");
+    sumTime.textContent = "pick a time";
+  }
+
+  const occRow = document.getElementById("sumOccRow");
+  if (state.occ){
+    const o = OCCS.find(x=>x.id===state.occ);
+    occRow.style.display = "grid";
+    document.getElementById("sumOcc").textContent = o.lbl;
+  } else { occRow.style.display = "none"; }
+
+  const seatRow = document.getElementById("sumSeatRow");
+  if (state.seat && state.seat!=="no-pref"){
+    seatRow.style.display = "grid";
+    const s = SEATS.find(x=>x.id===state.seat);
+    document.getElementById("sumSeat").textContent = s.lbl;
+  } else { seatRow.style.display = "none"; }
+
+  const btn = document.getElementById("confirmBtn");
+  const ready = !!(state.party && state.date && state.time);
+  btn.disabled = !ready;
+  document.getElementById("confirmBtnTxt").textContent = ready ? "Confirm reservation" : "Choose date & time";
+  document.getElementById("sumStatus").textContent = ready ? "Ready" : "Drafting";
+}
+
+/* -------------------- toast -------------------- */
+let toastT;
+function toast(msg){
+  const el = document.getElementById("toast");
+  document.getElementById("toastTxt").textContent = msg;
+  el.classList.add("is-on");
+  clearTimeout(toastT);
+  toastT = setTimeout(()=>el.classList.remove("is-on"), 1800);
+}
+
+/* -------------------- confirm -------------------- */
+function makeRef(){
+  const n = Math.floor(1000 + Math.random()*8999);
+  return "MND-" + n;
+}
+document.getElementById("confirmBtn").addEventListener("click", ()=>{
+  // light validation
+  const name = (document.getElementById("fName").value || "").trim();
+  const phone = (document.getElementById("fPhone").value || "").trim();
+  if (!name){
+    document.getElementById("fName").focus();
+    document.getElementById("detailsStep").scrollIntoView({block:"start"});
+    toast("Please add your name");
+    return;
+  }
+  if (!phone || phone.replace(/\D/g,"").length < 7){
+    document.getElementById("fPhone").focus();
+    document.getElementById("detailsStep").scrollIntoView({block:"start"});
+    toast("We need a mobile to confirm");
+    return;
+  }
+  // populate confirmation
+  const [y,m,dd] = state.date.split("-").map(Number);
+  const d = new Date(y, m-1, dd);
+  document.getElementById("okName").textContent = name.split(/\s+/)[0];
+  document.getElementById("okParty").textContent = state.party + (state.party===1?" guest":" guests");
+  document.getElementById("okDate").textContent = prettyDate(d);
+  document.getElementById("okTime").textContent = state.time;
+  document.getElementById("okRef").textContent = makeRef();
+  document.getElementById("ok").classList.add("is-on");
+  document.getElementById("ok").setAttribute("aria-hidden","false");
+});
+function closeOk(){
+  document.getElementById("ok").classList.remove("is-on");
+  document.getElementById("ok").setAttribute("aria-hidden","true");
+}
+document.querySelectorAll("[data-close-ok]").forEach(el=>el.addEventListener("click", closeOk));
+document.getElementById("okDone").addEventListener("click", closeOk);
+document.getElementById("okWhats").addEventListener("click", ()=>{
+  window.open("https://wa.me/447800003321", "_blank");
+});
+
+/* -------------------- init -------------------- */
+renderParty();
+renderDates();
+renderSlots();
+renderOcc();
+renderSeat();
+renderDiet();
+updateSummary();
+</script>
+
+</body>
+</html>

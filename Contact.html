@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#14110D" />
+<title>Contact Maandeeq · Visit, Call or Write to Us · Woolwich, London</title>
+<meta name="description" content="Find Maandeeq Somali Restaurant in Woolwich. Address, opening hours, phone, email and a contact form for bookings, catering and private events." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#14110D;
+    --ink-2:#2A211A;
+    --ink-3:#3B2F25;
+    --paper:#F5EFE6;
+    --paper-2:#EADFCC;
+    --paper-3:#FBF7EF;
+    --camel:#8B6B4F;
+    --camel-dk:#6A4F38;
+    --gold:#D4A24C;
+    --gold-dk:#B7873A;
+    --muted:#8A7868;
+    --green:#6B8E5A;
+    --whats:#25D366;
+
+    --serif:"Bodoni Moda","Cormorant Garamond","Didot",serif;
+    --sans:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Space Mono",ui-monospace,Menlo,monospace;
+
+    --pad:clamp(18px,5vw,40px);
+    --r-card:20px;
+    --r-pill:999px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:120px}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-wrap:pretty;
+    overscroll-behavior:none;
+    padding-bottom:90px;
+  }
+  img{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer;color:inherit;background:none;border:0}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--gold);color:var(--ink)}
+
+  /* ============================= TICKER ============================= */
+  .ticker{
+    background:var(--ink);color:var(--paper);
+    overflow:hidden;position:relative;
+    border-bottom:1px solid rgba(212,162,76,0.18);
+  }
+  .ticker__track{
+    display:flex;gap:48px;padding:9px 0;width:max-content;
+    animation:ticker 60s linear infinite;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:rgba(245,239,230,0.8);
+  }
+  .ticker__track span em{color:var(--gold);font-style:normal;margin-right:8px}
+  .ticker__track span .sep{display:inline-block;margin:0 16px;color:rgba(245,239,230,0.3)}
+  @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============================= HERO ============================= */
+  .hero{
+    position:relative;padding:30px var(--pad) 64px;
+    background:
+      radial-gradient(120% 70% at 50% 0%, rgba(212,162,76,0.18), transparent 55%),
+      linear-gradient(180deg,#14110D 0%, #1B1610 100%);
+    color:var(--paper);overflow:hidden;text-align:center;
+  }
+  .hero__camel{
+    position:absolute;inset:auto 0 -22% 0;margin:0 auto;
+    width:min(560px,140%);opacity:.05;pointer-events:none;filter:invert(1);
+  }
+  .hero__back{
+    position:absolute;top:18px;left:var(--pad);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.75);
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.06);border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;z-index:2;
+  }
+  .hero__back:hover{background:rgba(245,239,230,0.12)}
+  .hero__nav{
+    position:absolute;top:18px;right:var(--pad);
+    display:inline-flex;gap:6px;z-index:2;
+    max-width:calc(100% - 130px);
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .hero__nav::-webkit-scrollbar{display:none}
+  .hero__nav a{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.75);padding:9px 14px;border-radius:var(--r-pill);white-space:nowrap;
+    background:rgba(245,239,230,0.06);border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;
+  }
+  .hero__nav a:hover{background:rgba(245,239,230,0.12)}
+
+  .hero__eyebrow{
+    margin-top:48px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--gold);
+    display:inline-flex;align-items:center;gap:12px;position:relative;z-index:1;
+  }
+  .hero__eyebrow::before,.hero__eyebrow::after{
+    content:"";display:block;width:24px;height:1px;background:rgba(212,162,76,.45);
+  }
+  .hero__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(48px,10vw,108px);
+    line-height:0.92;letter-spacing:-0.03em;
+    margin:18px 0 16px;position:relative;z-index:1;
+  }
+  .hero__title em{font-style:italic;color:var(--gold);font-weight:400}
+  .hero__sub{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(17px,2vw,21px);line-height:1.45;
+    color:rgba(245,239,230,0.78);
+    margin:0 auto;max-width:46ch;position:relative;z-index:1;
+  }
+
+  .hero__quick{
+    margin:36px auto 0;
+    position:relative;z-index:1;
+    display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;
+  }
+  .hero__quick a{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--paper);background:rgba(245,239,230,0.06);
+    border:1px solid rgba(245,239,230,0.16);
+    padding:11px 16px;border-radius:var(--r-pill);
+    display:inline-flex;align-items:center;gap:8px;
+    transition:background .2s ease,border-color .2s ease,color .2s ease;
+  }
+  .hero__quick a:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  .hero__quick a svg{color:var(--gold);transition:color .2s ease}
+  .hero__quick a:hover svg{color:var(--ink)}
+
+  /* ============================= MAIN ============================= */
+  main{max-width:1080px;margin:0 auto;padding:0 var(--pad)}
+  .sect{padding:64px 0 16px}
+  .sect__head{margin-bottom:32px}
+  .sect__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:10px;
+  }
+  .sect__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(34px,6.4vw,54px);
+    line-height:0.98;letter-spacing:-0.025em;margin:0;
+    max-width:18ch;
+  }
+  .sect__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .sect__lede{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(17px,2vw,20px);line-height:1.45;
+    color:var(--ink-2);margin:16px 0 0;max-width:48ch;
+  }
+
+  /* ============================= INFO CARDS ============================= */
+  .cards{
+    display:grid;grid-template-columns:1fr;gap:16px;
+  }
+  @media (min-width:680px){
+    .cards{grid-template-columns:1fr 1fr;gap:16px}
+  }
+  @media (min-width:980px){
+    .cards{grid-template-columns:repeat(4,1fr)}
+  }
+  .card{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:24px;
+    display:flex;flex-direction:column;gap:12px;
+    position:relative;overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px -28px rgba(20,17,13,0.35);
+    border-color:rgba(212,162,76,0.4);
+  }
+  .card__num{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .card__icon{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--ink);color:var(--gold);
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-bottom:2px;
+  }
+  .card__lbl{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--camel-dk);font-weight:600;margin:0;
+  }
+  .card__val{
+    font-family:var(--serif);font-weight:500;
+    font-size:22px;line-height:1.2;letter-spacing:-0.015em;
+    margin:0;color:var(--ink);
+  }
+  .card__val em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .card__val a{
+    border-bottom:1px solid rgba(20,17,13,0.18);padding-bottom:1px;
+    transition:border-color .2s ease,color .2s ease;
+  }
+  .card__val a:hover{color:var(--camel-dk);border-color:var(--camel-dk)}
+  .card__sub{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.06em;
+    color:var(--muted);margin:0;
+  }
+  .card__cta{
+    margin-top:auto;padding-top:12px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink);font-weight:700;
+    display:inline-flex;align-items:center;gap:6px;
+    align-self:flex-start;
+  }
+  .card__cta svg{transition:transform .2s ease}
+  .card:hover .card__cta svg{transform:translateX(3px)}
+
+  /* ============================= SPLIT (map + hours) ============================= */
+  .split{
+    display:grid;grid-template-columns:1fr;gap:26px;
+    padding-top:8px;
+  }
+  @media (min-width:880px){
+    .split{grid-template-columns:1.25fr 1fr;gap:30px;align-items:stretch}
+  }
+
+  /* Map block (no third-party tiles; uses a stylised illustration) */
+  .map{
+    position:relative;border-radius:var(--r-card);overflow:hidden;
+    background:
+      radial-gradient(60% 60% at 30% 20%, rgba(255,255,255,0.5), transparent 60%),
+      linear-gradient(135deg, #E8DEC9 0%, #D6C5A7 100%);
+    min-height:460px;
+    border:1px solid rgba(20,17,13,0.08);
+  }
+  .map__grid{
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(20,17,13,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20,17,13,0.04) 1px, transparent 1px);
+    background-size:40px 40px;
+    background-position:center;
+  }
+  .map__road{
+    position:absolute;background:rgba(20,17,13,0.14);
+    border-radius:2px;
+  }
+  .map__road--main{
+    left:-10%;right:-10%;top:48%;height:14px;
+    transform:rotate(-8deg);transform-origin:center;
+    background:rgba(245,239,230,0.7);
+    border-top:1px solid rgba(20,17,13,0.18);
+    border-bottom:1px solid rgba(20,17,13,0.18);
+  }
+  .map__road--main::after{
+    content:"";position:absolute;top:50%;left:0;right:0;height:1px;
+    background:repeating-linear-gradient(90deg, var(--gold) 0 14px, transparent 14px 28px);
+    transform:translateY(-50%);
+  }
+  .map__road--cross{
+    top:-10%;bottom:-10%;left:62%;width:8px;
+    transform:rotate(14deg);
+    background:rgba(245,239,230,0.5);
+    border-left:1px solid rgba(20,17,13,0.14);
+    border-right:1px solid rgba(20,17,13,0.14);
+  }
+  .map__road--river{
+    left:-10%;right:-10%;bottom:6%;height:36px;
+    transform:rotate(3deg);
+    background:linear-gradient(180deg, #B8C9CD 0%, #93AEB4 100%);
+    border-top:1px solid rgba(20,17,13,0.1);
+    border-bottom:1px solid rgba(20,17,13,0.1);
+  }
+  .map__riverlbl{
+    position:absolute;bottom:5%;left:14%;
+    font-family:var(--serif);font-style:italic;font-size:13px;
+    color:rgba(20,17,13,0.45);transform:rotate(3deg);
+  }
+  .map__poi{
+    position:absolute;
+    font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;
+    color:rgba(20,17,13,0.55);
+    display:inline-flex;align-items:center;gap:5px;
+  }
+  .map__poi::before{
+    content:"";width:6px;height:6px;border-radius:50%;background:rgba(20,17,13,0.4);
+  }
+  .map__poi--station{ top:32%; left:18%; }
+  .map__poi--ferry{ top:62%; right:12%; }
+  .map__poi--park{ top:14%; right:24%; }
+
+  .map__pin{
+    position:absolute;left:50%;top:42%;
+    transform:translate(-50%,-100%);
+    z-index:2;
+  }
+  .map__pindot{
+    width:54px;height:54px;border-radius:50% 50% 50% 0;
+    background:var(--gold);
+    rotate:-45deg;
+    box-shadow:0 12px 30px -10px rgba(20,17,13,0.5), 0 0 0 4px rgba(212,162,76,0.25);
+    display:flex;align-items:center;justify-content:center;
+    animation:pinPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pinPulse{
+    0%,100%{box-shadow:0 12px 30px -10px rgba(20,17,13,0.5), 0 0 0 4px rgba(212,162,76,0.25)}
+    50%{box-shadow:0 12px 30px -10px rgba(20,17,13,0.5), 0 0 0 14px rgba(212,162,76,0)}
+  }
+  .map__pindot svg{rotate:45deg;color:var(--ink)}
+  .map__pinlbl{
+    margin-top:14px;
+    background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;
+    padding:8px 14px;border-radius:var(--r-pill);
+    white-space:nowrap;
+    text-align:center;
+  }
+  .map__pinlbl strong{display:block;color:var(--gold);font-weight:700;margin-bottom:2px}
+
+  .map__zoom{
+    position:absolute;top:14px;right:14px;
+    display:flex;flex-direction:column;
+    background:var(--paper);
+    border-radius:10px;
+    border:1px solid rgba(20,17,13,0.1);
+    overflow:hidden;
+    box-shadow:0 4px 12px -6px rgba(20,17,13,0.25);
+  }
+  .map__zoom button{
+    width:32px;height:32px;background:transparent;border:0;
+    font-family:var(--mono);font-size:16px;font-weight:700;color:var(--ink);
+    border-bottom:1px solid rgba(20,17,13,0.1);
+  }
+  .map__zoom button:last-child{border-bottom:0}
+  .map__zoom button:hover{background:rgba(20,17,13,0.05)}
+
+  .map__open{
+    position:absolute;left:14px;bottom:14px;
+    background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;
+    padding:11px 14px;border-radius:var(--r-pill);
+    display:inline-flex;align-items:center;gap:8px;
+    transition:background .2s ease;
+  }
+  .map__open:hover{background:var(--gold);color:var(--ink)}
+
+  .map__scale{
+    position:absolute;bottom:14px;right:14px;
+    font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;
+    color:rgba(20,17,13,0.5);
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .map__scale::before{
+    content:"";display:block;width:48px;height:6px;
+    border-left:1px solid rgba(20,17,13,0.45);
+    border-right:1px solid rgba(20,17,13,0.45);
+    border-bottom:1px solid rgba(20,17,13,0.45);
+  }
+
+  /* HOURS panel (dark) */
+  .hours{
+    background:linear-gradient(180deg,#14110D 0%, #1F1812 100%);
+    color:var(--paper);
+    border-radius:var(--r-card);
+    padding:30px;
+    position:relative;overflow:hidden;
+    border:1px solid rgba(245,239,230,0.06);
+    display:flex;flex-direction:column;
+  }
+  .hours::before{
+    content:"";position:absolute;inset:10px;
+    border:1px dashed rgba(212,162,76,0.18);
+    border-radius:14px;pointer-events:none;
+  }
+  .hours__head{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    margin-bottom:20px;position:relative;z-index:1;
+  }
+  .hours__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:26px;letter-spacing:-0.015em;line-height:1;margin:0;
+  }
+  .hours__title em{font-style:italic;color:var(--gold)}
+  .hours__status{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    background:rgba(107,142,90,0.18);color:#A8C599;
+    padding:7px 12px;border-radius:var(--r-pill);
+    border:1px solid rgba(107,142,90,0.3);
+  }
+  .hours__status::before{
+    content:"";width:7px;height:7px;border-radius:50%;background:#A8C599;
+    box-shadow:0 0 0 4px rgba(168,197,153,0.25);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  .hours__status.is-closed{background:rgba(212,162,76,0.12);color:var(--gold);border-color:rgba(212,162,76,0.3)}
+  .hours__status.is-closed::before{background:var(--gold);box-shadow:0 0 0 4px rgba(212,162,76,0.25)}
+  @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(168,197,153,0)}}
+
+  .hours__list{
+    list-style:none;margin:0;padding:0;position:relative;z-index:1;
+  }
+  .hours__list li{
+    display:grid;grid-template-columns:1fr auto;align-items:baseline;
+    padding:14px 0;
+    border-top:1px solid rgba(245,239,230,0.08);
+    gap:14px;
+  }
+  .hours__list li:first-child{border-top:0}
+  .hours__list li.is-today{
+    background:linear-gradient(90deg, rgba(212,162,76,0.1), transparent);
+    margin:0 -14px;padding:14px 14px;border-radius:10px;
+    border:1px solid rgba(212,162,76,0.2);
+    border-top:1px solid rgba(212,162,76,0.2);
+  }
+  .hours__day{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;
+    color:rgba(245,239,230,0.65);font-weight:500;
+    display:flex;align-items:center;gap:10px;
+  }
+  .hours__list li.is-today .hours__day{color:var(--gold);font-weight:700}
+  .hours__list li.is-today .hours__day::after{
+    content:"Today";
+    font-size:9px;letter-spacing:0.18em;
+    padding:3px 7px;border-radius:var(--r-pill);
+    background:var(--gold);color:var(--ink);font-weight:700;
+  }
+  .hours__time{
+    font-family:var(--serif);font-weight:500;font-size:17px;
+    color:var(--paper);letter-spacing:-0.005em;
+    font-feature-settings:"tnum";
+  }
+  .hours__list li.is-today .hours__time{color:var(--gold)}
+  .hours__foot{
+    margin-top:auto;padding-top:18px;position:relative;z-index:1;
+    font-family:var(--serif);font-style:italic;font-size:14px;
+    color:rgba(245,239,230,0.6);line-height:1.5;
+  }
+  .hours__foot strong{color:var(--gold);font-weight:500;font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;display:block;margin-bottom:4px}
+
+  /* ============================= FORM ============================= */
+  .formwrap{
+    display:grid;grid-template-columns:1fr;gap:30px;
+    padding-top:8px;
+  }
+  @media (min-width:880px){
+    .formwrap{grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}
+  }
+  .formintro{position:sticky;top:120px}
+  .formintro p{
+    font-size:16px;line-height:1.6;color:var(--ink-2);
+    margin:0 0 14px;max-width:42ch;
+  }
+  .formintro__rule{
+    display:inline-flex;align-items:center;gap:14px;
+    margin:6px 0 16px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .formintro__rule::before{content:"";display:block;width:32px;height:1px;background:var(--camel)}
+  .formintro__quotes{
+    margin-top:22px;padding:18px 20px;
+    border-left:3px solid var(--gold);
+    background:var(--paper-3);
+    border-radius:0 14px 14px 0;
+  }
+  .formintro__quotes p{
+    font-family:var(--serif);font-style:italic;font-size:18px;
+    line-height:1.35;color:var(--ink);margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  .formintro__quotes span{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+
+  .form{
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:clamp(22px,3vw,32px);
+    position:relative;
+  }
+  .form__head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:12px;margin-bottom:20px;flex-wrap:wrap;
+  }
+  .form__head h3{
+    font-family:var(--serif);font-weight:500;
+    font-size:28px;letter-spacing:-0.015em;margin:0;
+  }
+  .form__head h3 em{font-style:italic;color:var(--camel-dk)}
+  .form__head small{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  .topic{
+    display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;
+  }
+  .topic button{
+    padding:9px 14px;border-radius:var(--r-pill);
+    background:transparent;border:1px solid rgba(20,17,13,0.14);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--ink-2);font-weight:600;
+    transition:background .2s ease,color .2s ease,border-color .2s ease;
+  }
+  .topic button:hover{background:rgba(20,17,13,0.05)}
+  .topic button.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  .grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  }
+  @media (max-width:520px){.grid{grid-template-columns:1fr}}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field--full{grid-column:1/-1}
+  .field > label{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+  .field input, .field textarea, .field select{
+    background:var(--paper);
+    border:1px solid rgba(20,17,13,0.12);
+    border-radius:12px;
+    padding:13px 14px;
+    font:inherit;font-size:15px;color:var(--ink);
+    font-family:var(--sans);
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .field textarea{min-height:120px;resize:vertical;line-height:1.5}
+  .field input:focus, .field textarea:focus, .field select:focus{
+    outline:none;border-color:var(--camel);background:#fff;
+  }
+  .field--full textarea{font-family:var(--sans)}
+
+  .form__foot{
+    margin-top:22px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    flex-wrap:wrap;
+  }
+  .form__hint{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.12em;
+    color:var(--muted);margin:0;flex:1;min-width:200px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 22px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    font-weight:700;text-decoration:none;
+    transition:background .2s ease, color .2s ease, transform .15s ease, border-color .2s ease;
+    border:1px solid transparent;cursor:pointer;
+  }
+  .btn:active{transform:scale(0.98)}
+  .btn--gold{background:var(--gold);color:var(--ink)}
+  .btn--gold:hover{background:var(--gold-dk)}
+  .btn--ghost{border-color:rgba(20,17,13,0.22);color:var(--ink);background:transparent}
+  .btn--ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn--ghost-light{border-color:rgba(245,239,230,0.3);color:var(--paper);background:transparent}
+  .btn--ghost-light:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  .btn--whats{background:var(--whats);color:#06281a}
+  .btn--whats:hover{background:#1FBA5A}
+
+  .form__sent{
+    background:rgba(212,162,76,0.12);
+    border:1px solid rgba(212,162,76,0.35);
+    border-radius:14px;
+    padding:22px;
+    text-align:center;
+    display:none;
+  }
+  .form__sent.is-on{display:block;animation:fadeIn .35s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .form__sent h4{
+    font-family:var(--serif);font-style:italic;font-weight:500;
+    font-size:24px;letter-spacing:-0.01em;margin:0 0 6px;color:var(--ink);
+  }
+  .form__sent p{
+    font-size:14px;color:var(--ink-2);margin:0;line-height:1.5;
+  }
+
+  /* ============================= GETTING HERE (dark band) ============================= */
+  .getting{
+    margin:64px calc(var(--pad)*-1) 0;
+    padding:80px var(--pad);
+    background:linear-gradient(180deg,#1A140E 0%, #221913 100%);
+    color:var(--paper);
+    position:relative;overflow:hidden;
+  }
+  .getting::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(60% 70% at 100% 0%, rgba(212,162,76,0.15), transparent 60%),
+      radial-gradient(50% 60% at 0% 100%, rgba(212,162,76,0.06), transparent 60%);
+    pointer-events:none;
+  }
+  .getting__inner{
+    max-width:1080px;margin:0 auto;position:relative;z-index:1;
+  }
+  .getting__head{margin-bottom:32px}
+  .getting__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--gold);display:block;margin-bottom:10px;
+  }
+  .getting__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(34px,5.6vw,52px);
+    line-height:1;letter-spacing:-0.025em;margin:0;max-width:18ch;
+  }
+  .getting__title em{font-style:italic;color:var(--gold)}
+
+  .modes{
+    display:grid;grid-template-columns:1fr;gap:14px;
+  }
+  @media (min-width:680px){.modes{grid-template-columns:repeat(3,1fr)}}
+  .mode{
+    background:rgba(245,239,230,0.04);
+    border:1px solid rgba(245,239,230,0.12);
+    border-radius:var(--r-card);
+    padding:22px;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .mode__no{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--gold);
+  }
+  .mode__name{
+    font-family:var(--serif);font-weight:500;
+    font-size:22px;line-height:1.1;letter-spacing:-0.01em;margin:0;color:var(--paper);
+  }
+  .mode__name em{font-style:italic;color:var(--gold)}
+  .mode__txt{
+    font-size:14px;line-height:1.5;color:rgba(245,239,230,0.72);margin:0;
+  }
+  .mode__txt strong{color:var(--paper);font-weight:600}
+
+  .nearest{
+    margin-top:28px;
+    border-top:1px solid rgba(245,239,230,0.12);
+    padding-top:24px;
+    display:grid;grid-template-columns:1fr;gap:6px;
+  }
+  @media (min-width:720px){.nearest{grid-template-columns:repeat(3,1fr);gap:0}}
+  .nearest__cell{padding:0 18px;border-left:1px solid rgba(245,239,230,0.12)}
+  .nearest__cell:first-child{padding-left:0;border-left:0}
+  .nearest__lbl{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;
+    color:rgba(245,239,230,0.6);display:block;margin-bottom:8px;
+  }
+  .nearest__val{
+    font-family:var(--serif);font-weight:500;font-size:18px;
+    color:var(--paper);letter-spacing:-0.01em;line-height:1.2;margin:0 0 4px;
+  }
+  .nearest__val em{font-style:italic;color:var(--gold)}
+  .nearest__sub{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.06em;
+    color:rgba(245,239,230,0.5);
+  }
+
+  /* ============================= CTA ============================= */
+  .cta{
+    margin:0 calc(var(--pad)*-1);
+    padding:80px var(--pad);
+    background:var(--paper-2);
+    text-align:center;position:relative;overflow:hidden;
+  }
+  .cta__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:12px;
+  }
+  .cta h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(38px,6.5vw,68px);
+    line-height:0.98;letter-spacing:-0.03em;
+    margin:0 auto 18px;max-width:14ch;
+  }
+  .cta h2 em{font-style:italic;color:var(--camel-dk)}
+  .cta p{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(16px,1.8vw,19px);
+    color:var(--ink-3);line-height:1.45;
+    margin:0 auto 32px;max-width:46ch;
+  }
+  .cta__row{
+    display:inline-flex;flex-wrap:wrap;gap:10px;justify-content:center;
+  }
+
+  /* ============================= FOOTER ============================= */
+  footer{
+    background:var(--ink);color:var(--paper);
+    padding:48px var(--pad) 30px;text-align:center;
+  }
+  footer .wordmark{
+    font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:0.06em;
+    display:inline-block;padding:0 0 6px;border-bottom:1px solid var(--gold);position:relative;
+  }
+  footer .wordmark::before,footer .wordmark::after{
+    content:"";position:absolute;bottom:-1px;width:24%;height:1px;background:var(--gold)
+  }
+  footer .wordmark::before{left:-14px}
+  footer .wordmark::after{right:-14px}
+  footer .tagline{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--gold);margin:8px 0 18px;
+  }
+  footer .legal{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:rgba(245,239,230,0.4);margin:18px 0 0;
+  }
+  footer .quote{
+    font-family:var(--serif);font-style:italic;color:rgba(245,239,230,0.7);
+    max-width:32ch;margin:0 auto;font-size:15px;line-height:1.4;
+  }
+
+  /* ============================= STICKY ACTIONS ============================= */
+  .actions{
+    position:fixed;
+    left:12px;right:12px;bottom:12px;z-index:60;
+    background:rgba(20,17,13,0.96);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    color:var(--paper);
+    border-radius:var(--r-pill);
+    padding:8px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;
+    box-shadow:0 20px 50px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,162,76,0.18);
+    max-width:580px;margin:0 auto;
+  }
+  .actions__btn{
+    background:transparent;border:0;color:var(--paper);
+    padding:11px 6px;border-radius:calc(var(--r-pill) - 4px);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    transition:background .2s ease;
+  }
+  .actions__btn:hover{background:rgba(245,239,230,0.06)}
+  .actions__btn--call{background:var(--gold);color:var(--ink)}
+  .actions__btn--call:hover{background:var(--gold-dk)}
+
+  @media (min-width:760px){
+    body{padding-bottom:30px}
+    .actions{
+      left:auto;right:18px;bottom:18px;
+      grid-template-columns:1fr;width:auto;padding:6px;
+    }
+    .actions__btn{padding:12px 22px}
+    .actions__btn--whats,.actions__btn--menu{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================= TICKER ============================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker"></div>
+</div>
+
+<!-- ============================= HERO ============================= -->
+<header class="hero" data-screen-label="01 Hero">
+  <a class="hero__back" href="index.html">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    Home
+  </a>
+  <div class="hero__nav">
+    <a href="Menu.html">Menu</a>
+    <a href="Order.html">Order</a>
+    <a href="Catering.html">Catering</a>
+    <a href="About.html">About</a>
+    <a href="Reviews.html">Reviews</a>
+    <a href="Reserve.html">Reserve</a>
+  </div>
+
+  <img class="hero__camel" src="assets/brand/logo-transparent.png" alt="" aria-hidden="true" />
+
+  <div class="hero__eyebrow">Contact · Soo Dhaweyn</div>
+  <h1 class="hero__title">Come by, call,<br><em>or write to us</em>.</h1>
+  <p class="hero__sub">The kettle is always on. Reach us for a table, a takeaway, a catering quote, or just to say hello — we're a quick walk from Woolwich Arsenal.</p>
+
+  <div class="hero__quick">
+    <a href="tel:+447958139312">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"></path></svg>
+      Call us
+    </a>
+    <a href="mailto:restaurantmaandeeq@gmail.com">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      Email
+    </a>
+    <a href="https://wa.me/447958139312" target="_blank" rel="noopener">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      WhatsApp
+    </a>
+    <a href="#form">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+      Send a message
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================= INFO CARDS ============================= -->
+  <section class="sect" id="reach" data-screen-label="02 Ways to reach us">
+    <div class="sect__head">
+      <span class="sect__num">01 — Find us</span>
+      <h2 class="sect__title">Four ways to <em>reach us</em>.</h2>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <span class="card__num">No. 01</span>
+        <div class="card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <p class="card__lbl">Address</p>
+        <p class="card__val">Maandeeq Restaurant<br>13B Anglesea Rd<br><em>London SE18 6EG</em></p>
+        <p class="card__sub">Woolwich · South East London</p>
+        <a class="card__cta" href="https://maps.google.com/?q=Maandeeq+Restaurant+13B+Anglesea+Rd+London+SE18+6EG" target="_blank" rel="noopener">
+          Open in maps
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="card__num">No. 02</span>
+        <div class="card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"></path></svg>
+        </div>
+        <p class="card__lbl">Phone</p>
+        <p class="card__val"><a href="tel:+447958139312">+44 7958<br>139 312</a></p>
+        <p class="card__sub">Booking · Takeaway · Catering</p>
+        <a class="card__cta" href="tel:+447958139312">
+          Call now
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="card__num">No. 03</span>
+        <div class="card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
+        <p class="card__lbl">Email</p>
+        <p class="card__val"><a href="mailto:restaurantmaandeeq@gmail.com">restaurant<br>maandeeq<br><em>@gmail.com</em></a></p>
+        <p class="card__sub">Replies within one working day</p>
+        <a class="card__cta" href="mailto:restaurantmaandeeq@gmail.com">
+          Write to us
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="card__num">No. 04</span>
+        <div class="card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </div>
+        <p class="card__lbl">WhatsApp</p>
+        <p class="card__val">Message the<br><em>kitchen</em> directly</p>
+        <p class="card__sub">Fastest for same-day orders</p>
+        <a class="card__cta" href="https://wa.me/447958139312" target="_blank" rel="noopener">
+          Open chat
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================= MAP + HOURS ============================= -->
+  <section class="sect" id="visit" data-screen-label="03 Map + hours">
+    <div class="sect__head">
+      <span class="sect__num">02 — Visit us</span>
+      <h2 class="sect__title">On <em>Anglesea Road</em>, just off Powis Street.</h2>
+    </div>
+
+    <div class="split">
+      <div class="map" aria-label="Stylised map showing Maandeeq Restaurant in Woolwich">
+        <div class="map__grid"></div>
+        <div class="map__road map__road--main"></div>
+        <div class="map__road map__road--cross"></div>
+        <div class="map__road map__road--river"></div>
+        <span class="map__riverlbl">River Thames</span>
+
+        <span class="map__poi map__poi--station">Woolwich Arsenal Stn.</span>
+        <span class="map__poi map__poi--ferry">Woolwich Ferry</span>
+        <span class="map__poi map__poi--park">General Gordon Sq.</span>
+
+        <div class="map__pin">
+          <div class="map__pindot">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="map__pinlbl">
+            <strong>Maandeeq</strong>
+            13B Anglesea Rd · SE18 6EG
+          </div>
+        </div>
+
+        <div class="map__zoom">
+          <button type="button" aria-label="Zoom in">+</button>
+          <button type="button" aria-label="Zoom out">−</button>
+        </div>
+
+        <a class="map__open" href="https://maps.google.com/?q=Maandeeq+Restaurant+13B+Anglesea+Rd+London+SE18+6EG" target="_blank" rel="noopener">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Open in Google Maps
+        </a>
+
+        <span class="map__scale">200m</span>
+      </div>
+
+      <aside class="hours" id="hours-panel">
+        <div class="hours__head">
+          <h3 class="hours__title">Opening <em>hours</em></h3>
+          <span class="hours__status" id="status">Open now</span>
+        </div>
+        <ul class="hours__list" id="hours-list">
+          <li data-day="1"><span class="hours__day">Monday</span><span class="hours__time">8:00 – 22:00</span></li>
+          <li data-day="2"><span class="hours__day">Tuesday</span><span class="hours__time">8:00 – 22:00</span></li>
+          <li data-day="3"><span class="hours__day">Wednesday</span><span class="hours__time">8:00 – 22:00</span></li>
+          <li data-day="4"><span class="hours__day">Thursday</span><span class="hours__time">8:00 – 22:00</span></li>
+          <li data-day="5"><span class="hours__day">Friday</span><span class="hours__time">8:00 – 22:00</span></li>
+          <li data-day="6"><span class="hours__day">Saturday</span><span class="hours__time">9:00 – 22:00</span></li>
+          <li data-day="0"><span class="hours__day">Sunday</span><span class="hours__time">9:00 – 22:00</span></li>
+        </ul>
+        <p class="hours__foot">
+          <strong>A note from the kitchen</strong>
+          Last orders 30 minutes before close. For groups of eight or more, please call ahead — we'd love to set the room for you.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================= FORM ============================= -->
+  <section class="sect" id="form" data-screen-label="04 Contact form">
+    <div class="sect__head">
+      <span class="sect__num">03 — Send a message</span>
+      <h2 class="sect__title">Tell us what <em>brings you in</em>.</h2>
+    </div>
+
+    <div class="formwrap">
+      <div class="formintro">
+        <span class="formintro__rule">A real person reads every one</span>
+        <p>Whether it's a quiet table for two, a Nikkah for a hundred, or a question about our menu — drop us a line. We reply from the kitchen, in plain English, usually within a working day.</p>
+        <p>For same-day bookings or takeaway, the phone or WhatsApp will always be the fastest.</p>
+
+        <div class="formintro__quotes">
+          <p>"They picked up on the second ring, took my order, and had it ready in twenty minutes. That's how it should be."</p>
+          <span>— Yusuf A. · ★★★★★</span>
+        </div>
+      </div>
+
+      <form class="form" id="contact-form" novalidate>
+        <div class="form__head">
+          <h3>Write to <em>Maandeeq</em></h3>
+          <small>* Required</small>
+        </div>
+
+        <div class="topic" id="topic" role="tablist" aria-label="What is this about?">
+          <button type="button" class="is-on" data-topic="Booking">Booking a table</button>
+          <button type="button" data-topic="Takeaway">Takeaway</button>
+          <button type="button" data-topic="Catering">Catering &amp; events</button>
+          <button type="button" data-topic="Feedback">Feedback</button>
+          <button type="button" data-topic="Other">Something else</button>
+        </div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="f-name">Your name *</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+44 …" />
+          </div>
+          <div class="field field--full">
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="f-date">Preferred date</label>
+            <input id="f-date" name="date" type="date" />
+          </div>
+          <div class="field">
+            <label for="f-guests">Guests</label>
+            <select id="f-guests" name="guests">
+              <option value="">Select…</option>
+              <option>1–2</option>
+              <option>3–4</option>
+              <option>5–8</option>
+              <option>9–16</option>
+              <option>17–40</option>
+              <option>40+</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="f-msg">Message *</label>
+            <textarea id="f-msg" name="message" required placeholder="A few lines about what you have in mind — date, time, occasion, dietary notes, anything we should know."></textarea>
+          </div>
+        </div>
+
+        <div class="form__foot">
+          <p class="form__hint">We never share your details. Replies come from <strong>restaurantmaandeeq@gmail.com</strong>.</p>
+          <button type="submit" class="btn btn--gold">
+            Send message
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+
+        <div class="form__sent" id="form-sent" role="status" aria-live="polite">
+          <h4>Soo Dhaweyn — thank you.</h4>
+          <p>Your note is on its way to the kitchen. We'll reply soon. For anything urgent, please call <strong>+44 7958 139 312</strong>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<!-- ============================= GETTING HERE (dark) ============================= -->
+<section class="getting" id="getting" data-screen-label="05 Getting here">
+  <div class="getting__inner">
+    <div class="getting__head">
+      <span class="getting__num">04 — Getting here</span>
+      <h2 class="getting__title">A few minutes from <em>almost anywhere</em>.</h2>
+    </div>
+
+    <div class="modes">
+      <article class="mode">
+        <span class="mode__no">01 / Rail &amp; Elizabeth line</span>
+        <h3 class="mode__name">By <em>train</em></h3>
+        <p class="mode__txt"><strong>Woolwich Arsenal</strong> (National Rail) and <strong>Woolwich</strong> (Elizabeth line) are a 4-minute walk. Exit toward Powis Street, then turn onto Anglesea Road.</p>
+      </article>
+      <article class="mode">
+        <span class="mode__no">02 / Bus &amp; DLR</span>
+        <h3 class="mode__name">By <em>bus or DLR</em></h3>
+        <p class="mode__txt"><strong>DLR:</strong> Woolwich Arsenal terminus, 5 min walk. <strong>Buses:</strong> 53, 54, 96, 161, 177, 178, 244, 380, 386, 422, 472, 53 — all stop within 200m.</p>
+      </article>
+      <article class="mode">
+        <span class="mode__no">03 / Car &amp; parking</span>
+        <h3 class="mode__name">By <em>car</em></h3>
+        <p class="mode__txt">Paid street parking on Anglesea Road and surrounding streets. <strong>Tesco Car Park</strong> on Lakedale Road is the easiest if we're full — about 3 minutes on foot.</p>
+      </article>
+    </div>
+
+    <div class="nearest">
+      <div class="nearest__cell">
+        <span class="nearest__lbl">Nearest station</span>
+        <p class="nearest__val">Woolwich <em>Arsenal</em></p>
+        <span class="nearest__sub">~ 4 min walk · 300m</span>
+      </div>
+      <div class="nearest__cell">
+        <span class="nearest__lbl">Nearest tube/DLR</span>
+        <p class="nearest__val">Woolwich <em>DLR</em></p>
+        <span class="nearest__sub">~ 5 min walk · 400m</span>
+      </div>
+      <div class="nearest__cell">
+        <span class="nearest__lbl">Step-free access</span>
+        <p class="nearest__val"><em>Yes</em> — at the door</p>
+        <span class="nearest__sub">Ground floor dining</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CTA ============================= -->
+<section class="cta" data-screen-label="06 CTA">
+  <span class="cta__num">05 — Or simply walk in</span>
+  <h2>The door is <em>open</em>. The table is <em>set</em>.</h2>
+  <p>No booking, no problem — most of our best nights begin with a walk-in. Bring your appetite, bring your people.</p>
+  <div class="cta__row">
+    <a class="btn btn--gold" href="Menu.html">
+      See the menu
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+    <a class="btn btn--whats" href="https://wa.me/447958139312" target="_blank" rel="noopener">
+      WhatsApp the kitchen
+    </a>
+    <a class="btn btn--gold" href="Reserve.html" style="margin-left:8px">
+      Reserve a table
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+    <a class="btn btn--ghost" href="Catering.html">Catering enquiries</a>
+  </div>
+</section>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="wordmark">MAANDEEQ</div>
+  <div class="tagline">Restaurant · Somali · Woolwich</div>
+  <p class="quote">Thank you for sharing our table. There will always be a place set for you.</p>
+  <p class="legal">© Maandeeq Restaurant · 13B Anglesea Rd · London SE18 6EG</p>
+</footer>
+
+<!-- ============================= STICKY ACTIONS ============================= -->
+<div class="actions">
+  <a class="actions__btn actions__btn--menu" href="Menu.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+    Menu
+  </a>
+  <a class="actions__btn actions__btn--whats" href="https://wa.me/447958139312" target="_blank" rel="noopener">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+    WhatsApp
+  </a>
+  <a class="actions__btn actions__btn--call" href="tel:+447958139312">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"></path></svg>
+    Call us
+  </a>
+</div>
+
+<script>
+/* ============================= TICKER ============================= */
+(function(){
+  const items = [
+    {em:"13B Anglesea Rd", t:"Woolwich · London SE18 6EG"},
+    {em:"+44 7958 139 312", t:"Booking · Takeaway · Catering"},
+    {em:"Open today", t:"Until 10pm · Last orders 9:30"},
+    {em:"Soo Dhaweyn", t:"The kettle is always on"},
+    {em:"Walk-ins welcome", t:"4 min from Woolwich Arsenal"},
+    {em:"100% Halal", t:"Family-run Somali kitchen"},
+  ];
+  const track = document.getElementById('ticker');
+  const html = items.map(i=>`<span><em>${i.em}</em>${i.t}<span class="sep">◆</span></span>`).join('');
+  track.innerHTML = html + html;
+})();
+
+/* ============================= HOURS — today highlight + open/closed ============================= */
+(function(){
+  const HOURS = {
+    1:{o:8, c:22}, 2:{o:8, c:22}, 3:{o:8, c:22}, 4:{o:8, c:22}, 5:{o:8, c:22},
+    6:{o:9, c:22}, 0:{o:9, c:22},
+  };
+  const now = new Date();
+  const dayIdx = now.getDay();
+  const list = document.getElementById('hours-list');
+  Array.from(list.children).forEach(li=>{
+    if(Number(li.dataset.day)===dayIdx) li.classList.add('is-today');
+  });
+  const status = document.getElementById('status');
+  const cur = now.getHours() + now.getMinutes()/60;
+  const today = HOURS[dayIdx];
+  const isOpen = today && cur >= today.o && cur < today.c;
+  if(isOpen){
+    const closesIn = today.c - cur;
+    const hrs = Math.floor(closesIn);
+    const mins = Math.round((closesIn-hrs)*60);
+    let label = 'Open now';
+    if(hrs===0) label = `Closes in ${mins}m`;
+    else if(hrs<=1) label = `Closes in ${hrs}h ${mins}m`;
+    status.textContent = label;
+  } else {
+    status.textContent = 'Closed now';
+    status.classList.add('is-closed');
+  }
+})();
+
+/* ============================= TOPIC PICKER ============================= */
+(function(){
+  const wrap = document.getElementById('topic');
+  wrap.addEventListener('click', e=>{
+    const b = e.target.closest('button');
+    if(!b) return;
+    wrap.querySelectorAll('button').forEach(x=>x.classList.remove('is-on'));
+    b.classList.add('is-on');
+  });
+})();
+
+/* ============================= FORM SUBMIT (demo only) ============================= */
+(function(){
+  const form = document.getElementById('contact-form');
+  const sent = document.getElementById('form-sent');
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    const name = form.querySelector('#f-name').value.trim();
+    const email = form.querySelector('#f-email').value.trim();
+    const msg = form.querySelector('#f-msg').value.trim();
+    if(!name || !email || !msg){
+      form.querySelectorAll('[required]').forEach(el=>{
+        if(!el.value.trim()) el.style.borderColor = 'var(--gold-dk)';
+      });
+      return;
+    }
+    sent.classList.add('is-on');
+    form.querySelector('.grid').style.display = 'none';
+    form.querySelector('.topic').style.display = 'none';
+    form.querySelector('.form__foot').style.display = 'none';
+    const y = sent.getBoundingClientRect().top + window.scrollY - 120;
+    window.scrollTo({top:y, behavior:'smooth'});
+  });
+  form.querySelectorAll('input,textarea,select').forEach(el=>{
+    el.addEventListener('input', ()=>{ el.style.borderColor = ''; });
+  });
+})();
+</script>
+</body>
+</html>

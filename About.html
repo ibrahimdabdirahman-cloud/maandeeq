@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#14110D" />
+<title>About Maandeeq · Authentic Somali Restaurant in Woolwich, London</title>
+<meta name="description" content="The story of Maandeeq — a family-run Somali kitchen in Woolwich serving traditional East African food in the spirit of Soo Dhaweyn." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#14110D;
+    --ink-2:#2A211A;
+    --ink-3:#3B2F25;
+    --paper:#F5EFE6;
+    --paper-2:#EADFCC;
+    --paper-3:#FBF7EF;
+    --camel:#8B6B4F;
+    --camel-dk:#6A4F38;
+    --gold:#D4A24C;
+    --gold-dk:#B7873A;
+    --muted:#8A7868;
+    --green:#6B8E5A;
+    --whats:#25D366;
+
+    --serif:"Bodoni Moda","Cormorant Garamond","Didot",serif;
+    --sans:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Space Mono",ui-monospace,Menlo,monospace;
+
+    --pad:clamp(18px,5vw,40px);
+    --r-card:20px;
+    --r-pill:999px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:120px}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-wrap:pretty;
+    overscroll-behavior:none;
+    padding-bottom:90px;
+  }
+  img{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer;color:inherit;background:none;border:0}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--gold);color:var(--ink)}
+
+  /* ============================= TICKER ============================= */
+  .ticker{
+    background:var(--ink);
+    color:var(--paper);
+    overflow:hidden;
+    position:relative;
+    border-bottom:1px solid rgba(212,162,76,0.18);
+  }
+  .ticker__track{
+    display:flex;
+    gap:48px;
+    padding:9px 0;
+    width:max-content;
+    animation:ticker 60s linear infinite;
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:rgba(245,239,230,0.8);
+  }
+  .ticker__track span em{
+    color:var(--gold);font-style:normal;margin-right:8px;
+  }
+  .ticker__track span .sep{
+    display:inline-block;margin:0 16px;color:rgba(245,239,230,0.3);
+  }
+  @keyframes ticker{
+    from{transform:translateX(0)}
+    to{transform:translateX(-50%)}
+  }
+
+  /* ============================= HERO ============================= */
+  .hero{
+    position:relative;
+    padding:30px var(--pad) 56px;
+    background:
+      radial-gradient(120% 70% at 50% 0%, rgba(212,162,76,0.18), transparent 55%),
+      linear-gradient(180deg,#14110D 0%, #1B1610 100%);
+    color:var(--paper);
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero__camel{
+    position:absolute;
+    inset:auto 0 -22% 0;
+    margin:0 auto;
+    width:min(560px,140%);
+    opacity:.05;
+    pointer-events:none;
+    filter:invert(1);
+  }
+  .hero__back{
+    position:absolute;
+    top:18px;
+    left:var(--pad);
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:rgba(245,239,230,0.75);
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;
+    border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.06);
+    border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;
+    z-index:2;
+  }
+  .hero__back:hover{background:rgba(245,239,230,0.12)}
+  .hero__nav{
+    position:absolute;
+    top:18px;
+    right:var(--pad);
+    display:inline-flex;gap:6px;
+    max-width:calc(100% - 130px);
+    overflow-x:auto;
+    scrollbar-width:none;-ms-overflow-style:none;
+    z-index:2;
+  }
+  .hero__nav::-webkit-scrollbar{display:none}
+  .hero__nav a{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:rgba(245,239,230,0.75);
+    padding:9px 14px;
+    border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.06);
+    border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;
+  }
+  .hero__nav a:hover{background:rgba(245,239,230,0.12)}
+
+  .hero__eyebrow{
+    margin-top:48px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:inline-flex;align-items:center;gap:12px;
+    position:relative;z-index:1;
+  }
+  .hero__eyebrow::before,.hero__eyebrow::after{
+    content:"";display:block;width:24px;height:1px;background:rgba(212,162,76,.45);
+  }
+  .hero__title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(48px,10vw,96px);
+    line-height:0.92;
+    letter-spacing:-0.03em;
+    margin:18px 0 16px;
+    position:relative;z-index:1;
+  }
+  .hero__title em{font-style:italic;color:var(--gold);font-weight:400}
+  .hero__sub{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(17px,2vw,21px);
+    line-height:1.45;
+    color:rgba(245,239,230,0.78);
+    margin:0 auto;
+    max-width:44ch;
+    position:relative;z-index:1;
+  }
+  .hero__meta{
+    margin-top:36px;
+    position:relative;z-index:1;
+    display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;
+  }
+  .hero__meta span{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:rgba(245,239,230,0.75);
+    padding:7px 13px;
+    border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.05);
+    border:1px solid rgba(245,239,230,0.1);
+    display:inline-flex;align-items:center;gap:7px;
+  }
+  .hero__meta span::before{
+    content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);
+  }
+
+  /* ============================= STICKY NAV ============================= */
+  .stickynav{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(245,239,230,0.92);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border-bottom:1px solid rgba(20,17,13,0.08);
+    padding:10px var(--pad);
+  }
+  .stickynav__inner{
+    max-width:1080px;margin:0 auto;
+    display:flex;align-items:center;gap:10px;
+  }
+  .stickynav__tabs{
+    flex:1;display:flex;gap:4px;overflow-x:auto;
+    scrollbar-width:none;-ms-overflow-style:none;
+    scroll-behavior:smooth;padding:2px;
+  }
+  .stickynav__tabs::-webkit-scrollbar{display:none}
+  .stickynav__tab{
+    flex-shrink:0;padding:9px 14px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--ink-2);font-weight:500;white-space:nowrap;
+    transition:background .2s ease, color .2s ease;
+  }
+  .stickynav__tab:hover{background:rgba(20,17,13,0.05)}
+  .stickynav__tab.is-on{background:var(--ink);color:var(--paper)}
+
+  /* ============================= LAYOUT ============================= */
+  main{max-width:1080px;margin:0 auto;padding:0 var(--pad)}
+  .sect{padding:64px 0 16px}
+  .sect__head{margin-bottom:32px}
+  .sect__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:10px;
+  }
+  .sect__title{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(34px,6.4vw,54px);
+    line-height:0.98;letter-spacing:-0.025em;margin:0;
+    max-width:18ch;
+  }
+  .sect__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .sect__lede{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(17px,2vw,20px);
+    line-height:1.45;color:var(--ink-2);
+    margin:16px 0 0;max-width:48ch;
+  }
+
+  /* ============================= STORY (two-col with framed image) ============================= */
+  .story{
+    display:grid;grid-template-columns:1fr;gap:36px;
+    align-items:start;padding-top:8px;
+  }
+  @media (min-width:880px){
+    .story{grid-template-columns:1.1fr 1fr;gap:60px}
+  }
+  .story__copy p{
+    font-size:17px;line-height:1.65;color:var(--ink-2);
+    margin:0 0 18px;max-width:54ch;
+  }
+  .story__copy p strong{font-weight:600;color:var(--ink)}
+  .story__copy p:first-of-type::first-letter{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:78px;
+    float:left;
+    line-height:0.82;
+    padding:6px 12px 0 0;
+    color:var(--camel-dk);
+  }
+  .story__rule{
+    display:inline-flex;align-items:center;gap:14px;
+    margin:6px 0 20px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .story__rule::before{content:"";display:block;width:32px;height:1px;background:var(--camel)}
+
+  .story__media{
+    position:sticky;top:120px;
+  }
+  .frame{
+    position:relative;
+    border-radius:var(--r-card);
+    overflow:hidden;
+    aspect-ratio:4/5;
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+  }
+  .frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .frame__cap{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:20px 22px;
+    background:linear-gradient(180deg, transparent 0%, rgba(20,17,13,0.78) 70%);
+    color:var(--paper);
+  }
+  .frame__cap small{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--gold);display:block;margin-bottom:6px;
+  }
+  .frame__cap span{
+    font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.3;display:block;
+  }
+
+  /* small horizontal photo strip */
+  .strip{
+    margin-top:18px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;
+  }
+  .strip > div{
+    aspect-ratio:1;border-radius:14px;overflow:hidden;
+    border:1px solid rgba(20,17,13,0.08);
+  }
+  .strip img{width:100%;height:100%;object-fit:cover}
+
+  /* ============================= VALUES STRIP (gold band) ============================= */
+  .values{
+    margin:48px calc(var(--pad)*-1) 0;
+    padding:36px var(--pad);
+    background:var(--paper-2);
+    border-top:1px solid rgba(20,17,13,0.08);
+    border-bottom:1px solid rgba(20,17,13,0.08);
+  }
+  .values__inner{
+    max-width:1080px;margin:0 auto;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+  }
+  @media (min-width:760px){
+    .values__inner{grid-template-columns:repeat(4,1fr);gap:0}
+    .values__cell{padding:6px 28px;border-left:1px solid rgba(20,17,13,0.12)}
+    .values__cell:first-child{padding-left:0;border-left:0}
+  }
+  .values__cell{padding:6px 0}
+  .values__lbl{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:8px;
+  }
+  .values__val{
+    font-family:var(--serif);font-weight:500;
+    font-size:26px;line-height:1.1;letter-spacing:-0.015em;
+    color:var(--ink);margin:0 0 6px;
+  }
+  .values__val em{font-style:italic;color:var(--gold-dk)}
+  .values__txt{
+    font-size:14px;line-height:1.5;color:var(--ink-3);margin:0;
+  }
+
+  /* ============================= QUALITY (dark band) ============================= */
+  .quality{
+    margin:64px calc(var(--pad)*-1) 0;
+    padding:88px var(--pad);
+    background:linear-gradient(180deg,#1A140E 0%, #221913 100%);
+    color:var(--paper);
+    position:relative;overflow:hidden;
+  }
+  .quality::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(60% 70% at 100% 0%, rgba(212,162,76,0.18), transparent 60%),
+      radial-gradient(50% 60% at 0% 100%, rgba(212,162,76,0.08), transparent 60%);
+    pointer-events:none;
+  }
+  .quality__inner{
+    max-width:1080px;margin:0 auto;
+    display:grid;grid-template-columns:1fr;gap:40px;
+    position:relative;z-index:1;
+  }
+  @media (min-width:880px){
+    .quality__inner{grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  }
+  .quality__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--gold);display:block;margin-bottom:10px;
+  }
+  .quality h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(34px,5.6vw,52px);
+    line-height:1;letter-spacing:-0.025em;
+    margin:0 0 22px;max-width:14ch;
+  }
+  .quality h2 em{font-style:italic;color:var(--gold)}
+  .quality p{
+    font-size:17px;line-height:1.6;color:rgba(245,239,230,0.78);
+    margin:0 0 16px;max-width:48ch;
+  }
+  .quality p strong{color:var(--paper);font-weight:600}
+
+  /* Spotlight dish */
+  .dish{
+    background:rgba(245,239,230,0.04);
+    border:1px solid rgba(245,239,230,0.12);
+    border-radius:var(--r-card);
+    padding:22px;
+    display:grid;grid-template-columns:120px 1fr;gap:18px;
+    align-items:center;
+  }
+  .dish__img{
+    width:120px;height:120px;border-radius:14px;overflow:hidden;
+    background:var(--paper-3);
+  }
+  .dish__img img{width:100%;height:100%;object-fit:cover}
+  .dish__eye{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--gold);display:block;margin-bottom:6px;
+  }
+  .dish__name{
+    font-family:var(--serif);font-weight:500;font-size:24px;letter-spacing:-0.01em;
+    line-height:1.1;color:var(--paper);margin:0 0 6px;
+  }
+  .dish__name em{font-style:italic;color:var(--gold)}
+  .dish__txt{
+    font-family:var(--serif);font-style:italic;
+    font-size:14px;color:rgba(245,239,230,0.72);line-height:1.45;margin:0;
+  }
+  @media (max-width:520px){
+    .dish{grid-template-columns:1fr;text-align:center}
+    .dish__img{margin:0 auto}
+  }
+
+  /* Pull stats */
+  .qstats{
+    margin-top:28px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;
+    border-top:1px solid rgba(245,239,230,0.12);
+    padding-top:24px;
+  }
+  .qstats__cell{padding:0 14px;border-left:1px solid rgba(245,239,230,0.12)}
+  .qstats__cell:first-child{padding-left:0;border-left:0}
+  .qstats__num{
+    font-family:var(--serif);font-weight:500;font-size:34px;
+    color:var(--gold);letter-spacing:-0.02em;line-height:1;margin:0 0 6px;
+  }
+  .qstats__num em{font-style:normal;font-size:18px;color:rgba(245,239,230,0.5);margin-left:2px}
+  .qstats__lbl{
+    font-family:var(--mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(245,239,230,0.6);
+  }
+
+  /* ============================= COMMUNITY (split) ============================= */
+  .community{
+    display:grid;grid-template-columns:1fr;gap:30px;
+    padding-top:8px;
+  }
+  @media (min-width:880px){
+    .community{grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+  }
+  .community__photo{
+    position:relative;border-radius:var(--r-card);overflow:hidden;
+    aspect-ratio:5/6;background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+  }
+  .community__photo img{width:100%;height:100%;object-fit:cover}
+  .community__photo small{
+    position:absolute;bottom:14px;left:14px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    background:rgba(20,17,13,0.78);color:var(--gold);
+    padding:7px 12px;border-radius:var(--r-pill);
+  }
+  .community__copy p{
+    font-size:17px;line-height:1.65;color:var(--ink-2);
+    margin:0 0 18px;max-width:54ch;
+  }
+  .community__quote{
+    margin:22px 0 0;
+    padding:22px 24px;
+    border-left:3px solid var(--gold);
+    background:var(--paper-3);
+    border-radius:0 14px 14px 0;
+  }
+  .community__quote p{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:22px;line-height:1.3;color:var(--ink);margin:0 0 10px;
+    letter-spacing:-0.015em;
+  }
+  .community__quote span{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .community__quote span strong{color:var(--ink);font-weight:700}
+
+  /* Soft chips list */
+  .softlist{
+    display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0;
+  }
+  .softlist span{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;border-radius:var(--r-pill);
+    border:1px solid rgba(20,17,13,0.12);background:transparent;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--ink-2);
+  }
+  .softlist span::before{
+    content:"";width:5px;height:5px;border-radius:50%;background:var(--camel);
+  }
+
+  /* ============================= GLOSSARY ============================= */
+  .glossary{
+    margin-top:56px;
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:32px;
+    position:relative;overflow:hidden;
+  }
+  .glossary::before{
+    content:"";position:absolute;inset:10px;
+    border:1px dashed rgba(212,162,76,0.3);
+    border-radius:14px;pointer-events:none;
+  }
+  .glossary__inner{position:relative;z-index:1}
+  .glossary__head{
+    display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+    gap:14px;margin-bottom:24px;
+  }
+  .glossary__head h3{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(26px,4vw,34px);letter-spacing:-0.02em;line-height:1;margin:6px 0 0;
+  }
+  .glossary__head h3 em{font-style:italic;color:var(--camel-dk)}
+  .glossary__head span{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .glossary__head p{
+    font-family:var(--serif);font-style:italic;
+    font-size:15px;color:var(--muted);line-height:1.4;max-width:32ch;margin:0;
+  }
+  .glossary__grid{
+    display:grid;grid-template-columns:1fr;gap:0;
+  }
+  @media (min-width:680px){
+    .glossary__grid{grid-template-columns:1fr 1fr;gap:0 36px}
+  }
+  .gloss__row{
+    display:grid;grid-template-columns:auto 1fr;gap:14px;
+    padding:14px 0;border-top:1px solid rgba(20,17,13,0.08);
+    align-items:baseline;
+  }
+  .gloss__row:first-child,
+  .gloss__row:nth-child(2){border-top:0}
+  @media (max-width:679px){
+    .gloss__row:nth-child(2){border-top:1px solid rgba(20,17,13,0.08)}
+  }
+  .gloss__term{
+    font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--ink);min-width:90px;
+  }
+  .gloss__def{
+    font-size:14px;line-height:1.45;color:var(--ink-2);margin:0;
+  }
+  .gloss__def em{font-family:var(--serif);font-style:italic;color:var(--camel-dk);font-size:13px}
+
+  /* ============================= VISIT CTA ============================= */
+  .cta{
+    margin:64px calc(var(--pad)*-1) 0;
+    padding:80px var(--pad);
+    background:var(--paper-2);
+    text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .cta__num{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--camel-dk);display:block;margin-bottom:12px;
+  }
+  .cta h2{
+    font-family:var(--serif);font-weight:500;
+    font-size:clamp(38px,6.5vw,68px);
+    line-height:0.98;letter-spacing:-0.03em;
+    margin:0 auto 18px;max-width:14ch;
+  }
+  .cta h2 em{font-style:italic;color:var(--camel-dk)}
+  .cta p{
+    font-family:var(--serif);font-style:italic;
+    font-size:clamp(16px,1.8vw,19px);
+    color:var(--ink-3);line-height:1.45;
+    margin:0 auto 32px;max-width:44ch;
+  }
+  .cta__row{
+    display:inline-flex;flex-wrap:wrap;gap:10px;justify-content:center;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:14px 22px;border-radius:var(--r-pill);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    font-weight:700;text-decoration:none;
+    transition:background .2s ease, color .2s ease, transform .15s ease, border-color .2s ease;
+    border:1px solid transparent;
+  }
+  .btn:active{transform:scale(0.98)}
+  .btn--gold{background:var(--gold);color:var(--ink)}
+  .btn--gold:hover{background:var(--gold-dk)}
+  .btn--ghost{border-color:rgba(20,17,13,0.25);color:var(--ink)}
+  .btn--ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  .cta__address{
+    margin-top:30px;
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--camel-dk);
+    padding:9px 16px;border-radius:var(--r-pill);
+    background:rgba(20,17,13,0.04);
+    border:1px solid rgba(20,17,13,0.08);
+  }
+
+  /* ============================= FOOTER ============================= */
+  footer{
+    background:var(--ink);color:var(--paper);
+    padding:48px var(--pad) 30px;text-align:center;margin-top:0;
+  }
+  footer .wordmark{
+    font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:0.06em;
+    display:inline-block;padding:0 0 6px;border-bottom:1px solid var(--gold);position:relative;
+  }
+  footer .wordmark::before,footer .wordmark::after{
+    content:"";position:absolute;bottom:-1px;width:24%;height:1px;background:var(--gold)
+  }
+  footer .wordmark::before{left:-14px}
+  footer .wordmark::after{right:-14px}
+  footer .tagline{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--gold);margin:8px 0 18px;
+  }
+  footer .legal{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:rgba(245,239,230,0.4);margin:18px 0 0;
+  }
+  footer .quote{
+    font-family:var(--serif);font-style:italic;color:rgba(245,239,230,0.7);
+    max-width:32ch;margin:0 auto;font-size:15px;line-height:1.4;
+  }
+
+  /* ============================= STICKY ACTIONS ============================= */
+  .actions{
+    position:fixed;
+    left:12px;right:12px;bottom:12px;z-index:60;
+    background:rgba(20,17,13,0.96);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    color:var(--paper);
+    border-radius:var(--r-pill);
+    padding:8px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;
+    box-shadow:0 20px 50px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,162,76,0.18);
+    max-width:580px;margin:0 auto;
+  }
+  .actions__btn{
+    background:transparent;border:0;color:var(--paper);
+    padding:11px 6px;border-radius:calc(var(--r-pill) - 4px);
+    font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    transition:background .2s ease;
+  }
+  .actions__btn:hover{background:rgba(245,239,230,0.06)}
+  .actions__btn--book{background:var(--gold);color:var(--ink)}
+  .actions__btn--book:hover{background:var(--gold-dk)}
+
+  @media (min-width:760px){
+    body{padding-bottom:30px}
+    .actions{
+      left:auto;right:18px;bottom:18px;
+      grid-template-columns:1fr;width:auto;padding:6px;
+    }
+    .actions__btn{padding:12px 22px}
+    .actions__btn--menu,.actions__btn--call{display:none}
+  }
+
+  /* Small screens */
+  @media (max-width:520px){
+    .story__copy p:first-of-type::first-letter{font-size:62px;padding:4px 10px 0 0}
+    .qstats{grid-template-columns:1fr 1fr;gap:18px 6px}
+    .qstats__cell:nth-child(3){grid-column:1/-1;border-left:0;padding-left:0;padding-top:18px;border-top:1px solid rgba(245,239,230,0.12)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================= TICKER ============================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker"></div>
+</div>
+
+<!-- ============================= HERO ============================= -->
+<header class="hero">
+  <a class="hero__back" href="index.html">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Home
+  </a>
+  <div class="hero__nav">
+    <a href="Menu.html">Menu</a>
+    <a href="Order.html">Order</a>
+    <a href="Catering.html">Catering</a>
+    <a href="Reviews.html">Reviews</a>
+    <a href="Contact.html">Visit</a>
+    <a href="Reserve.html">Reserve</a>
+  </div>
+
+  <img class="hero__camel" src="assets/brand/logo-transparent.png" alt="" aria-hidden="true" />
+
+  <div class="hero__eyebrow">About Maandeeq · Est. 2023</div>
+  <h1 class="hero__title">The true home of<br><em>authentic Somali</em> food.</h1>
+  <p class="hero__sub">A family kitchen in the heart of Woolwich, cooking the way our mothers taught us — slowly, generously, with the door always open.</p>
+
+  <div class="hero__meta">
+    <span>100% Halal</span>
+    <span>Family-Run</span>
+    <span>Woolwich, SE18</span>
+    <span>East African Kitchen</span>
+  </div>
+</header>
+
+<!-- ============================= STICKY NAV ============================= -->
+<nav class="stickynav">
+  <div class="stickynav__inner">
+    <div class="stickynav__tabs" id="tabs">
+      <button class="stickynav__tab is-on" data-target="story">Our story</button>
+      <button class="stickynav__tab" data-target="quality">Quality &amp; halal</button>
+      <button class="stickynav__tab" data-target="community">Community</button>
+      <button class="stickynav__tab" data-target="glossary">Somali kitchen</button>
+      <button class="stickynav__tab" data-target="visit">Visit us</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================= STORY ============================= -->
+  <section class="sect" id="story">
+    <div class="sect__head">
+      <span class="sect__num">01 — Our story</span>
+      <h2 class="sect__title">Tradition <em>on every plate</em>.</h2>
+    </div>
+
+    <div class="story">
+      <div class="story__copy">
+        <span class="story__rule">A family recipe, served openly</span>
+        <p>Maandeeq was born out of a deep love for community and a passion for generational family recipes. In Somali culture, food is never just a meal — it is a celebration of <strong>togetherness, generosity, and heritage</strong>. We wanted to create a space in London that captured exactly that feeling.</p>
+        <p>A welcoming, comfortable home where friends and families can gather over generous platters of incredible food. The kind of room where the conversation lasts longer than the meal, and the second pot of <em>shaah</em> is always already on.</p>
+        <p>We pride ourselves on doing things the traditional way. That means no shortcuts in our kitchen: from blending our own aromatic <strong>xawaash</strong> spices each morning, to slow-roasting our meats until they fall straight off the bone. Every dish is a labour of love, crafted to honour the culinary traditions of our ancestors.</p>
+      </div>
+
+      <div class="story__media">
+        <figure class="frame">
+          <img src="assets/food-platter.webp" alt="The Maandeeq Special — slow-roasted lamb shank on bariis rice" />
+          <figcaption class="frame__cap">
+            <small>Plated daily</small>
+            <span>The signature shank, on a bed of fragrant bariis.</span>
+          </figcaption>
+        </figure>
+        <div class="strip" aria-hidden="true">
+          <div><img src="assets/food-suqaar.webp" alt="" /></div>
+          <div><img src="assets/food-breakfast.webp" alt="" /></div>
+          <div><img src="assets/food-drinks.webp" alt="" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values strip -->
+    <div class="values">
+      <div class="values__inner">
+        <div class="values__cell">
+          <span class="values__lbl">Our spice</span>
+          <p class="values__val">Blended <em>by hand</em></p>
+          <p class="values__txt">Xawaash mixed each morning — no pre-made shortcuts.</p>
+        </div>
+        <div class="values__cell">
+          <span class="values__lbl">Our meat</span>
+          <p class="values__val">100% <em>Halal</em></p>
+          <p class="values__txt">Sourced from trusted London-area suppliers.</p>
+        </div>
+        <div class="values__cell">
+          <span class="values__lbl">Our cooks</span>
+          <p class="values__val">The <em>aunties</em></p>
+          <p class="values__txt">A kitchen led by Somali home-cooks, not consultants.</p>
+        </div>
+        <div class="values__cell">
+          <span class="values__lbl">Our table</span>
+          <p class="values__val">Always <em>open</em></p>
+          <p class="values__txt">Walk-ins welcome. Children, elders, regulars — everyone fits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= QUALITY (dark) ============================= -->
+  <section class="quality" id="quality">
+    <div class="quality__inner">
+      <div>
+        <span class="quality__num">02 — Quality &amp; halal</span>
+        <h2>Uncompromising. <em>From source to plate.</em></h2>
+        <p>We don't just serve food; we serve an experience. Our guests consistently call us the <strong>best Somali restaurant in London</strong>, and we work hard every day to maintain that reputation.</p>
+        <p>Our menu is 100% Halal and showcases the finest ingredients sourced from trusted local suppliers. From hearty breakfasts to our towering Mega Fusion Platters, every bite is designed to deliver <strong>maximum flavour</strong> — and to taste like the food someone made for you, because someone did.</p>
+
+        <div class="qstats">
+          <div class="qstats__cell">
+            <p class="qstats__num">100<em>%</em></p>
+            <span class="qstats__lbl">Halal kitchen</span>
+          </div>
+          <div class="qstats__cell">
+            <p class="qstats__num">8<em>hr</em></p>
+            <span class="qstats__lbl">Slow-roasted lamb</span>
+          </div>
+          <div class="qstats__cell">
+            <p class="qstats__num">12<em>+</em></p>
+            <span class="qstats__lbl">Spices in our xawaash</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div class="dish__img">
+          <img src="assets/food-platter.webp" alt="Maandeeq Special Haniid Lamb Shank" />
+        </div>
+        <div>
+          <span class="dish__eye">House signature</span>
+          <h3 class="dish__name">The <em>Maandeeq Special</em> Haniid Lamb Shank</h3>
+          <p class="dish__txt">Expertly seasoned, incredibly tender, slow-roasted until it falls from the bone — paired with our fragrant, fluffy bariis. The dish we're famous for across the city.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= COMMUNITY ============================= -->
+  <section class="sect" id="community">
+    <div class="sect__head">
+      <span class="sect__num">03 — More than a restaurant</span>
+      <h2 class="sect__title">A <em>community</em> hub.</h2>
+      <p class="sect__lede">The Somali spirit of generosity — <em>Soo Dhaweyn</em> — is woven into everything we do. When you walk through our doors, you aren't a customer. You are our guest.</p>
+    </div>
+
+    <div class="community">
+      <figure class="community__photo" style="margin:0">
+        <img src="assets/food-drinks.webp" alt="The Maandeeq dining room — warm light, family tables, shaah service" />
+        <small>The dining room</small>
+      </figure>
+
+      <div class="community__copy">
+        <p>At Maandeeq, our hospitality is as famous as our lamb shanks. Our spacious, family-friendly setting is designed for comfort — perfect for everything from a quick solo lunch to grand family celebrations and private events.</p>
+        <p>The aunties in our kitchen and our friendly front-of-house staff are here to ensure your dining experience is flawless from the moment you sit down to the last sip of your spiced Somali tea.</p>
+
+        <div class="community__quote">
+          <p>"We came as four cousins after Jummah and ended up staying three hours. They didn't rush us once. That's hospitality in the old way."</p>
+          <span>— Khadija R. · <strong>★★★★★</strong> · January 2026</span>
+        </div>
+
+        <div class="softlist">
+          <span>Family gatherings</span>
+          <span>Nikkah catering</span>
+          <span>Private events</span>
+          <span>Solo lunches welcome</span>
+          <span>Step-free entry</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================= GLOSSARY ============================= -->
+    <div class="glossary" id="glossary">
+      <div class="glossary__inner">
+        <div class="glossary__head">
+          <div>
+            <span>A few words from our kitchen</span>
+            <h3>The Somali <em>pantry</em></h3>
+          </div>
+          <p>Some terms you'll meet on our menu — and what they mean at our table.</p>
+        </div>
+
+        <div class="glossary__grid">
+          <div class="gloss__row">
+            <span class="gloss__term">Xawaash</span>
+            <p class="gloss__def">The foundation spice blend of every Somali kitchen — cumin, coriander, cardamom, cinnamon and more, ground fresh. <em>Our morning ritual.</em></p>
+          </div>
+          <div class="gloss__row">
+            <span class="gloss__term">Haniid</span>
+            <p class="gloss__def">Slow-roasted lamb, traditionally cooked low and long until the meat surrenders. <em>Our signature.</em></p>
+          </div>
+          <div class="gloss__row">
+            <span class="gloss__term">Bariis</span>
+            <p class="gloss__def">Fragrant Somali basmati rice, perfumed with whole spices and caramelised onion. <em>The bed for everything.</em></p>
+          </div>
+          <div class="gloss__row">
+            <span class="gloss__term">Sabayaad</span>
+            <p class="gloss__def">A buttery, flaky flatbread cooked on a hot griddle. <em>For tearing, scooping, sharing.</em></p>
+          </div>
+          <div class="gloss__row">
+            <span class="gloss__term">Malawax</span>
+            <p class="gloss__def">A soft, lacy pancake-bread — sweet or savoury, served morning or night. <em>Honey is non-negotiable.</em></p>
+          </div>
+          <div class="gloss__row">
+            <span class="gloss__term">Shaah</span>
+            <p class="gloss__def">Spiced black tea with cardamom, clove, cinnamon and milk. <em>The end of every meal, the start of every conversation.</em></p>
+          </div>
+          <div class="gloss__row">
+            <span class="gloss__term">Soo Dhaweyn</span>
+            <p class="gloss__def">The Somali welcome — generosity without expectation. <em>The reason we cook.</em></p>
+          </div>
+          <div class="gloss__row">
+            <span class="gloss__term">Chipsi Maya</span>
+            <p class="gloss__def">A Tanzanian-influenced chip omelette — comfort food we serve in the Swahili tradition. <em>East Africa, on a single plate.</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================= VISIT CTA ============================= -->
+<section class="cta" id="visit">
+  <span class="cta__num">04 — Join us</span>
+  <h2>Come <em>hungry</em>. Bring your <em>loved ones</em>.</h2>
+  <p>Conveniently located a stone's throw from Woolwich Arsenal Station. Walk in, book a table, or let us cater your next celebration.</p>
+  <div class="cta__row">
+    <a class="btn btn--gold" href="Menu.html">
+      See the Menu
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <a class="btn btn--ghost" href="Reserve.html">Reserve a table</a>
+    <a class="btn btn--ghost" href="Reviews.html">Read our reviews</a>
+  </div>
+  <div class="cta__address">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Woolwich, South East London, SE18
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="wordmark">MAANDEEQ</div>
+  <div class="tagline">Restaurant · Somali</div>
+  <p class="quote">Thank you for sharing our table. There will always be a place set for you.</p>
+  <p class="legal">© Maandeeq Restaurant · Woolwich, London</p>
+</footer>
+
+<!-- ============================= STICKY ACTIONS ============================= -->
+<div class="actions">
+  <a class="actions__btn actions__btn--menu" href="Menu.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+    Menu
+  </a>
+  <a class="actions__btn actions__btn--call" href="tel:+442000000000">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a class="actions__btn actions__btn--book" href="index.html#reservations">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Reserve a table
+  </a>
+</div>
+
+<script>
+/* ============================= TICKER ============================= */
+(function(){
+  const items = [
+    {em:"Est. 2023", t:"Family-run Somali kitchen in Woolwich"},
+    {em:"100% Halal", t:"Sourced from trusted local suppliers"},
+    {em:"Soo Dhaweyn", t:"The Somali welcome — woven into every visit"},
+    {em:"Slow-roasted", t:"Lamb shank, the way our mothers taught us"},
+    {em:"East African", t:"From Mogadishu to Mombasa, on one menu"},
+    {em:"Walk-ins welcome", t:"Open Tue–Sun · Late kitchen Fri & Sat"},
+  ];
+  const track = document.getElementById('ticker');
+  const html = items.map(i=>`<span><em>${i.em}</em>${i.t}<span class="sep">◆</span></span>`).join('');
+  track.innerHTML = html + html;
+})();
+
+/* ============================= STICKY TABS — scroll-spy ============================= */
+(function(){
+  const tabs = document.querySelectorAll('.stickynav__tab');
+  const sections = {
+    story:    document.getElementById('story'),
+    quality:  document.getElementById('quality'),
+    community:document.getElementById('community'),
+    glossary: document.getElementById('glossary'),
+    visit:    document.getElementById('visit'),
+  };
+
+  tabs.forEach(t=>{
+    t.addEventListener('click', ()=>{
+      const target = t.dataset.target;
+      const el = sections[target];
+      if(!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({top:y, behavior:'smooth'});
+    });
+  });
+
+  const setActive = (id)=>{
+    tabs.forEach(t=>t.classList.toggle('is-on', t.dataset.target===id));
+  };
+
+  // IntersectionObserver-based spy
+  const order = ['story','quality','community','glossary','visit'];
+  const visible = new Map();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      const id = en.target.id;
+      visible.set(id, en.intersectionRatio);
+    });
+    // pick the most-visible
+    let best = 'story', bestR = -1;
+    order.forEach(id=>{
+      const r = visible.get(id) || 0;
+      if(r > bestR){ bestR = r; best = id; }
+    });
+    setActive(best);
+  }, {rootMargin: '-120px 0px -55% 0px', threshold: [0, 0.15, 0.4, 0.8]});
+
+  Object.values(sections).forEach(s=>s && io.observe(s));
+})();
+</script>
+</body>
+</html>

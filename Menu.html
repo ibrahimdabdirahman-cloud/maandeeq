@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#14110D" />
+<title>Maandeeq Restaurant · Digital Menu</title>
+<meta name="description" content="Maandeeq Restaurant digital menu — authentic Somali food in Woolwich. Scan, browse, save." />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#14110D;
+    --ink-2:#2A211A;
+    --ink-3:#3B2F25;
+    --paper:#F5EFE6;
+    --paper-2:#EADFCC;
+    --paper-3:#FBF7EF;
+    --camel:#8B6B4F;
+    --camel-dk:#6A4F38;
+    --gold:#D4A24C;
+    --gold-dk:#B7873A;
+    --muted:#8A7868;
+    --green:#6B8E5A;
+    --whats:#25D366;
+
+    --serif:"Bodoni Moda","Cormorant Garamond","Didot",serif;
+    --sans:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Space Mono",ui-monospace,Menlo,monospace;
+
+    --pad:clamp(18px,5vw,40px);
+    --r-card:20px;
+    --r-pill:999px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:120px}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-wrap:pretty;
+    overscroll-behavior:none;
+    padding-bottom:90px; /* room for sticky bar */
+  }
+  img{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer;color:inherit}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--gold);color:var(--ink)}
+
+  /* ============================= HERO ============================= */
+  .hero{
+    position:relative;
+    padding:34px var(--pad) 28px;
+    background:
+      radial-gradient(120% 70% at 50% 0%, rgba(212,162,76,0.18), transparent 55%),
+      linear-gradient(180deg,#14110D 0%, #1B1610 100%);
+    color:var(--paper);
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero__camel{
+    position:absolute;
+    inset:auto 0 -18% 0;
+    margin:0 auto;
+    width:min(560px,140%);
+    opacity:.06;
+    pointer-events:none;
+    filter:invert(1);
+  }
+  /* top bar: home + site nav */
+  .hero__top{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .hero__back{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:rgba(245,239,230,0.78);
+    display:inline-flex;align-items:center;gap:8px;
+    padding:9px 14px;
+    border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.06);
+    border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;
+    flex-shrink:0;
+  }
+  .hero__back:hover{background:rgba(245,239,230,0.12)}
+  .hero__nav{
+    flex:1;
+    min-width:0;
+    display:flex;align-items:center;gap:6px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .hero__nav::-webkit-scrollbar{display:none}
+  .hero__nav a{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,230,0.78);
+    padding:9px 13px;
+    border-radius:var(--r-pill);
+    background:rgba(245,239,230,0.06);
+    border:1px solid rgba(245,239,230,0.12);
+    transition:background .2s ease;
+    white-space:nowrap;
+  }
+  .hero__nav a:hover{background:rgba(245,239,230,0.12)}
+  .hero__share{
+    width:38px;height:38px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:rgba(245,239,230,0.06);
+    border:1px solid rgba(245,239,230,0.12);
+    color:var(--paper);
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:background .2s ease;
+  }
+  .hero__share:hover{background:rgba(245,239,230,0.15)}
+  .hero__open{
+    position:relative;z-index:1;
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:7px;
+    color:rgba(245,239,230,0.6);
+    margin-top:14px;
+  }
+  .hero__open .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(107,142,90,.25);animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{50%{box-shadow:0 0 0 7px rgba(107,142,90,0)}}
+
+  .hero__logo{
+    width:74px;height:74px;
+    border-radius:50%;
+    background:var(--paper);
+    padding:3px;
+    object-fit:contain;
+    margin:24px auto 18px;
+    box-shadow:0 18px 40px -16px rgba(0,0,0,0.6);
+    border:1px solid rgba(212,162,76,0.4);
+    position:relative;z-index:1;
+  }
+  .hero__eyebrow{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    position:relative;z-index:1;
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .hero__eyebrow::before,.hero__eyebrow::after{
+    content:"";display:block;width:18px;height:1px;background:rgba(212,162,76,.45);
+  }
+  .hero__title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(46px,11vw,76px);
+    line-height:0.94;
+    letter-spacing:-0.025em;
+    margin:14px 0 8px;
+    position:relative;z-index:1;
+  }
+  .hero__title em{font-style:italic;color:var(--gold);font-weight:400}
+  .hero__sub{
+    font-family:var(--sans);
+    font-size:14px;
+    line-height:1.5;
+    color:rgba(245,239,230,0.7);
+    margin:0 auto 18px;
+    max-width:34ch;
+    position:relative;z-index:1;
+  }
+  .hero__meta{
+    display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;
+    gap:6px 14px;
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:rgba(245,239,230,0.6);
+    position:relative;z-index:1;
+  }
+  .hero__meta span.sep{width:3px;height:3px;background:rgba(245,239,230,.35);border-radius:50%}
+  .hero__meta strong{color:var(--gold);font-weight:700}
+
+  /* ============================= STICKY NAV ============================= */
+  .stickynav{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(245,239,230,0.92);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
+    border-bottom:1px solid rgba(20,17,13,0.08);
+    padding:10px var(--pad) 10px;
+  }
+  .stickynav__inner{
+    max-width:1080px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .stickynav__tabs{
+    flex:1;
+    display:flex;
+    gap:4px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    scroll-behavior:smooth;
+    padding:2px;
+  }
+  .stickynav__tabs::-webkit-scrollbar{display:none}
+  .stickynav__tab{
+    flex-shrink:0;
+    background:transparent;
+    border:0;
+    padding:9px 14px;
+    border-radius:var(--r-pill);
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    font-weight:500;
+    white-space:nowrap;
+    transition:background .2s ease, color .2s ease;
+    position:relative;
+  }
+  .stickynav__tab:hover{background:rgba(20,17,13,0.05)}
+  .stickynav__tab.is-on{background:var(--ink);color:var(--paper)}
+  .stickynav__tab .tabct{font-family:var(--mono);font-size:9px;opacity:.5;margin-left:6px}
+
+  .search{
+    position:relative;
+    flex-shrink:0;
+    width:44px;
+    transition:width .25s ease;
+  }
+  .search.is-open{width:min(220px,42vw)}
+  .search__btn{
+    width:44px;height:38px;
+    border-radius:var(--r-pill);
+    background:rgba(20,17,13,0.06);
+    border:0;
+    display:inline-flex;align-items:center;justify-content:center;
+    position:absolute;right:0;top:0;
+  }
+  .search__btn:hover{background:rgba(20,17,13,0.1)}
+  .search.is-open .search__btn{background:transparent}
+  .search input{
+    width:100%;
+    height:38px;
+    padding:0 44px 0 14px;
+    border-radius:var(--r-pill);
+    border:1px solid rgba(20,17,13,0.15);
+    background:var(--paper-3);
+    font:inherit;
+    font-size:13px;
+    color:var(--ink);
+    outline:none;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s ease;
+  }
+  .search.is-open input{opacity:1;pointer-events:auto}
+  .search.is-open input:focus{border-color:var(--camel-dk)}
+
+  /* ============================= FILTERS ============================= */
+  .filters{
+    padding:18px var(--pad) 0;
+    max-width:1080px;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .filter{
+    background:transparent;
+    border:1px solid rgba(20,17,13,0.15);
+    border-radius:var(--r-pill);
+    padding:7px 12px;
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    display:inline-flex;align-items:center;gap:6px;
+    transition:all .2s ease;
+  }
+  .filter:hover{background:rgba(20,17,13,0.04)}
+  .filter.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .filter .swatch{
+    width:8px;height:8px;border-radius:50%;
+  }
+  .filter .swatch--veg{background:var(--green)}
+  .filter .swatch--pop{background:var(--gold)}
+  .filter .swatch--chef{background:#A6451C}
+  .filter .swatch--halal{background:#1c6a3a}
+
+  /* ============================= MENU SECTIONS ============================= */
+  main{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 var(--pad);
+  }
+  .sect{
+    padding:38px 0 28px;
+    border-bottom:1px solid rgba(20,17,13,0.06);
+  }
+  .sect:last-of-type{border-bottom:0}
+  .sect__head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:22px;
+  }
+  .sect__num{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--camel-dk);
+    display:block;
+    margin-bottom:6px;
+  }
+  .sect__title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(38px,8vw,60px);
+    line-height:0.95;
+    letter-spacing:-0.025em;
+    margin:0;
+  }
+  .sect__title em{font-style:italic;color:var(--camel-dk);font-weight:400}
+  .sect__count{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.16em;
+    color:var(--muted);
+    text-transform:uppercase;
+    text-align:right;
+    flex-shrink:0;
+    padding-bottom:6px;
+  }
+  .sect__note{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:15px;
+    color:var(--camel-dk);
+    margin:0 0 18px;
+    max-width:46ch;
+    line-height:1.4;
+  }
+  .sect__note svg{vertical-align:-3px;margin-right:6px;color:var(--gold)}
+
+  .items{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  @media (min-width:760px){
+    .items{grid-template-columns:1fr 1fr;gap:0 56px}
+  }
+
+  .item{
+    padding:18px 0;
+    border-top:1px solid rgba(20,17,13,0.08);
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:6px 12px;
+    align-items:baseline;
+    transition:opacity .2s ease;
+  }
+  .item:first-child{border-top:0;padding-top:6px}
+  @media (min-width:760px){
+    .item{padding:20px 0}
+    .item:nth-child(2){border-top:0;padding-top:6px}
+  }
+  .item.is-hidden{display:none}
+  .item.dim{opacity:.32}
+
+  .item__head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:8px;
+  }
+  .item__name{
+    font-family:var(--mono);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    margin:0;
+    color:var(--ink);
+  }
+  .item__somali{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:14px;
+    color:var(--camel-dk);
+    text-transform:none;
+    letter-spacing:0;
+    margin-left:2px;
+  }
+  .item__desc{
+    margin:6px 0 0;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.45;
+    max-width:46ch;
+    grid-column:1/-1;
+  }
+  .item__price{
+    font-family:var(--mono);
+    font-size:15px;
+    font-weight:700;
+    color:var(--ink);
+    white-space:nowrap;
+    justify-self:end;
+  }
+  .item__price em{
+    font-family:var(--mono);
+    font-style:normal;
+    font-size:11px;
+    font-weight:400;
+    color:var(--muted);
+    margin-right:3px;
+  }
+
+  .tag{
+    display:inline-flex;align-items:center;gap:4px;
+    font-family:var(--mono);
+    font-size:9px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    padding:2px 7px;
+    border-radius:var(--r-pill);
+    font-weight:700;
+  }
+  .tag--pop{background:var(--gold);color:var(--ink)}
+  .tag--veg{background:rgba(107,142,90,.18);color:#3F5836;border:1px solid rgba(107,142,90,.35)}
+  .tag--chef{background:#3B2F25;color:var(--gold)}
+  .tag--new{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .tag .dot{width:5px;height:5px;border-radius:50%;background:currentColor}
+  .spice{display:inline-flex;gap:1px;color:#A6451C;font-size:11px;vertical-align:-1px}
+
+  /* ============================= PLATTERS BAND ============================= */
+  .feast{
+    background:linear-gradient(180deg,#1A140E 0%, #221913 100%);
+    color:var(--paper);
+    margin:48px calc(var(--pad)*-1) 0;
+    padding:48px var(--pad);
+    position:relative;
+    overflow:hidden;
+  }
+  .feast::before{
+    content:"";position:absolute;
+    inset:0;
+    background:
+      radial-gradient(70% 50% at 100% 0%, rgba(212,162,76,0.15), transparent 60%),
+      radial-gradient(50% 60% at 0% 100%, rgba(212,162,76,0.08), transparent 60%);
+    pointer-events:none;
+  }
+  .feast__head{
+    text-align:center;
+    margin-bottom:30px;
+    position:relative;
+  }
+  .feast__eye{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .feast__title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(34px,7vw,52px);
+    letter-spacing:-0.025em;
+    line-height:1;
+    margin:12px 0 8px;
+  }
+  .feast__title em{font-style:italic;color:var(--gold);font-weight:400}
+  .feast__sub{color:rgba(245,239,230,0.65);font-size:14px;max-width:38ch;margin:0 auto;line-height:1.5}
+
+  .feast__items{
+    max-width:560px;
+    margin:30px auto 0;
+    list-style:none;
+    padding:0;
+    position:relative;
+  }
+  .feast__item{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    gap:14px;
+    align-items:baseline;
+    padding:18px 0;
+    border-top:1px solid rgba(245,239,230,0.1);
+  }
+  .feast__item:last-child{border-bottom:1px solid rgba(245,239,230,0.1)}
+  .feast__people{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.18em;
+    color:var(--gold);
+    min-width:42px;
+  }
+  .feast__name{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--paper);
+    display:block;
+    margin-bottom:4px;
+  }
+  .feast__desc{
+    color:rgba(245,239,230,0.6);
+    font-size:13px;
+    line-height:1.4;
+    display:block;
+  }
+  .feast__price{
+    font-family:var(--mono);
+    font-size:16px;
+    font-weight:700;
+    color:var(--paper);
+    white-space:nowrap;
+  }
+
+  /* ============================= QR CARD ============================= */
+  .savecard{
+    margin:48px auto 12px;
+    background:var(--paper-3);
+    border:1px solid rgba(20,17,13,0.08);
+    border-radius:var(--r-card);
+    padding:28px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+    align-items:center;
+    max-width:680px;
+    position:relative;
+    overflow:hidden;
+  }
+  .savecard::before{
+    content:"";position:absolute;
+    inset:10px;
+    border:1px dashed rgba(212,162,76,0.3);
+    border-radius:14px;
+    pointer-events:none;
+  }
+  @media (min-width:620px){
+    .savecard{grid-template-columns:auto 1fr;gap:28px;padding:28px 32px}
+  }
+  .savecard__qr{
+    width:148px;height:148px;
+    background:var(--paper);
+    border-radius:14px;
+    padding:10px;
+    position:relative;
+    z-index:1;
+    box-shadow:0 12px 30px -16px rgba(0,0,0,0.25);
+    justify-self:center;
+  }
+  .savecard__qr canvas, .savecard__qr svg{width:100% !important;height:100% !important;display:block}
+  .savecard__body{position:relative;z-index:1;text-align:center}
+  @media (min-width:620px){.savecard__body{text-align:left}}
+  .savecard__eye{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--camel-dk);
+  }
+  .savecard__title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:26px;
+    line-height:1.1;
+    margin:6px 0 8px;
+    letter-spacing:-0.01em;
+  }
+  .savecard__title em{font-style:italic;color:var(--camel-dk)}
+  .savecard__p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.5;
+    margin:0 0 14px;
+    max-width:36ch;
+  }
+  @media (min-width:620px){.savecard__p{margin-left:0}}
+  .savecard__cta{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  @media (min-width:620px){.savecard__cta{justify-content:flex-start}}
+  .savecard__btn{
+    background:var(--ink);
+    color:var(--paper);
+    border:0;
+    padding:10px 16px;
+    border-radius:var(--r-pill);
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:600;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .savecard__btn--gh{background:transparent;color:var(--ink);border:1px solid rgba(20,17,13,0.2)}
+  .savecard__btn--gh:hover{background:rgba(20,17,13,0.06)}
+
+  /* ============================= INFO STRIP ============================= */
+  .info{
+    max-width:1080px;
+    margin:32px auto 0;
+    padding:0 var(--pad) 32px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  @media (min-width:680px){.info{grid-template-columns:1fr 1fr 1fr}}
+  .info__block h4{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--camel-dk);
+    margin:0 0 10px;
+    font-weight:600;
+  }
+  .info__block p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-2)}
+  .info__hours{list-style:none;margin:0;padding:0}
+  .info__hours li{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-top:1px solid rgba(20,17,13,0.06)}
+  .info__hours li:first-child{border-top:0}
+  .info__hours li span:first-child{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+  .info__hours li span:last-child{font-weight:500}
+
+  /* ============================= FOOTER ============================= */
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:40px var(--pad) 30px;
+    text-align:center;
+    margin-top:40px;
+  }
+  footer .wordmark{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:24px;
+    letter-spacing:0.06em;
+    display:inline-block;
+    padding:0 0 6px;
+    border-bottom:1px solid var(--gold);
+    position:relative;
+  }
+  footer .wordmark::before,footer .wordmark::after{
+    content:"";position:absolute;bottom:-1px;width:24%;height:1px;background:var(--gold)
+  }
+  footer .wordmark::before{left:-14px}
+  footer .wordmark::after{right:-14px}
+  footer .tagline{font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin:8px 0 18px}
+  footer .legal{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,239,230,0.4);margin:18px 0 0}
+
+  /* ============================= STICKY ACTIONS BAR ============================= */
+  .actions{
+    position:fixed;
+    left:12px;right:12px;bottom:12px;
+    z-index:60;
+    background:rgba(20,17,13,0.96);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    color:var(--paper);
+    border-radius:var(--r-pill);
+    padding:8px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:6px;
+    box-shadow:0 20px 50px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,162,76,0.18);
+    max-width:580px;
+    margin:0 auto;
+  }
+  .actions__btn{
+    background:transparent;
+    border:0;
+    color:var(--paper);
+    padding:11px 6px;
+    border-radius:calc(var(--r-pill) - 4px);
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-weight:600;
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    transition:background .2s ease;
+  }
+  .actions__btn:hover{background:rgba(245,239,230,0.06)}
+  .actions__btn--call{background:var(--gold);color:var(--ink)}
+  .actions__btn--call:hover{background:var(--gold-dk)}
+  .actions__btn--whats{background:var(--whats);color:#06281a}
+  .actions__btn--whats:hover{background:#1FBA5A}
+  .actions__btn svg{flex-shrink:0}
+
+  /* ============================= TOAST ============================= */
+  .toast{
+    position:fixed;
+    bottom:84px;
+    left:50%;
+    transform:translateX(-50%) translateY(20px);
+    background:var(--ink);
+    color:var(--paper);
+    padding:12px 18px;
+    border-radius:var(--r-pill);
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    box-shadow:0 12px 30px -12px rgba(0,0,0,0.4);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+    z-index:70;
+    border:1px solid rgba(212,162,76,0.3);
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .toast.is-on{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast svg{color:var(--gold)}
+
+  /* ============================= EMPTY ============================= */
+  .empty{
+    text-align:center;
+    padding:60px 20px;
+    color:var(--muted);
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:18px;
+    display:none;
+  }
+  .empty.is-on{display:block}
+
+  /* ============================= RESPONSIVE TWEAKS ============================= */
+  @media (max-width:520px){
+    .sect__head{flex-wrap:wrap}
+    .sect__count{text-align:left;padding-bottom:0}
+    .stickynav__tab{font-size:10px;padding:8px 12px;letter-spacing:0.1em}
+  }
+  @media (min-width:760px){
+    body{padding-bottom:30px}
+    .actions{
+      left:auto;right:18px;bottom:18px;
+      grid-template-columns:1fr;
+      width:auto;
+      padding:6px;
+    }
+    .actions__btn{padding:12px 22px}
+    .actions__btn--menu{display:none}
+  }
+
+  /* Print: clean printable menu */
+  @media print{
+    .stickynav,.actions,.savecard,.hero__share,.toast,.filters{display:none !important}
+    body{background:#fff;color:#000;padding:0}
+    .hero{background:#fff;color:#000;padding:20px 0;text-align:left}
+    .hero__camel,.hero__open{display:none}
+    .hero__logo{margin:0 0 12px}
+    .hero__title,.hero__eyebrow,.hero__sub,.hero__meta{color:#000}
+    .feast{background:#fff;color:#000;margin:30px 0;padding:0;border:1px solid #ccc;border-radius:0}
+    .feast__title,.feast__name,.feast__price,.feast__sub{color:#000}
+    .feast::before{display:none}
+    .item{break-inside:avoid}
+    .sect{break-inside:avoid-page}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================= HERO ============================= -->
+<header class="hero">
+  <div class="hero__top">
+    <a class="hero__back" href="index.html" aria-label="Back to home">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Home
+    </a>
+    <nav class="hero__nav" aria-label="Site">
+      <a href="Order.html">Order</a>
+      <a href="Catering.html">Catering</a>
+      <a href="About.html">About</a>
+      <a href="Reviews.html">Reviews</a>
+      <a href="Contact.html">Visit</a>
+      <a href="Reserve.html">Reserve</a>
+    </nav>
+    <button class="hero__share" id="shareBtn" aria-label="Share menu">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+    </button>
+  </div>
+
+  <img class="hero__camel" src="assets/brand/logo-transparent.png" alt="" aria-hidden="true" />
+
+  <img class="hero__logo" src="assets/brand/logo-circle.png" alt="Maandeeq Restaurant" />
+  <div class="hero__eyebrow">À LA CARTE</div>
+  <h1 class="hero__title">The <em>Maandeeq</em><br>Menu</h1>
+  <p class="hero__sub">Authentic Somali kitchen — slow-cooked lamb, fragrant rice, family platters and aromatic shaah, served in the heart of Woolwich.</p>
+  <span class="hero__open"><span class="dot"></span>Open · 8:30am — 11:00pm</span>
+  <div class="hero__meta">
+    <span><strong>Halal</strong> Certified</span>
+    <span class="sep"></span>
+    <span>Dine in · Takeaway · Catering</span>
+    <span class="sep"></span>
+    <span>GBP <strong>£</strong></span>
+  </div>
+</header>
+
+<!-- ============================= STICKY NAV ============================= -->
+<nav class="stickynav" id="stickynav">
+  <div class="stickynav__inner">
+    <div class="stickynav__tabs" id="tabs">
+      <!-- tabs injected by JS -->
+    </div>
+    <div class="search" id="search">
+      <input type="search" id="searchInput" placeholder="Search dishes…" aria-label="Search menu" />
+      <button class="search__btn" id="searchBtn" aria-label="Toggle search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================= FILTERS ============================= -->
+<div class="filters" id="filters">
+  <button class="filter is-on" data-filter="all">All</button>
+  <button class="filter" data-filter="popular"><span class="swatch swatch--pop"></span>Most loved</button>
+  <button class="filter" data-filter="veg"><span class="swatch swatch--veg"></span>Vegetarian</button>
+  <button class="filter" data-filter="chef"><span class="swatch swatch--chef"></span>Chef's pick</button>
+</div>
+
+<!-- ============================= MAIN ============================= -->
+<main id="main">
+  <p class="empty" id="empty">No dishes match — try clearing your filters.</p>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="wordmark">MAANDEEQ</div>
+  <div class="tagline">Restaurant · Somali</div>
+  <p style="font-family:var(--serif);font-style:italic;color:rgba(245,239,230,0.7);max-width:30ch;margin:0 auto;font-size:15px;line-height:1.4">From our hearth to your table — bismillah, eat well.</p>
+  <p class="legal">© Maandeeq Restaurant · Woolwich, London</p>
+</footer>
+
+<!-- ============================= STICKY ACTIONS ============================= -->
+<div class="actions">
+  <a class="actions__btn actions__btn--menu" href="Reserve.html" aria-label="Reserve a table">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    Reserve
+  </a>
+  <a class="actions__btn actions__btn--call" href="tel:+442000000000" aria-label="Call restaurant">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"></path></svg>
+    Call
+  </a>
+  <a class="actions__btn actions__btn--whats" href="https://wa.me/447000000000" target="_blank" rel="noopener" aria-label="WhatsApp order">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5 0-.2 0-.4-.1-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.9-3.1-.2-.3C3.9 14.7 3.4 13.4 3.4 12c0-4.7 3.9-8.6 8.6-8.6s8.6 3.9 8.6 8.6-3.9 8.6-8.6 8.6z"/></svg>
+    WhatsApp
+  </a>
+  <button class="actions__btn actions__btn--menu" id="topBtn" aria-label="Top of menu">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    Top
+  </button>
+</div>
+
+<!-- ============================= TOAST ============================= -->
+<div class="toast" id="toast">
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  <span id="toastTxt">Link copied</span>
+</div>
+
+<!-- ============================= DATA + APP ============================= -->
+<script>
+/* ============================= MENU DATA ============================= */
+const SECTIONS = [
+  {
+    id: "appetizers",
+    label: "Appetizers",
+    title: "Appetizers",
+    titleItalic: "to begin",
+    note: "Light, hand-folded starters — perfect alongside Maandeeq's Special Tea.",
+    items: [
+      { name: "Sambusa",            somali: "(Sambuusa)",       desc: "Crispy hand-folded pastry filled with spiced minced beef, onions and fresh coriander.", price: "0.99", tags: ["popular"] },
+      { name: "Sabayaad",           somali: "(Chapati)",        desc: "Soft, layered Somali flatbread — flaky, golden, served in a portion of three. Beautiful with honey or savoury dishes.", price: "0.99" },
+      { name: "Kimis Mayai",        somali: "(Malawaax)",       desc: "Spongy Tanzanian-style Kimis flatbread paired with perfectly cooked eggs. Light, savoury, served as three.", price: "1.49" },
+      { name: "Maandeeq's Chipsi Maya", somali: "",             desc: "Crispy traditional fries folded through seasoned eggs — a heartier starter or a small meal in itself.", price: "3.99" },
+    ]
+  },
+  {
+    id: "mains",
+    label: "Main Course",
+    title: "Main Course",
+    titleItalic: "the hearth",
+    note: "Every main is served with your choice of Somali rice (Bariice), pasta (Baasto) or Ugali (Soor), with a fresh salad alongside.",
+    items: [
+      { name: "Maandeeq Special",   somali: "Haniid Lamb Shank / Shoulder", desc: "Our signature — slow-cooked, fall-off-the-bone lamb in a deep blend of Somali xawaash spices. Choose shank or shoulder.", price: "12.99", tags: ["popular","chef"] },
+      { name: "Chicken Steak",      somali: "Digaag",            desc: "Marinated chicken grilled over fire, finished with East African pepper blend.", price: "8.99" },
+      { name: "Salmon Fish",        somali: "Kalluun",           desc: "Pan-seared salmon seasoned with Somali spice and fresh lemon.", price: "10.49" },
+      { name: "Beef Suqaar",        somali: "Suqaar",            desc: "Tender cubes of Somali beef sautéed with peppers, onions and potatoes — fragrant, rich and homely.", price: "7.99", tags: ["popular"] },
+      { name: "Maandeeq's Special Veg", somali: "Maraq Khudaar", desc: "Maharaghe — red kidney beans, spinach, tomato, garlic and East African spices, served with seasonal vegetables.", price: "5.99", tags: ["veg"] },
+    ]
+  },
+  {
+    id: "platters",
+    label: "Family",
+    title: "Family Platters",
+    titleItalic: "to share",
+    note: "Built for the table. Every platter is served with your choice of Bariice, Baasto or Soor and a generous salad.",
+    items: []  // rendered as the dark "feast" block instead
+  },
+  {
+    id: "desserts",
+    label: "Desserts",
+    title: "Desserts",
+    titleItalic: "& sweets",
+    items: [
+      { name: "Milk Cake",          somali: "",                 desc: "Creamy, soaked Somali milk cake in your choice of Oreo, Lotus Biscoff, Ferrero Rocher or Kinder Bueno.", price: "5.49", tags: ["popular"] },
+      { name: "Somali Cake",        somali: "Cambaabur",        desc: "Soft, golden rice donut with a delicate sweetness. One slice from a 12-inch cake.", price: "1.49" },
+      { name: "Milkshake",          somali: "",                 desc: "Sweet, well-blended homemade milkshake — Oreo or strawberry.", price: "3.49" },
+    ]
+  },
+  {
+    id: "drinks",
+    label: "Drinks & Tea",
+    title: "Drinks",
+    titleItalic: "& tea",
+    note: "Brewed and shaken in-house — try our Special Shaah, the traditional close to any Somali meal.",
+    items: [
+      { name: "Maandeeq's Special Tea", somali: "Shaah",         desc: "A fragrant brew of cardamom, cinnamon, clove and black tea. Steeped slowly for that traditional, comforting Somali taste.", price: "1.49", tags: ["popular","chef"] },
+      { name: "Somali Coffee",      somali: "Qaxwo",             desc: "Cardamom, cinnamon, ginger and clove — the traditional Somali way.", price: "1.99" },
+      { name: "Mango Lassi",        somali: "",                 desc: "Rich, creamy yogurt blended with sweet, ripe mangoes.", price: "2.99" },
+      { name: "Mojito",             somali: "",                 desc: "Classic, Blue Fusion, Strawberry or Piña Colada — alcohol-free, chilled with fresh mint and lime.", price: "4.49" },
+      { name: "Fresh Juice",        somali: "",                 desc: "Mango, Guava or Exotic Pineapple — served on the rocks.", price: "1.99" },
+      { name: "Soft Drinks",        somali: "",                 desc: "7Up, Fanta Pineapple, Diet Coke, Shanni or Miranda.", price: "0.99" },
+      { name: "Spring Water",       somali: "",                 desc: "Pure natural still spring water.", price: "0.99" },
+    ]
+  },
+];
+
+const PLATTERS = [
+  { people: "1—2",  name: "Sharing Platter",     desc: "Lamb Shank or Shoulder · Chicken Steak · Beef Suqaar.",                       price: "29.99" },
+  { people: "2—3",  name: "Family Platter",      desc: "Lamb Shank or Shoulder (×2) · Chicken Steak · Beef Suqaar.",                  price: "38.99" },
+  { people: "4—5",  name: "Feast Platter",       desc: "Lamb Shank or Shoulder (×3) · Chicken Steak · Beef Suqaar.",                  price: "49.99", pop: true },
+  { people: "6+",   name: "Mega Fusion Platter", desc: "Lamb Shank or Shoulder (×5) · Chicken Steak (×3) · Beef Suqaar. For the whole table.", price: "79.99" },
+];
+
+/* ============================= RENDER ============================= */
+const main = document.getElementById('main');
+const tabsEl = document.getElementById('tabs');
+
+function spice(n){
+  return '<span class="spice" aria-label="spice ' + n + ' of 3">' + '🌶️'.repeat(n) + '</span>';
+}
+
+function tagsHtml(tags){
+  if (!tags || !tags.length) return '';
+  const map = {
+    popular: '<span class="tag tag--pop"><span class="dot"></span>Most loved</span>',
+    chef:    '<span class="tag tag--chef">Chef\'s pick</span>',
+    veg:     '<span class="tag tag--veg">Vegetarian</span>',
+    new:     '<span class="tag tag--new">New</span>',
+  };
+  return tags.map(t => map[t] || '').join('');
+}
+
+function renderSection(sec, idx){
+  if (sec.id === 'platters'){
+    // dark feast band
+    const html = `
+      <section class="sect" id="sect-${sec.id}" data-sect="${sec.id}">
+        <div class="feast">
+          <div class="feast__head">
+            <div class="feast__eye">${String(idx+1).padStart(2,'0')} · Family</div>
+            <h2 class="feast__title">Built for <em>sharing</em></h2>
+            <p class="feast__sub">${sec.note || ''}</p>
+          </div>
+          <ul class="feast__items">
+            ${PLATTERS.map(p => `
+              <li class="feast__item" data-item data-tags="${p.pop ? 'popular' : ''}">
+                <span class="feast__people">${p.people}<br><span style="font-size:9px;letter-spacing:.18em;color:rgba(245,239,230,.5)">people</span></span>
+                <div>
+                  <span class="feast__name">${p.name} ${p.pop ? '<span class="tag tag--pop" style="margin-left:6px"><span class="dot"></span>Loved</span>' : ''}</span>
+                  <span class="feast__desc">${p.desc}</span>
+                </div>
+                <span class="feast__price">£${p.price}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      </section>
+    `;
+    main.insertAdjacentHTML('beforeend', html);
+    return;
+  }
+
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const items = sec.items.map(it => `
+    <article class="item" data-item data-name="${esc((it.name + ' ' + (it.somali||'') + ' ' + it.desc).toLowerCase())}" data-tags="${(it.tags||[]).join(' ')}">
+      <div>
+        <div class="item__head">
+          <h3 class="item__name">${it.name}${it.somali ? ` <span class="item__somali">${it.somali}</span>` : ''}</h3>
+          ${tagsHtml(it.tags)}
+        </div>
+        <p class="item__desc">${it.desc}</p>
+      </div>
+      <div class="item__price"><em>£</em>${it.price}</div>
+    </article>
+  `).join('');
+
+  const html = `
+    <section class="sect" id="sect-${sec.id}" data-sect="${sec.id}">
+      <div class="sect__head">
+        <div>
+          <span class="sect__num">${String(idx+1).padStart(2,'0')} — Section</span>
+          <h2 class="sect__title">${sec.title} ${sec.titleItalic ? `<em>${sec.titleItalic}</em>` : ''}</h2>
+        </div>
+        <div class="sect__count">${sec.items.length} dishes</div>
+      </div>
+      ${sec.note ? `<p class="sect__note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L14.39 8.26L21 9.27L16 14.14L17.18 21.02L12 17.77L6.82 21.02L8 14.14L3 9.27L9.61 8.26L12 2z"></path></svg>${sec.note}</p>` : ''}
+      <div class="items">${items}</div>
+    </section>
+  `;
+  main.insertAdjacentHTML('beforeend', html);
+}
+
+SECTIONS.forEach(renderSection);
+
+/* QR / Save card + Info appended after sections */
+main.insertAdjacentHTML('beforeend', `
+  <section class="savecard" aria-label="Save this menu">
+    <div class="savecard__qr" id="qr"></div>
+    <div class="savecard__body">
+      <div class="savecard__eye">Scan · Save · Share</div>
+      <h3 class="savecard__title">Keep our menu in <em>your pocket</em></h3>
+      <p class="savecard__p">Scan the code to save this menu's address, or send it to whoever is joining you for dinner.</p>
+      <div class="savecard__cta">
+        <button class="savecard__btn" id="copyBtn">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy link
+        </button>
+        <button class="savecard__btn savecard__btn--gh" id="printBtn">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="info__block">
+      <h4>Find us</h4>
+      <p>Woolwich, South East London<br><span style="color:var(--muted);font-size:13px">Address pending — please confirm with venue</span></p>
+    </div>
+    <div class="info__block">
+      <h4>Opening hours</h4>
+      <ul class="info__hours">
+        <li><span>Mon — Thu</span><span>8:30am — 11:00pm</span></li>
+        <li><span>Fri</span><span>8:30am — 11:30pm</span></li>
+        <li><span>Sat</span><span>9:00am — 11:30pm</span></li>
+        <li><span>Sun</span><span>9:00am — 10:30pm</span></li>
+      </ul>
+    </div>
+    <div class="info__block">
+      <h4>Allergens</h4>
+      <p>All dishes are 100% Halal. Please notify your server of any allergies — many dishes can be adapted on request.</p>
+    </div>
+  </section>
+`);
+
+/* ============================= TABS ============================= */
+SECTIONS.forEach((s, i) => {
+  const b = document.createElement('button');
+  b.className = 'stickynav__tab' + (i === 0 ? ' is-on' : '');
+  b.dataset.target = 'sect-' + s.id;
+  const count = s.id === 'platters' ? PLATTERS.length : s.items.length;
+  b.innerHTML = s.label + ' <span class="tabct">' + count + '</span>';
+  b.addEventListener('click', () => {
+    const t = document.getElementById('sect-' + s.id);
+    if (t) {
+      const y = t.getBoundingClientRect().top + window.scrollY - 76;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  });
+  tabsEl.appendChild(b);
+});
+
+/* ============================= SCROLL SPY ============================= */
+const tabBtns = [...tabsEl.querySelectorAll('.stickynav__tab')];
+const sections = SECTIONS.map(s => document.getElementById('sect-' + s.id));
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      const id = e.target.id;
+      tabBtns.forEach(b => b.classList.toggle('is-on', b.dataset.target === id));
+      // keep active tab visible in horizontal scroller
+      const active = tabBtns.find(b => b.classList.contains('is-on'));
+      if (active){
+        const wrap = tabsEl;
+        const aL = active.offsetLeft;
+        const aR = aL + active.offsetWidth;
+        if (aL < wrap.scrollLeft + 20) wrap.scrollTo({left: Math.max(0, aL - 20), behavior:'smooth'});
+        else if (aR > wrap.scrollLeft + wrap.clientWidth - 20) wrap.scrollTo({left: aR - wrap.clientWidth + 20, behavior:'smooth'});
+      }
+    }
+  });
+}, { rootMargin: '-50% 0px -45% 0px', threshold: 0 });
+
+sections.forEach(s => s && io.observe(s));
+
+/* ============================= SEARCH ============================= */
+const search = document.getElementById('search');
+const searchBtn = document.getElementById('searchBtn');
+const searchInput = document.getElementById('searchInput');
+const emptyEl = document.getElementById('empty');
+
+searchBtn.addEventListener('click', () => {
+  search.classList.toggle('is-open');
+  if (search.classList.contains('is-open')) {
+    setTimeout(()=>searchInput.focus(), 120);
+  } else {
+    searchInput.value = '';
+    applyFilters();
+  }
+});
+searchInput.addEventListener('input', applyFilters);
+
+/* ============================= TAG FILTERS ============================= */
+let activeFilter = 'all';
+document.querySelectorAll('.filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(b => b.classList.remove('is-on'));
+    btn.classList.add('is-on');
+    activeFilter = btn.dataset.filter;
+    applyFilters();
+  });
+});
+
+function applyFilters(){
+  const q = (searchInput.value || '').toLowerCase().trim();
+  const items = document.querySelectorAll('[data-item]');
+  let visibleTotal = 0;
+  // First handle all individual items
+  items.forEach(it => {
+    const name = (it.dataset.name || '').toLowerCase();
+    const tags = (it.dataset.tags || '').split(/\s+/);
+    const matchQ = !q || name.includes(q);
+    const matchF = activeFilter === 'all' || tags.includes(activeFilter);
+    const show = matchQ && matchF;
+    it.classList.toggle('is-hidden', !show);
+    if (show) visibleTotal++;
+  });
+
+  // Hide whole section if no items visible in it
+  document.querySelectorAll('.sect').forEach(sec => {
+    const its = sec.querySelectorAll('[data-item]');
+    const anyVisible = [...its].some(i => !i.classList.contains('is-hidden'));
+    sec.style.display = (its.length === 0 || anyVisible) ? '' : 'none';
+  });
+
+  emptyEl.classList.toggle('is-on', visibleTotal === 0);
+}
+
+/* ============================= QR CODE ============================= */
+const url = location.href.split('#')[0];
+(function renderQR(){
+  const img = document.createElement('img');
+  img.alt = 'Scan to open menu';
+  img.loading = 'eager';
+  img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=0&color=14110D&bgcolor=FBF7EF&qzone=0&data=' + encodeURIComponent(url);
+  img.style.width = '100%';
+  img.style.height = '100%';
+  img.style.display = 'block';
+  img.style.borderRadius = '6px';
+  document.getElementById('qr').appendChild(img);
+})();
+
+/* ============================= SHARE / COPY / PRINT ============================= */
+const toast = document.getElementById('toast');
+const toastTxt = document.getElementById('toastTxt');
+let toastTimer;
+function showToast(msg){
+  toastTxt.textContent = msg;
+  toast.classList.add('is-on');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=> toast.classList.remove('is-on'), 2200);
+}
+
+document.getElementById('shareBtn').addEventListener('click', async () => {
+  const data = {
+    title: 'Maandeeq Restaurant — Menu',
+    text: 'Authentic Somali food in Woolwich. Take a look at the menu:',
+    url: location.href
+  };
+  if (navigator.share){
+    try { await navigator.share(data); } catch(e){ /* cancelled */ }
+  } else {
+    try { await navigator.clipboard.writeText(location.href); showToast('Link copied'); }
+    catch(e){ showToast('Press long-tap to copy'); }
+  }
+});
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(location.href); showToast('Link copied'); }
+  catch(e){ showToast('Could not copy'); }
+});
+
+document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+document.getElementById('topBtn').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+</script>
+</body>
+</html>
