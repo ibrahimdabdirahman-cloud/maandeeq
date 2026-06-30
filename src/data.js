@@ -58,11 +58,18 @@ window.MENU_DATA = [
 ];
 
 window.SITE = {
-  phone: "+44 20 0000 0000",            // placeholder — pending owner confirmation
-  whatsapp: "+44 7000 000000",          // placeholder — pending owner confirmation
-  whatsappRaw: "447000000000",
-  address: "Woolwich, South East London", // placeholder — pending owner confirmation
-  postcode: "",                          // intentionally blank until verified
+  phone: "+44 7958 139 312",
+  phoneRaw: "+447958139312",
+  whatsapp: "+44 7958 139 312",
+  whatsappRaw: "447958139312",
+  email: "restaurantmaandeeq@gmail.com",
+  addressName: "Maandeeq Restaurant",
+  addressLine: "13B Anglesea Rd",
+  postcode: "London SE18 6EG",
+  address: "13B Anglesea Rd, Woolwich, London SE18 6EG",
+  area: "Woolwich · South East London",
+  maps: "https://maps.google.com/?q=Maandeeq+Restaurant+13B+Anglesea+Rd+London+SE18+6EG",
+  transit: "4-min walk from Woolwich Arsenal (Rail & DLR) and Woolwich (Elizabeth line).",
   hours: [
     ["Mon – Thu", "8:30am – 11:00pm"],
     ["Fri", "8:30am – 11:30pm"],

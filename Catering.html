@@ -1308,13 +1308,13 @@
             <small>Tue – Sun, 11:30am – 9:00pm · Faster for same-week dates</small>
           </div>
         </a>
-        <a class="inquiry__contact" href="https://wa.me/447700900000">
+        <a class="inquiry__contact" href="https://wa.me/447958139312">
           <span class="inquiry__icon" style="background:var(--whats);color:#06281a">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.1-.3.1-.6 0-1.5-.7-2.5-1.3-3.5-3-.3-.4.3-.4.7-1.4.1-.2 0-.4 0-.5s-.6-1.4-.8-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.9 2.9 4.6 4 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.2 15 3.8 13.5 3.8 12 3.8 7.5 7.5 3.8 12 3.8s8.2 3.7 8.2 8.2-3.7 8-8.2 8z"/></svg>
           </span>
           <div>
             <dt>WhatsApp — quickest</dt>
-            <dd>+44 7700 900 000</dd>
+            <dd>+44 7958 139 312</dd>
             <small>Voice notes welcome — sometimes easier than typing it all out</small>
           </div>
         </a>
@@ -1456,14 +1456,34 @@
     });
   });
 
-  // Form submit — soft confirmation
+  // Form submit — open a complete, pre-filled email
   const form = document.getElementById('cateringForm');
   if(form){
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      const value = id => (form.querySelector('#' + id)?.value || '').trim();
+      const selectedLabel = name => {
+        const input = form.querySelector('input[name="' + name + '"]:checked');
+        const label = input && form.querySelector('label[for="' + input.id + '"]');
+        return label ? label.textContent.trim() : '';
+      };
+      const subject = encodeURIComponent('Maandeeq catering enquiry — ' + value('date'));
+      const body = encodeURIComponent([
+        'Name: ' + value('name'),
+        'Email: ' + value('email'),
+        'Phone: ' + value('phone'),
+        'Event date: ' + value('date'),
+        'Headcount: ' + value('guests'),
+        'Postcode: ' + value('postcode'),
+        'Event type: ' + selectedLabel('occ'),
+        'Service style: ' + selectedLabel('srv'),
+        '',
+        value('msg')
+      ].join('\n'));
+      window.location.href = 'mailto:restaurantmaandeeq@gmail.com?subject=' + subject + '&body=' + body;
       form.style.opacity = '0.6';
       const b = form.querySelector('.submitbtn');
-      b.innerHTML = 'Sent — we’ll be in touch';
+      b.innerHTML = 'Opening your email…';
       b.style.background = 'var(--green)';
       b.style.color = 'var(--paper)';
     });

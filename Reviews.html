@@ -1684,11 +1684,38 @@ document.querySelectorAll('#visit .visitchip').forEach(c => {
   });
 });
 
-document.getElementById('reviewForm').addEventListener('submit', (e) => {
+document.getElementById('reviewForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
   if (rating === 0){
     showToast('Pick a star rating first');
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  let result;
+  try {
+    const response = await fetch('https://masul-forms-backend.vercel.app/api/submit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        siteId: 'maandeeq',
+        type: 'review',
+        rating,
+        name: document.getElementById('rName').value,
+        email: document.getElementById('rEmail').value,
+        title: document.getElementById('rHead').value,
+        body: document.getElementById('rBody').value
+      })
+    });
+    result = await response.json();
+  } catch (error) {
+    result = {ok: false, error: 'Could not send your review. Please try again.'};
+  }
+  if (!result.ok) {
+    btn.disabled = false;
+    btn.innerHTML = 'Send it to the kitchen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+    showToast((result.errors && result.errors.join('. ')) || result.error || 'Could not send your review.');
     return;
   }
   btn.classList.add('is-sent');
@@ -1696,6 +1723,7 @@ document.getElementById('reviewForm').addEventListener('submit', (e) => {
   showToast('Thanks — sent to the kitchen');
   setTimeout(() => {
     btn.classList.remove('is-sent');
+    btn.disabled = false;
     btn.innerHTML = 'Send it to the kitchen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
     e.target.reset();
     rating = 0;

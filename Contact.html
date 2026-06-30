@@ -1035,7 +1035,7 @@
 
         <div class="form__sent" id="form-sent" role="status" aria-live="polite">
           <h4>Soo Dhaweyn — thank you.</h4>
-          <p>Your note is on its way to the kitchen. We'll reply soon. For anything urgent, please call <strong>+44 7958 139 312</strong>.</p>
+          <p>Your email app is opening with the message prepared. Send it there and we'll reply soon. For anything urgent, please call <strong>+44 7958 139 312</strong>.</p>
         </div>
       </form>
     </div>
@@ -1190,7 +1190,7 @@
   });
 })();
 
-/* ============================= FORM SUBMIT (demo only) ============================= */
+/* ============================= FORM SUBMIT ============================= */
 (function(){
   const form = document.getElementById('contact-form');
   const sent = document.getElementById('form-sent');
@@ -1205,6 +1205,22 @@
       });
       return;
     }
+    const topic = (document.querySelector('#topic .is-on') || {}).dataset?.topic || 'Website enquiry';
+    const phone = form.querySelector('#f-phone').value.trim();
+    const date = form.querySelector('#f-date').value;
+    const guests = form.querySelector('#f-guests').value;
+    const subject = encodeURIComponent('Maandeeq website enquiry — ' + topic);
+    const body = encodeURIComponent([
+      'Name: ' + name,
+      'Email: ' + email,
+      'Phone: ' + phone,
+      'Topic: ' + topic,
+      'Preferred date: ' + date,
+      'Guests: ' + guests,
+      '',
+      msg
+    ].join('\n'));
+    window.location.href = 'mailto:restaurantmaandeeq@gmail.com?subject=' + subject + '&body=' + body;
     sent.classList.add('is-on');
     form.querySelector('.grid').style.display = 'none';
     form.querySelector('.topic').style.display = 'none';
