@@ -1763,3 +1763,10 @@ a { color: inherit; }
   .menu__right { flex-direction: row; align-items: center; gap: 14px; }
   .form__grid { grid-template-columns: 1fr; }
 }
+
+/* QA 2026-06-30: clip decorative pattern bleed so mobile has no horizontal scroll.
+   Header is position:fixed (not sticky), so a root overflow-x guard is safe. */
+@media (max-width: 899px) {
+  html, body { overflow-x: hidden; }
+  .welcome, .platters { overflow: hidden; }
+}
