@@ -1756,12 +1756,43 @@ a { color: inherit; }
    Responsive tweaks
    =========================================================== */
 @media (max-width: 640px) {
+  :root { --pad: 18px; }
+  .topnav {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 9px 10px;
+  }
+  .topnav__brand { min-width: 0; gap: 9px; }
+  .topnav__logo { width: 40px; height: 40px; flex: 0 0 40px; }
+  .topnav__wordmark { min-width: 0; }
+  .topnav__name { font-size: 19px; }
   .hero { padding-top: 100px; }
   .hero__cta .btn { flex: 1; min-width: 0; justify-content: center; }
+  .hero__strip { gap: 10px; overflow-x: auto; padding-bottom: 4px; }
+  .hero__title { font-size: clamp(44px, 15vw, 70px); }
   .menu__item { grid-template-columns: 1fr; gap: 8px; }
   .menu__leader { display: none; }
   .menu__right { flex-direction: row; align-items: center; gap: 14px; }
   .form__grid { grid-template-columns: 1fr; }
+  .overlay__panel { inset: 8px; border-radius: 20px; overflow-y: auto; }
+  .overlay__head { padding: 16px 16px 2px; }
+  .overlay__nav { padding-left: 16px; padding-right: 16px; }
+  .overlay__label { font-size: clamp(28px, 10vw, 44px); }
+  .overlay__foot { padding: 16px; }
+  .overlay__cta { width: 100%; }
+  .overlay__cta .btn { flex: 1 1 100%; justify-content: center; }
+  .modal { align-items: flex-end; padding: 0; }
+  .modal__card {
+    width: 100%;
+    max-height: 92dvh;
+    border-radius: 22px 22px 0 0;
+    padding: 24px 18px calc(24px + env(safe-area-inset-bottom));
+  }
+  .sticky { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); }
+  .foot__bottom { padding-bottom: 72px; }
 }
 
 /* QA 2026-06-30: clip decorative pattern bleed so mobile has no horizontal scroll.
